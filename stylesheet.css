@@ -1,0 +1,53 @@
+.mainsection{
+	position: relative;
+height: 20em;
+
+}
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+h1{
+	font-family: 'Lobster', cursive;
+}
+.contentpage{
+	width: 80%;
+	margin: auto;
+	background-color: #E9ECEC;
+}
+.background{
+	background-color: #B6BFBF;
+	height: 100%;
+}
+.floatingbutton{
+	width:100px;
+	height: 100px;
+	background-color: #00FFFF;
+	border-radius: 50px;
+	position: fixed;
+	right: 30px;
+	bottom: 100px;
+	margin: auto;
+}
+.floatingbutton:hover{
+	background-color: #80FFFF;
+	-webkit-animation: bigger 1s;
+}
+@-webkit-keyframes bigger{
+	0% {width:100px;height:100px;}
+	100% {width:150px;height: 150px;border-radius: 75px;}
+}
+.jumbotron-image{
+	height:30%;
+	margin: auto;
+	text-align: center;
+}
+jumbotron{
+	text-align: center;
+}
+.platform{
+	background-color: #CCFFFF;
+}
+.image4{
+	height:200px;
+	text-align: center;
+}
