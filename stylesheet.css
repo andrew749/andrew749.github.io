@@ -101,3 +101,23 @@ jumbotron{
 	background-color: #80FFFF;
 	z-index: 100;
 }
+.contactcardlayout{
+	position:fixed;
+	padding:20px;
+	background-color:#FFF9C4;
+	z-index:1000;
+	margin:auto;
+	display:inline-block;
+	top:25%;
+	left:25%;
+	right:25%;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size:200%;
+
+}
+.contacthide{
+	display:none;
+}
+td{
+	padding:10px;
+}

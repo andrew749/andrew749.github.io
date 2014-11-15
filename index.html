@@ -6,6 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="jssor.js"></script>
 <script src="jssor.slider.js"></script>
@@ -13,7 +14,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <title>Andrew Codispoti</title>
-<body on>
+<body >
 <!--
 This is the main page
 -->
@@ -49,29 +50,32 @@ This is the main page
 <div class="background">
 <div class="contentpage">
 <!--Main Jumbotron-->
+<div id="home"></div>
+
 <div class="jumbotron">
+
   <h1 style="text-align:center;">ANDREW CODISPOTI</h1>
   <div class="jumbotron-image-container">
     <img class="jumbotron-image" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10649641_10203341730597215_4357029128428828851_n.jpg?oh=e1edad79be3a0ffa28f5eba1107b66be&oe=54C67ADD&__gda__=1421256328_12e118d7cbb81a7fdcc1313eacc67c3c">
   </div>
+
   <h1>Get to know me!</h1>
-  <p>Explore my website and check out some of the projects I have done in the past. Also follow me on twitter to activley follow my development.</p>
+  <p>Explore my website and check out some of the projects I have done in the past. Also follow me on Twitter to activley follow my development.</p>
 </div>
 <!-- About Me-->
 <div class="col-md-12 mainsection" id="about">
   <h2>Who am I?</h2>
   <p>I am a hard-working, passionate entrepreneur who will stop at nothing to succeed.
-    I also enjoy learning new things, espcially when it has to do with programming.(This website was made because I wanted to learn bootstrap)<br>
+    I also enjoy learning new things, espcially when it has to do with programming.<br>
 
   Anything else I could possible say in this section would be my own biased perspective of myself so I'll let you judge: am i really that awesome?!?!
   </p>
 </div>
 <div class="col-md-12 mainpage">
   <h2>What have I done?</h2>
-  <p>I have experience in several different languages, including but not limited to Java, C, HTML, CSS, and Javascript</p>
+  <p>I have experience in several different languages, including but not limited to Java, C,python, HTML, CSS, and Javascript</p>
 
-<p>As previously mentioned, I have always loved to learn new things so it won't come as a surprise to you when you find out that the projects I have worked on range from different platforms, all of which I have 'tested the waters' but never fully adopted. That being said, I am still literate with each of the following languages (is code-literacy a thing?) and am very adaptible to new platforms and frameworks.</p>
-
+<p>I have always loved to learn new things so it won't come as a surprise to you when you find out that the projects I have worked on range from different platforms, all of which I have 'tested the waters' and hacked around with.
 
 <div id="carouselcontainer">
 <div class="imagecarousel" id="slider1_container">
@@ -100,8 +104,7 @@ This is the main page
 
 <div class="web">
   <h3>Web</h3>
-
-  <p>I have also created several application for the web, using modern standards such as HTML5 CSS3 and Javascript</p>
+  <p>I have also created several application for the web, using modern standards such as HTML5, CSS3, and Javascript</p>
 </div>
 </div>
 
@@ -114,20 +117,19 @@ This is the main page
 <h2>Like what you see. Send me a message and we can talk.</h2>
 <p>Honestly, I don't bite.</p><br/>
 <br/>
-<p>But on a more serious note you can email me @ andrewcod749@gmail.com or andrew.codispoti@gmail.com or add me on google+ so we can talk using hanoguts.</p><br>
+<p>But on a more serious note click the floating contact button to get the details about how you can reach me.</p><br>
+<p>I should be able to respond within 24 hours though I wont make any promises(you know, because of school and stuff).</p>
 </div>
 </div>
 </div>
-<div class="floatingbutton"><img style="width:inherit;height:inherit; margin:auto;" src="Images/user.png"/>
+<div id="contactfab" class="floatingbutton"><img style="width:inherit;height:inherit; margin:auto;" src="Images/user.png"/></div>
+
 <!--  contact info goes here-->
-<div class="contactcardlayout">
-<div class="contactcard">
-Name:         Andrew Joseph Codispoti
-Phone-Number: 4165287547
-Github:       andrew749
-Email:        andrew.codispoti@gmail.com
-</div>
-</div>
+<div class="contactcardlayout contacthide">
+<table id="contactinfo"><tr><td>Name:</td><td>Andrew Joseph Codispoti</td></tr>
+<tr><td>Phone-Number:</td><td>4165287547</td></tr>
+<tr><td>Github:</td><td><a href="http://github.com/andrew749">andrew749</a></td><br/>
+<tr><td>Email:</td><td id="emailcell">andrew.codispoti@gmail.com</td></tr></table>
 
 </div>
 </body>
