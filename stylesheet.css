@@ -18,30 +18,16 @@ h1{
 	background-color: #B6BFBF;
 	height: 100%;
 }
-.floatingbutton{
-	width:100px;
-	height: 100px;
-	background-color: #00FFFF;
-	border-radius: 50px;
-	position: fixed;
-	right: 30px;
-	bottom: 100px;
-	margin: auto;
+.menubutton:hover{
+	  transition: opacity 1s ease-in-out;
 }
-.floatingbutton:hover{
-	background-color: #80FFFF;
-	-webkit-animation: bigger 1s forwards;
-	z-index: 100;
-}
+
 img{
 	position: relative;
 	max-width: 100%
 	height:auto;
 }
-@-webkit-keyframes bigger{
-	0% {width:100px;height:100px;}
-	100% {width:150px;height: 150px;border-radius: 75px;}
-}
+
 .jumbotron-image{
 	position:relative;
 	height:auto;
@@ -69,4 +55,49 @@ jumbotron{
 	max-height: 100%
 	max-width:100%;
 	height: auto;
+}
+.imagecarousel{
+	cursor: move;
+	position: relative;
+	overflow: hidden;
+	margin:auto;
+	width:512px;
+	height: 512px;
+	float:left;
+
+}
+.platformsexplanation{
+	float:right;
+	position:absolute;
+	display:inline-block;
+	padding-left:2em;
+}
+#carouselcontainer{
+	align:center;text-align:center;margin:auto;
+	width:512px;
+	display:inline-block;
+}
+
+
+
+
+
+
+
+
+
+/*Floating action buttons*/
+.floatingbutton{
+	width:100px;
+	height: 100px;
+	background-color: #00FFFF;
+	border-radius: 50px;
+	position: fixed;
+	right: 30px;
+	bottom: 100px;
+	margin: auto;
+}
+.floatingbutton:hover{
+	background-color: #80FFFF;
+	z-index: 100;
 }
