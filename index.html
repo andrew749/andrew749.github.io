@@ -1,137 +1,139 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="jssor.js"></script>
-<script src="jssor.slider.js"></script>
-<script src="script.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<title>Andrew Codispoti</title>
-<body >
-<!--
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="jssor.js"></script>
+        <script src="jssor.slider.js"></script>
+        <script src="script.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+    <title>Andrew Codispoti</title>
+    <body >
+        <!--
 This is the main page
 -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Andrew Codispoti</a>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Andrew Codispoti</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="homebutton" class="menubutton"><a>Home</a></li>
+                        <li id="aboutbutton" class="menubutton"><a >About</a></li>
+                        <li id="contactbutton" class="menubutton"><a >Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Current Projects <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">TextSpam</a></li>
+                                <li><a href="#">Play</a></li>
+                                <li><a href="#">TextMetrics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li id="homebutton" class="menubutton"><a>Home</a></li>
-            <li id="aboutbutton" class="menubutton"><a >About</a></li>
-            <li id="contactbutton" class="menubutton"><a >Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Current Projects <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">TextSpam</a></li>
-                <li><a href="#">Play</a></li>
-                <li><a href="#">TextMetrics</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
 
-<div class="background">
-<div class="contentpage">
-<!--Main Jumbotron-->
-<div id="home"></div>
+        <div class="background">
+            <div class="contentpage">
+                <!--Main Jumbotron-->
+                <div id="home"></div>
 
-<div class="jumbotron">
+                <div class="jumbotron">
 
-  <h1 style="text-align:center;">ANDREW CODISPOTI</h1>
-  <div class="jumbotron-image-container">
-    <img class="jumbotron-image" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10649641_10203341730597215_4357029128428828851_n.jpg?oh=e1edad79be3a0ffa28f5eba1107b66be&oe=54C67ADD&__gda__=1421256328_12e118d7cbb81a7fdcc1313eacc67c3c">
-  </div>
+                    <h1 style="text-align:center;">ANDREW CODISPOTI</h1>
+                    <div class="jumbotron-image-container">
+                        <img class="jumbotron-image" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10649641_10203341730597215_4357029128428828851_n.jpg?oh=e1edad79be3a0ffa28f5eba1107b66be&oe=54C67ADD&__gda__=1421256328_12e118d7cbb81a7fdcc1313eacc67c3c">
+                    </div>
 
-  <h1>Get to know me!</h1>
-  <p>Explore my website and check out some of the projects I have done in the past. Also follow me on Twitter to activley follow my development.</p>
-</div>
-<!-- About Me-->
-<div class="col-md-12 mainsection" id="about">
-  <h2>Who am I?</h2>
-  <p>I am a hard-working, passionate entrepreneur who will stop at nothing to succeed.
-    I also enjoy learning new things, espcially when it has to do with programming.<br>
+                    <h1>Get to know me!</h1>
+                    <p>Explore my website and check out some of the projects I have done in the past. Also follow me on Twitter to activley follow my development.</p>
+                </div>
+                <!-- About Me-->
+                <div class="col-md-12 mainsection" id="about">
+                    <h2>Who am I?</h2>
+                    <p>I am a hard-working, passionate entrepreneur who will stop at nothing to succeed.
+                        I also enjoy learning new things, espcially when it has to do with programming.<br>
 
-  Anything else I could possible say in this section would be my own biased perspective of myself so I'll let you judge: am i really that awesome?!?!
-  </p>
-</div>
-<div class="col-md-12 mainpage">
-  <h2>What have I done?</h2>
-  <p>I have experience in several different languages, including but not limited to Java, C,python, HTML, CSS, and Javascript</p>
+                        Anything else I could possible say in this section would be my own biased perspective of myself so I'll let you judge: am i really that awesome?!?!
+                    </p>
+                </div>
+                <div class="col-md-12 mainpage">
+                    <h2>What have I done?</h2>
+                    <p>I have experience in several different languages, including but not limited to Java, C,python, HTML, CSS, and Javascript</p>
 
-<p>I have always loved to learn new things so it won't come as a surprise to you when you find out that the projects I have worked on range from different platforms, all of which I have 'tested the waters' and hacked around with.
+                    <p>I have always loved to learn new things so it won't come as a surprise to you when you find out that the projects I have worked on range from different platforms, all of which I have 'tested the waters' and hacked around with.
+                        <div class="projectholder">
+                        <div class="imagecarousel" id="slider1_container">
+                            <!-- Slides Container -->
+                            <div  u="slides" style="cursor: move; position: relative;top:0;left:0; margin:auto; align:center; overflow: hidden; width: 512px; height: 512px;">
+                                <div><img u="image" src="Images/android.jpg" /></div>
+                                <div><img u="image" src="Images/java.jpg" /></div>
+                                <div><img u="image" src="Images/html5css3.jpg"></div>
 
-<div id="carouselcontainer">
-<div class="imagecarousel" id="slider1_container">
-    <!-- Slides Container -->
-    <div  u="slides" style="cursor: move; position: absolute;top:0;left:0; margin:auto; align:center; overflow: hidden; width: 512px; height: 512px;">
-        <div><img u="image" src="Images/android.jpg" /></div>
-        <div><img u="image" src="Images/java.jpg" /></div>
-        <div><img u="image" src="Images/html5css3.jpg"></div>
+                            </div>
+                        </div>
+                    
+                    
+                    
+                    
+                    <div class="platformsexplanation">
+                        <div class="android">
+                            <h3>Android</h3>
 
-    </div>
-</div>
-</div>
-<div class="platformsexplanation">
-<div class="android">
-<h3>Android</h3>
-
-<p>Ok so i might have lied. I actually have quite a bit of experience with Android and Java in general. I have developed over 30 applications for the Android platform (albeit some rudimentary) and have launched 4 full featured applications on the Google Play Store. </p>
-</div>
+                            <p>Ok so i might have lied. I actually have quite a bit of experience with Android and Java in general. I have developed over 30 applications for the Android platform (albeit some rudimentary) and have launched 4 full featured applications on the Google Play Store. </p>
+                        </div>
 
 
-<div class="desktop">
-  <h3>Desktop</h3>
-  <p>I know this is more of a platform than a language but I figured it was important enought to note. I have created applications in Python, Java, and C for the desktop. These programs have ranged from simple command line interfaces, to more complex GUI based programs and games. </p>
-</div>
+                        <div class="desktop">
+                            <h3>Desktop</h3>
+                            <p>I know this is more of a platform than a language but I figured it was important enought to note. I have created applications in Python, Java, and C for the desktop. These programs have ranged from simple command line interfaces, to more complex GUI based programs and games. </p>
+                        </div>
 
 
-<div class="web">
-  <h3>Web</h3>
-  <p>I have also created several application for the web, using modern standards such as HTML5, CSS3, and Javascript</p>
-</div>
-</div>
+                        <div class="web">
+                            <h3>Web</h3>
+                            <p>I have also created several application for the web, using modern standards such as HTML5, CSS3, and Javascript</p>
+                        </div>
+                    </div>
 
-</div>
+                </div>
 
 
 
 
-<div class="col-md-12 mainsection" id="contact">
-<h2>Like what you see. Send me a message and we can talk.</h2>
-<p>Honestly, I don't bite.</p><br/>
-<br/>
-<p>But on a more serious note click the floating contact button to get the details about how you can reach me.</p><br>
-<p>I should be able to respond within 24 hours though I wont make any promises(you know, because of school and stuff).</p>
-</div>
-</div>
-</div>
-<div id="contactfab" class="floatingbutton"><img style="width:inherit;height:inherit; margin:auto;" src="Images/user.png"/></div>
+                <div class="col-md-12 mainsection" id="contact">
+                    <h2>Like what you see. Send me a message and we can talk.</h2>
+                    <p>Honestly, I don't bite.</p><br/>
+                    <br/>
+                    <p>But on a more serious note click the floating contact button to get the details about how you can reach me.</p><br>
+                    <p>I should be able to respond within 24 hours though I wont make any promises(you know, because of school and stuff).</p>
+                </div>
+            </div>
+        </div>
+        <div id="contactfab" class="floatingbutton"><img style="width:inherit;height:inherit; margin:auto;" src="Images/user.png"/></div>
 
-<!--  contact info goes here-->
-<div class="contactcardlayout contacthide">
-<table id="contactinfo"><tr><td>Name:</td><td>Andrew Joseph Codispoti</td></tr>
-<tr><td>Phone-Number:</td><td>4165287547</td></tr>
-<tr><td>Github:</td><td><a href="http://github.com/andrew749">andrew749</a></td><br/>
-<tr><td>Email:</td><td id="emailcell">andrew.codispoti@gmail.com</td></tr></table>
+        <!--  contact info goes here-->
+        <div class="contactcardlayout contacthide">
+            <table id="contactinfo"><tr><td>Name:</td><td>Andrew Joseph Codispoti</td></tr>
+                <tr><td>Phone-Number:</td><td>4165287547</td></tr>
+                <tr><td>Github:</td><td><a href="http://github.com/andrew749">andrew749</a></td><br/>
+                <tr><td>Email:</td><td id="emailcell">andrew.codispoti@gmail.com</td></tr></table>
 
-</div>
-</body>
+        </div>
+    </body>
 
 </html>

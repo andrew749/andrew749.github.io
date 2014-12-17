@@ -1,0 +1,38 @@
+#androidimage{
+    left: auto;
+    height: auto;
+}
+.image-background{
+    width: 100%;
+    text-align: center;
+    background-image: url(https://raw.githubusercontent.com/andrew749/TextSpam/master/TextSpam/res/drawable-hdpi/textspamlogo.png);
+    background-repeat: no-repeat;
+    -webkit-transform: translateZ(-10px) scale(10);
+
+
+}
+html{
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+
+}
+body{
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-transform-style:preserve-3d;
+    perspective: 1px;
+
+}
+.maincontent{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    height: 50%;
+    padding: 2em;
+    background-color: rgba(219, 219, 219, 0.69);
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+}

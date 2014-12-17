@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//handles the image carousel
 	var options = { $AutoPlay: true };
   var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-	$("#slider1_container").width("100%");
+	$("#slider1_container").width("512px");
 	//handles the button click to scroll the page
 	$(".menubutton").on("click",function (event){
 		//code for the event
