@@ -1,6 +1,7 @@
 .mainsection{
     position: ab;
-    height: 20em;
+    min-height: 20em;
+    height: auto;
     display:block;
 
 }
@@ -61,19 +62,22 @@ jumbotron{
     cursor: move;
     position: relative;
     overflow: hidden;
-    width:512px;
+    max-width:512px;
+    width: auto;
     height: 512px;
+    float: left;
     text-align:center;
-    display:inline-block;
-
+    display: block;
 }
 
 .platformsexplanation{
     display:inline-block;
     padding-left:2em;
-    width:30%;
+    width:50%;
+    position: relative;
     text-align: justify;
     vertical-align: top;
+    float: right;
 }
 
 @media (max-width:1000px){
@@ -93,7 +97,8 @@ jumbotron{
 
 
 #contact{
-    display:block;
+    margin-top: 30px;
+
 } 
 
 
@@ -137,12 +142,24 @@ td{
     padding:10px;
 }
 
-#imagealignment {
-    width: 50%;
-    text-align: left;
+
+
+
+.projectview {
+    height:40%;
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 134, 145, 0.33);
 }
 
-#explanationalignment {
-    width: 50%;
-    display: inline-block;
+.projectcontainer {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+.selectednavbutton{
+    background-color: #cacbcb;
+
+
 }
