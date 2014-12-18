@@ -11,7 +11,7 @@
         <script src="script.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
-    <body>
+    <body class="projectbody">
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -27,33 +27,35 @@
                     <ul class="nav navbar-nav">
                         <li id="homebutton" class="menubutton"><a href="index.html#home">Home</a></li>
                         <li id="aboutbutton" class="menubutton"><a href="index.html#about">About</a></li>
-                        <li id="contactbutton" class="menubutton"><a >Contact</a></li>
+                        <li id="contactbutton" class="menubutton"><a  href="index.html#contact">Contact</a></li>
                         <li id="projects" class="menubutton selectednavbutton"><a href="projects.html">Projects</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
-                <div class="row">
-                    <!--        will hold all projects which have the same class but different id-->
-                    <div class="projectcontainer">
-                        <div class="projectview col-md-12" id="textspam">
-                            <h1>TextSpam</h1>
-                            <h3> The most popular batch messaging application on the play store. Ever.</h3>
-                            <br />
-                            <br />
-                            <p> Its no wonder over 60000 people have chosen textspam for their texting needs. With a simplistic ui, coupled with its powerful functionality, TextSpam makes it easier than evey to create mailing lists and avoid those high costs that third party services charge for messaging.</p>    
-                            <br/>
-                            <p>Whether you need to reach 2 people or 10 million people, TextSpam is the right tool for you. Imagine a world where all your customers are at a button click away. TextSpam makes this possible.</p>                        </div>
-                         <div class="projectview col-md-12" id="textspam">
-                            <h1>Play</h1>
-                            <h3>Play any song. From any artist. Anywhere.</h3>
-                            <br />
-                            <br />
-                             <p>Like PopcornTime but for songs. Play uses a growing repository of sources to search and play music. All while remaining DMCA compliant. </p>
-                                                 </div>
-                    </div>
-
-                </div>
             </div>
         </div>
+        <!--        will hold all projects which have the same class but different id-->
+        <div class="projectcontainer">
+            <div class="projectview col-md-12" id="textspam">
+                <h1>TextSpam</h1>
+                <img class="textspamimage" src="https://raw.githubusercontent.com/andrew749/TextSpam/master/TextSpam/res/drawable-hdpi/textspamlogo.png"/>
+                <h3> The most popular batch messaging application on the play store. Ever.</h3> 
+                <br />
+                <br />
+               
+                <p> Its no wonder over 60000 people have chosen textspam for their texting needs. With a simplistic ui, coupled with its powerful functionality, TextSpam makes it easier than evey to create mailing lists and avoid those high costs that third party services charge for messaging.</p>    
+                <br/>
+                <p>Whether you need to reach 2 people or 10 million people, TextSpam is the right tool for you. Imagine a world where all your customers are at a button click away. TextSpam makes this possible.</p>                        </div>
+            <div class="projectview col-md-12" id="play">
+                <h1>Play</h1>
+                <h3>Play any song. From any artist. Anywhere.</h3>
+                <br />
+                <br />
+                <img class="playimage" src="http://www.play-app.co/playlogo.png"/>
+                <p>Like PopcornTime but for songs. Play uses a growing repository of sources to search and play music. All while remaining DMCA compliant. If you think of it Play it. </p>
+            </div>
+        </div>
+
+
 
 
     </body>

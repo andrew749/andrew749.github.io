@@ -59,9 +59,9 @@ This is the main page
                 <div class="col-md-12 mainsection" id="about">
                     <h2>Who am I?</h2>
                     <p>I am a hard-working, passionate entrepreneur who will stop at nothing to succeed.
-                        I also enjoy learning new things, espcially when it has to do with programming.<br>
+                        I also enjoy learning new things, especially when it has to do with programming.<br>
 
-                        Anything else I could possible say in this section would be my own biased perspective of myself so I'll let you judge: am i really that awesome?!?!
+                        Anything else I could possible say in this section would be my own biased perspective of myself so I'll let you judge: am I really that awesome?!?!
                     </p>
                 </div>
                 <div class="col-md-12 mainsection">
@@ -69,9 +69,10 @@ This is the main page
                     <p>I have experience in several different languages, including but not limited to Java, C,python, HTML, CSS, and Javascript</p>
 
                     <p>I have always loved to learn new things so it won't come as a surprise to you when you find out that the projects I have worked on range from different platforms, all of which I have 'tested the waters' and hacked around with.
-                    <div class="projectholder">
-                            <div class="imagecarousel" id="slider1_container">
-                                <!-- Slides Container -->
+                    <div class="col-md-12">
+                        <div class="imagecarousel col-md-6" id="slider1_container">
+                            <!-- Slides Container -->
+                            <div class=imageholder>
                                 <div  u="slides" style="cursor: move; position: relative;top:0;left:0; margin:auto; align:center; overflow: hidden; width: 512px; height: 512px;">
                                     <div><img u="image" src="Images/android.jpg" /></div>
                                     <div><img u="image" src="Images/java.jpg" /></div>
@@ -79,38 +80,38 @@ This is the main page
 
                                 </div>
                             </div>
-
-
-                        
-                            
-                            <div class="platformsexplanation">
+                        </div>
 
 
 
-                                <div class="android">
-                                    <h3>Android</h3>
-
-                                    <p>Ok so I might have lied. I actually have quite a bit of experience with Android and Java in general. I have developed over 30 applications for the Android platform (albeit some rudimentary) and have launched 4 full featured applications on the Google Play Store. </p>
-                                </div>
-
-
-                                <div class="desktop">
-                                    <h3>Desktop</h3>
-                                    <p>I know this is more of a platform than a language but I figured it was important enought to note. I have created applications in Python, Java, and C for the desktop. These programs have ranged from simple command line interfaces, to more complex GUI based programs and games. </p>
-                                </div>
+                        <div class="platformsexplanation col-md-6">
 
 
 
-                                <div class="web">
-                                    <h3>Web</h3>
-                                    <p>I have also created several application for the web, using modern standards such as HTML5, CSS3, and Javascript</p>
-                                </div>
+                            <div class="android">
+                                <h3>Android</h3>
 
-
-
+                                <p>Ok so I might have lied. I actually have quite a bit of experience with Android and Java in general. I have developed over 30 applications for the Android platform (albeit some rudimentary) and have launched 4 full featured applications on the Google Play Store. </p>
                             </div>
+
+
+                            <div class="desktop">
+                                <h3>Desktop</h3>
+                                <p>I know this is more of a platform than a language but I figured it was important enought to note. I have created applications in Python, Java, and C for the desktop. These programs have ranged from simple command line interfaces, to more complex GUI based programs and games. </p>
+                            </div>
+
+
+
+                            <div class="web">
+                                <h3>Web</h3>
+                                <p>I have also created several application for the web, using modern standards such as HTML5, CSS3, and Javascript</p>
+                            </div>
+
+
+
                         </div>
                     </div>
+                </div>
 
 
 
@@ -119,20 +120,21 @@ This is the main page
                     <p>Honestly, I don't bite.</p><br/>
                     <br/>
                     <p>But on a more serious note click the floating contact button to get the details about how you can reach me.</p><br>
-                    <p>Or follow me on Twitter.</p>
-                    <p>Add me on Facebook</p>
-                    <p>Connect with me on LinkedIn</p>
+                    <a href="https://twitter.com/Andrewcod749" class="twitter-follow-button" data-show-count="false">Follow @Andrewcod749</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <p>Connect with me on LinkedIn</p><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                    <script type="IN/MemberProfile" data-id="https://www.linkedin.com/pub/andrew-codispoti/61/45/5b2" data-format="inline"></script>
                 </div>
             </div>
         </div>
         <div id="contactfab" class="floatingbutton"><img style="width:inherit;height:inherit; margin:auto;" src="Images/user.png"/></div>
 
         <!--  contact info goes here-->
-        <div class="contactcardlayout contacthide">
-            <table id="contactinfo"><tr><td>Name:</td><td>Andrew Joseph Codispoti</td></tr>
-                <tr><td>Phone-Number:</td><td>4165287547</td></tr>
-                <tr><td>Github:</td><td><a href="http://github.com/andrew749">andrew749</a></td><br/>
-                <tr><td>Email:</td><td id="emailcell">andrew.codispoti@gmail.com</td></tr></table>
+        <div class="contactcardlayout contacthide"> 
+            <table id="contactinfo"><tr><td>Name:</td><td class="cardinfo">Andrew Joseph Codispoti</td></tr>
+                <tr><td>Phone-Number:</td><td class="cardinfo">4165287547</td></tr>
+                <tr><td>Github:</td><td class="cardinfo"><a href="http://github.com/andrew749">andrew749</a></td><br/>
+                <tr><td>Email:</td><td id="emailcell" class="cardinfo">andrew.codispoti@gmail.com</td></tr></table>
 
         </div>
     </body>

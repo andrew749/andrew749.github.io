@@ -2,11 +2,16 @@
     position: ab;
     min-height: 20em;
     height: auto;
+    background-color: #E9ECEC;
+    margin: 10px;
     display:block;
 
 }
 body{
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+    width:auto;
 }
 h1{
     font-family: 'Lobster', cursive;
@@ -61,13 +66,10 @@ jumbotron{
 .imagecarousel{
     cursor: move;
     position: relative;
-    overflow: hidden;
     max-width:512px;
-    width: auto;
     height: 512px;
-    float: left;
-    text-align:center;
-    display: block;
+    margin: 5px ;
+    left:0px;
 }
 
 .platformsexplanation{
@@ -77,13 +79,14 @@ jumbotron{
     position: relative;
     text-align: justify;
     vertical-align: top;
-    float: right;
+
 }
 
 @media (max-width:1000px){
     .platformsexplanation{
         display: block;
         width:100%;
+        position: relative;
 
     }
 
@@ -91,6 +94,8 @@ jumbotron{
         display:block;
         text-align: center;
         margin: auto;
+        width: auto;
+        max-width: inherit;
         position: relative;
     }
 }
@@ -104,6 +109,7 @@ jumbotron{
 
 .projectholder{
     text-align: center;
+    position: relative;
     width: 100%;
 }
 /*Floating action buttons*/
@@ -121,19 +127,22 @@ jumbotron{
     background-color: #80FFFF;
     z-index: 100;
 }
+
 .contactcardlayout{
     position:fixed;
     padding:20px;
-    background-color:#FFF9C4;
+    border: 5px groove;
+    background-color:rgb(252, 249, 229);
     z-index:1000;
+    box-shadow: 10px 10px 5px #000;
     margin:auto;
-    display:inline-block;
-    top:25%;
-    left:25%;
-    right:25%;
+    display:block;
+    top:10%;
+    
+    margin: auto;
     font-family:'Open Sans Condensed', sans-serif;
     font-size:200%;
-
+ 
 }
 .contacthide{
     display:none;
@@ -146,20 +155,47 @@ td{
 
 
 .projectview {
-    height:40%;
     position: relative;
     display: block;
     width: 100%;
-    background-color: rgba(0, 134, 145, 0.33);
+    background-color: rgba(0, 0, 0, 0.33);
+    margin-bottom: 10px;
 }
 
 .projectcontainer {
     width: 80%;
     margin: auto;
     height: 100%;
+    position: relative;
+    top:50px
 }
 .selectednavbutton{
     background-color: #cacbcb;
+}
 
 
+
+
+.textspamimage {
+    float:right;
+}
+
+.playimage {
+    float: left;
+    position: relative;
+    min-height: 100px;
+    height: 512px;
+}
+
+.projectbody {
+    width: 100%;
+    position: relative;
+}
+
+.cardinfo {
+    text-align: right;
+}
+
+#contactinfo {
+    margin: auto;
 }
