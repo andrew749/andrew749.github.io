@@ -98,7 +98,9 @@ jumbotron{
 
 
 .projectholder{
-    text-align: center;}
+    text-align: center;
+    width: 80%;
+}
 /*Floating action buttons*/
 .floatingbutton{
     width:100px;
@@ -133,4 +135,14 @@ jumbotron{
 }
 td{
     padding:10px;
+}
+
+#imagealignment {
+    width: 50%;
+    text-align: left;
+}
+
+#explanationalignment {
+    width: 50%;
+    display: inline-block;
 }

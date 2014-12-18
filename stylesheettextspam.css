@@ -5,7 +5,6 @@
 .image-background{
     width: 100%;
     text-align: center;
-    background-image: url(https://raw.githubusercontent.com/andrew749/TextSpam/master/TextSpam/res/drawable-hdpi/textspamlogo.png);
     background-repeat: no-repeat;
     -webkit-transform: translateZ(-10px) scale(10);
 
@@ -35,4 +34,7 @@ body{
 body{
     font-family: 'Roboto Condensed', sans-serif;
     overflow-x: hidden;
+}
+.features{
+    top:150%;
 }
