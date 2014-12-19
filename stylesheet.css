@@ -71,21 +71,23 @@ jumbotron{
 }
 .imagecarousel{
     cursor: move;
-    position: relative;
-    max-width:512px;
+    width:512px;
     height: 512px;
-    margin: 5px ;
+    margin: 5px;
     left:0px;
     margin-bottom: 10px;
+    float: left;
 }
 
 .platformsexplanation{
     display:inline-block;
     padding-left:2em;
 
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 40%;
     text-align: justify;
-    vertical-align: top;
+    vertical-align: middle;
 
 }
 
@@ -94,16 +96,13 @@ jumbotron{
         display: block;
         width:100%;
         position: relative;
+        left:0;
 
     }
 
     .imagecarousel{
-        display:block;
         text-align: center;
         margin: auto;
-        width: auto;
-        max-width: inherit;
-        position: relative;
     }
 }
 
@@ -222,12 +221,7 @@ td{
     position: relative;
 
 }
-.github {
-    display: inline-block;
-    position: absolute;
-    top: 30%;
-    left: 35%;    
-}
+
 .githubbackground{
     background-image: url(Images/github.gif);
     background-repeat: no-repeat;
@@ -237,16 +231,13 @@ td{
     width: 100%;
 
 }
-.github img{
-    display: block;
-}
+
 .linkedin{
     position: relative;
     background-color: #fff;
 
 }
 .twitter{ 
-    background-color: #fff;
     position: relative;
 
 }
@@ -260,5 +251,11 @@ td{
     height: auto;
     position: relative;
     margin: 5px; 
+}
+
+
+#twitterimage {
+    height: 100%;
+    width: auto;
 }
 
