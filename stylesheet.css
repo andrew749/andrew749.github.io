@@ -159,10 +159,9 @@ jumbotron{
 td{
     padding:10px;
 }
-
-
-
-
+.selectednavbutton{
+    background-color: #cacbcb;
+}
 .projectview {
     background-color: rgba(114, 114, 114, 0.37);
     margin-bottom: 20px;
@@ -178,20 +177,10 @@ td{
     position: relative;
     top:50px;
     margin: 0 auto;
-    
-}
 
-.selectednavbutton{
-    background-color: #cacbcb;
 }
 .textspamimage {
     float:right;
-}
-
-.playimage {
-    width: 50%;
-    float: left;
-    margin: 5px;
 }
 
 .projectbody {
@@ -265,16 +254,11 @@ td{
     box-shadow: 1px 2px 1px #000;
 }
 
-.heartrateimage {
+.projectimage{
     float :left;
-    width: 50%;
-margin: 5px;    
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 5px; 
 }
 
-
-
-
-
-.textmetricimage {
-    float: left;
-}
