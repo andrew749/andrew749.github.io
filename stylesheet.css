@@ -34,7 +34,7 @@ h1{
 img{
     position: relative;
     max-width: 100%;
-        height:auto;
+    height:auto;
 }
 
 .mainimage{
@@ -76,12 +76,13 @@ jumbotron{
     height: 512px;
     margin: 5px ;
     left:0px;
+    margin-bottom: 10px;
 }
 
 .platformsexplanation{
     display:inline-block;
     padding-left:2em;
-    
+
     position: relative;
     text-align: justify;
     vertical-align: top;
@@ -128,7 +129,7 @@ jumbotron{
     right: 30px;
     bottom: 100px;
     margin: auto;
-        box-shadow: 1px 1px 5px #000;
+    box-shadow: 1px 1px 5px #000;
 
 }
 .floatingbutton:hover{
@@ -168,7 +169,7 @@ td{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.33);
     margin-bottom: 20px;
-        box-shadow: 5px 5px 10px #000;
+    box-shadow: 5px 5px 10px #000;
 
 }
 
@@ -205,7 +206,7 @@ td{
 }
 
 .playcontent {
-   float: right;
+    float: right;
 }
 
 @media (max-width:1000px){
@@ -216,16 +217,44 @@ td{
 
 
 }
-
-
-
-
 .contactentry {
-    width: 100%;
+    margin: 10px;
+    height: 300px;
+    position: relative;
 }
 
 
-
-.twitter-follow-button {
+.contactmethods{
+    vertical-align: middle;
+    margin: 0 auto;
+    height: 300px;
     position: relative;
+
+}
+.github {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+left: 35%;    
+}
+.githubbackground{
+    background-image: url(Images/github.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+.github img{
+display: block;
+}
+.linkedin{
+    position: relative;
+    background-color: #fff;
+
+}
+.twitter{ 
+    background-color: #fff;
+
 }
