@@ -33,10 +33,14 @@ h1{
 
 img{
     position: relative;
-    max-width: 100%
+    max-width: 100%;
         height:auto;
 }
 
+.mainimage{
+    box-shadow: 5px 5px 10px #000;
+
+}
 .jumbotron-image{
     position:relative;
     height:auto;
@@ -124,6 +128,8 @@ jumbotron{
     right: 30px;
     bottom: 100px;
     margin: auto;
+        box-shadow: 1px 1px 5px #000;
+
 }
 .floatingbutton:hover{
     background-color: #80FFFF;
