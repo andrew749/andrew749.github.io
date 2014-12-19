@@ -235,19 +235,19 @@ td{
     display: inline-block;
     position: absolute;
     top: 30%;
-left: 35%;    
+    left: 35%;    
 }
 .githubbackground{
     background-image: url(Images/github.gif);
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative;
+    position:relative;
     height: 100%;
     width: 100%;
 
 }
 .github img{
-display: block;
+    display: block;
 }
 .linkedin{
     position: relative;
@@ -256,6 +256,7 @@ display: block;
 }
 .twitter{ 
     background-color: #fff;
+    position: relative;
 
 }
 .navbarshadow {

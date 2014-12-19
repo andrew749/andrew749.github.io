@@ -42,7 +42,7 @@ $(document).ready(function(){
     });
     function clickHandler(id){
         console.log(id);
-        $('html, body').animate({scrollTop: $(id).offset().top-100}, 2000);
+        $('html, body').animate({scrollTop: $(id).offset().top-100}, 500);
     }
     function purgeClass(){
         $("#aboutbutton").removeClass("selectednavbutton");
