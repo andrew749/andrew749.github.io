@@ -23,7 +23,7 @@ h1{
 }
 .background{
     background-color: #B6BFBF;
-    height: 100%;
+
 }
 .menubutton:hover{
     transition: opacity 1s ease-in-out;
@@ -75,7 +75,7 @@ jumbotron{
 .platformsexplanation{
     display:inline-block;
     padding-left:2em;
-    width:50%;
+    
     position: relative;
     text-align: justify;
     vertical-align: top;
@@ -138,11 +138,11 @@ jumbotron{
     margin:auto;
     display:block;
     top:10%;
-    
+
     margin: auto;
     font-family:'Open Sans Condensed', sans-serif;
     font-size:200%;
- 
+
 }
 .contacthide{
     display:none;
@@ -172,19 +172,13 @@ td{
 .selectednavbutton{
     background-color: #cacbcb;
 }
-
-
-
-
 .textspamimage {
     float:right;
 }
 
 .playimage {
-    float: left;
-    position: relative;
-    min-height: 100px;
     height: 512px;
+    float: left;
 }
 
 .projectbody {
@@ -198,4 +192,30 @@ td{
 
 #contactinfo {
     margin: auto;
+}
+
+.playcontent {
+   float: right;
+}
+
+@media (max-width:1000px){
+    .playcontent{
+        display: block;
+        float: none;
+    }
+
+
+}
+
+
+
+
+.contactentry {
+    width: 100%;
+}
+
+
+
+.twitter-follow-button {
+    position: relative;
 }
