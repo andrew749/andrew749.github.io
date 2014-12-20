@@ -253,7 +253,7 @@ td{
     height: 100%;
     position: relative;
     top:50px;
-    }
+}
 #textspamimage {
     float:right;
 }
@@ -263,18 +263,15 @@ td{
     position: relative;
 }
 
-.playcontent {
-    float: right;
-}
 
-@media (max-width:1000px){
-.projectimage{
-    float: none;
-    display: block;
-    height: 20%;
-    position: relative;
-}
-
+@media (max-width:976px){
+    .projectimage{
+        float: none;
+    }
+    .projectdescription{
+        display: block;
+    
+    }
 }
 .projectimage{
     float :left;
@@ -284,3 +281,8 @@ td{
     margin: 10px; 
 }
 
+
+.projectdescription {
+    display: inline;
+    
+}
