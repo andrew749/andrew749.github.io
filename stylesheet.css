@@ -1,3 +1,8 @@
+/*Styles for the first page
+Styles the index page
+
+
+*/
 .mainsection{
     position: ab;
     min-height: 20em;
@@ -109,7 +114,6 @@ jumbotron{
 
 #contact{
     margin-top: 30px;
-
 } 
 
 
@@ -118,7 +122,9 @@ jumbotron{
     position: relative;
     width: 100%;
 }
-/*Floating action buttons*/
+
+
+/*Floating action button*/
 .floatingbutton{
     width:100px;
     height: 100px;
@@ -135,7 +141,13 @@ jumbotron{
     background-color: #80FFFF;
     z-index: 100;
 }
+/*End floating button*/
 
+
+/*Contact card styles
+Popup business card on first page
+
+*/
 .contactcardlayout{
     position:fixed;
     padding:20px;
@@ -155,38 +167,10 @@ jumbotron{
 .contacthide{
     display:none;
 }
+
 td{
     padding:10px;
 }
-.selectednavbutton{
-    background-color: #cacbcb;
-}
-.projectview {
-    background-color: rgba(114, 114, 114, 0.37);
-    margin-bottom: 20px;
-    height: auto;
-    box-shadow: 5px 5px 10px #000;
-    margin-left: 2%;
-
-}
-
-.projectcontainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top:50px;
-    margin: 0 auto;
-
-}
-.textspamimage {
-    float:right;
-}
-
-.projectbody {
-    width: 100%;
-    position: relative;
-}
-
 .cardinfo {
     text-align: right;
 }
@@ -195,31 +179,25 @@ td{
     margin: auto;
 }
 
-.playcontent {
-    float: right;
-}
-
-@media (max-width:1000px){
-    .playcontent{
-        display: block;
-        float: none;
-    }
-
-
-}
 .contactentry {
     margin: 10px;
     height: 300px;
     position: relative;
 }
-
-
 .contactmethods{
     vertical-align: middle;
     margin: 0 auto;
     height: 300px;
     position: relative;
 
+}
+
+/*End contact*/
+
+
+
+.selectednavbutton{
+    background-color: #cacbcb;
 }
 
 .githubbackground{
@@ -245,17 +223,64 @@ td{
     box-shadow: 1px 2px 1px #000;
 }
 
-.projectimage{
-    float :left;
-    width: auto;
-    height: auto;
-    position: relative;
-    margin: 5px; 
-}
-
-
 #twitterimage {
     height: 100%;
     width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/*Styles for the projects page*/
+
+.projectview {
+    background-color: rgba(114, 114, 114, 0.37);
+    height: auto;
+    min-height: 400px;
+    position: relative;
+    box-shadow: 5px 5px 10px #000;
+    margin: 10 20;
+}
+
+.projectcontainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top:50px;
+    }
+#textspamimage {
+    float:right;
+}
+
+.projectbody {
+    width: 100%;
+    position: relative;
+}
+
+.playcontent {
+    float: right;
+}
+
+@media (max-width:1000px){
+.projectimage{
+    float: none;
+    display: block;
+    height: 20%;
+    position: relative;
+}
+
+}
+.projectimage{
+    float :left;
+    height: 30%;
+    width: auto;
+    position: relative;
+    margin: 10px; 
 }
 
