@@ -73,18 +73,24 @@ jumbotron{
     max-width:100%;
     height: auto;
 }
-.imagecarousel{
+div .imagecarousel{
     cursor: move;
-    width:512px;
-    height: 512px;;
+    height: 512px;
+    max-width: 512px;
+    min-width: 100px;
+    text-align: center;
     display: block;
-    margin: 0 auto;
+    margin:0 auto;
+    position: relative;
+    width: 100%;
 }
 
 .platformsexplanation{
-    display:inline;
+    display:block;
     padding-left:2em;
     width: auto;
+    height: auto;
+    position: relative;
     text-align: justify;
     vertical-align: middle;
 
@@ -100,8 +106,8 @@ jumbotron{
     }
 
     .imagecarousel{
-        text-align: center;
-        margin: auto;
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
@@ -282,4 +288,9 @@ td{
 .projectdescription {
     display: inline;
     
+}
+
+div .linkedindiv {
+    width: 50%;
+    margin:0 auto;
 }
