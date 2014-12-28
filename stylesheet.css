@@ -4,7 +4,6 @@ Styles the index page
 
 */
 .mainsection{
-    position: ab;
     min-height: 20em;
     height: auto;
     background-color: #E9ECEC;
@@ -77,20 +76,15 @@ jumbotron{
 .imagecarousel{
     cursor: move;
     width:512px;
-    height: 512px;
-    margin: 5px;
-    left:0px;
-    margin-bottom: 10px;
-    float: left;
+    height: 512px;;
+    display: block;
+    margin: 0 auto;
 }
 
 .platformsexplanation{
-    display:inline-block;
+    display:inline;
     padding-left:2em;
-
-    position: absolute;
-    top: 0;
-    left: 40%;
+    width: auto;
     text-align: justify;
     vertical-align: middle;
 
@@ -187,7 +181,7 @@ td{
 .contactmethods{
     vertical-align: middle;
     margin: 0 auto;
-    height: 300px;
+    height: auto;
     position: relative;
 
 }
@@ -217,15 +211,18 @@ td{
 }
 .twitter{ 
     position: relative;
-
+    height: auto;
 }
 .navbarshadow {
     box-shadow: 1px 2px 1px #000;
 }
 
 #twitterimage {
-    height: 100%;
-    width: auto;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-image: url("https://g.twimg.com/Twitter_logo_blue.png");
+    background-size: contain;
+
 }
 
 
