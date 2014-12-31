@@ -283,7 +283,6 @@ div .linkedindiv {
     }
     .imagewrapper{
         clear:both;
-        overflow: auto;
         height: auto;
         max-width: 50%;
     }
