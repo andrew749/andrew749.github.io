@@ -109,7 +109,7 @@ div .imagecarousel{
         margin: 0 auto;
         width: 100%;
     }
-    
+
 }
 
 
@@ -253,6 +253,8 @@ div .linkedindiv {
 
 #textspamimage {
     float:right;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .projectbody {
@@ -262,12 +264,18 @@ div .linkedindiv {
 
 
 @media (max-width:976px){
-    .projectimage{
-        float: none;
+    #textspamimage{
+        clear: both;
         display: block;
-        width: auto;
+        float: none;
+    }
+    .projectimage{
+        display:block;
+        margin:0 auto;
+        float: none;
         clear: both;
     }
+  
     .projectdescription{
         display: block;
         margin: 10px;
@@ -275,13 +283,20 @@ div .linkedindiv {
         width: auto;
     }
     div .imagewrapper{
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
+        clear: both;
+        text-align: center;
+    }
+    .imagewrapper::after {
+        content: "";
+        display: table;
+        clear: both;
+        text-align: center;
     }
     .imagewrapper{
         clear:both;
         height: auto;
-        max-width: 50%;
     }
 }
 .projectimage{
@@ -303,3 +318,5 @@ div .linkedindiv {
     width: 50%;
     height: auto;
 }
+
+
