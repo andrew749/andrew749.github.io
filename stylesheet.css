@@ -225,7 +225,10 @@ td{
 
 }
 
-
+div .linkedindiv {
+    width: 50%;
+    margin:0 auto;
+}
 
 
 
@@ -235,22 +238,22 @@ td{
 
 
 /*Styles for the projects page*/
+.projectcontainer {
+    width: auto;
+    height: auto;
+    position: relative;
+    top:50px;
+}
 
 .projectview {
     background-color: rgba(114, 114, 114, 0.37);
     height: auto;
-    min-height: 400px;
     position: relative;
     box-shadow: 5px 5px 10px #000;
     margin: 10 20;
 }
 
-.projectcontainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top:50px;
-}
+
 #textspamimage {
     float:right;
 }
@@ -264,27 +267,43 @@ td{
 @media (max-width:976px){
     .projectimage{
         float: none;
+        display: block;
+        width: auto;
+        clear: both;
     }
     .projectdescription{
         display: block;
-    
+        margin: 10px;
+        float: none;
+        width: auto;
+    }
+    div .imagewrapper{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .imagewrapper{
+        clear:both;
+        overflow: auto;
+        height: auto;
+        max-width: 50%;
     }
 }
 .projectimage{
     float :left;
-    height: 30%;
     width: auto;
-    position: relative;
+    display: inline-block;
     margin: 10px; 
 }
 
 
 .projectdescription {
     display: inline;
-    
+    margin: 10px;
 }
 
-div .linkedindiv {
+
+
+.imagewrapper {
     width: 50%;
-    margin:0 auto;
+    height: auto;
 }
