@@ -15,7 +15,7 @@
         <script src="script.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
-    <body class="projectbody">
+    <body class="projectbody container-fluid">
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -33,7 +33,7 @@
                         <li id="aboutbutton" class="menubutton"><a href="index.html#about">About</a></li>
                         <li id="contactbutton" class="menubutton"><a  href="index.html#contact">Contact</a></li>
                         <li id="projects" class="menubutton selectednavbutton"><a href="projects.html">Projects</a></li>
-                       < li class="menubutton"><a href="https://www.dropbox.com/s/tt4k0lqyss74hf2/Andrew_Codispoti_Resume.docx?dl=0">Resume</a></li>
+                        <li class="menubutton"><a href="https://www.dropbox.com/s/tt4k0lqyss74hf2/Andrew_Codispoti_Resume.docx?dl=0">Resume</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -49,7 +49,7 @@
         <!--        will hold all projects which have the same class but different id-->
         <div class="projectcontainer">
             <div class="centerprojectpage">
-                <div class="projectview center-block col-md-11" id="textspam">
+                <div class="projectview center-block col-md-12" id="textspam">
                     <h1>TextSpam</h1>
                     <img  id="textspamimage" src="https://raw.githubusercontent.com/andrew749/TextSpam/master/TextSpam/res/drawable-hdpi/textspamlogo.png"/>
                     <h3> The most popular batch messaging application on the Google Play Store. Ever.</h3> 
@@ -61,86 +61,106 @@
                     <p>Whether you need to reach 2 people or 10 million people, TextSpam is the right tool for you. Imagine a world where all your customers are at a button click away. TextSpam makes this possible.</p>                        </div>
 
 
+                <div class="row">
+                    <div class="col-lg-10" style="float: none; margin: 0 auto;">
 
-                <div class="projectview col-md-5 " id="play">
-                    <h1>Play</h1>
-                    <h3>Play any song. From any artist. Anywhere.</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-                        <img class="projectimage" src="http://www.play-app.co/playlogo.png"/>
+
+                        <div class="projectview col-md-5 " id="play">
+                            <h1>Play</h1>
+                            <h3>Play any song. From any artist. Anywhere.</h3>
+                            <br />
+                            <br />
+                            <div class="imagewrapper">
+                                <img class="projectimage" src="http://www.play-app.co/playlogo.png"/>
+                            </div>
+                            <div class="projectdescription">Like PopcornTime but for songs. Play uses a growing repository of sources to search and play music. All while remaining DMCA compliant. If you think of it Play it.</div>
+                        </div>
+                        <div class="projectview col-md-5" id="heartratemonitor">
+                            <h1>HeartRateMonitor</h1>
+                            <h3>Measure your heart rate anytime, anywhere.</h3>
+                            <br />
+                            <br />
+                            <div class="imagewrapper">
+                                <img class="projectimage" src="Images/heartrate.jpeg"/>
+                            </div>
+                            <div class="projectdescription"> Using some clever image processing algorithm, HeartRateMonitor accurately tracks one's heart rate and creates a moving average with sampled data. This data is then graphed with respect to time to show trends in the rate over a short period of time. (Created for Biology SBI4U)</div>
+
+                        </div>
                     </div>
-                    <div class="projectdescription">Like PopcornTime but for songs. Play uses a growing repository of sources to search and play music. All while remaining DMCA compliant. If you think of it Play it.</div>
+                    <div class="row">
+                        <div class="col-lg-10" style="float: none; margin: 0 auto;">
+
+                            <div class="projectview col-md-5 center-block" id="textmetrics">
+                                <h1>TextMetrics</h1>
+                                <h3>Analyze your texting habits.</h3>
+                                <br />
+                                <br />
+                                <div class="imagewrapper">
+                                    <img class="projectimage" src="https://lh4.ggpht.com/QphrOY7RCILYpElm82apYb6fYhPDEa9HERtYMv0iZFqNkN5lcZKsXFXGEN1sR6Td5CO5=w300-rw"/>
+                                </div>
+                                <div class="projectdescription">  TextMetrics creates a visual representation of who you text most often. The application scans all of a users messages and then displays a pie chart with a breakdown with respect to how many messages are sent to and from each contact.(Created for Computer Science ICS4U)</div>
+
+                            </div>
+
+                            <div class="projectview col-md-5" id="myounlock">
+                                <h1>MyoMove</h1>
+                                <h3>A gesture suite for the Myo wearable device.</h3>
+                                <br />
+                                <br />
+                                <div class="imagewrapper">
+
+                                    <img class="projectimage" src="Images/myomove.png"/>
+                                </div>
+
+                                <div class="projectdescription "> MyoMove adds several useful features to the Myo through using several easy to perform gestures. MyoMove can control music playback as well as the lock state of the phone. The application uses a combination of gesture tracking on the Myo and accelerometer data from the phone to determine whether or not to unlock the phone.(Created for Hack the North 2014)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10" style="float: none; margin: 0 auto;">
+
+                            <div class="projectview col-md-5" id="hive">
+                                <h1>Hive</h1>
+                                <h3>A Social Gathering Application</h3>
+                                <br />
+                                <br />
+                                <div class="imagewrapper">
+
+                                    <img class="projectimage" src="https://raw.githubusercontent.com/andrew749/Hive/master/Hive/app/src/main/res/drawable-hdpi/ic_logo.png"/>
+                                </div>
+                                <div class="projectdescription">  Hive lets you see nearby events from a crowdsourced database. When the backend is running, the service allows user to submit events to the central database and for any user to see these events if they are withing a certain radius of the event geographically. (Created for YHack 2014)</div>
+                            </div>
+                            <div class="projectview col-md-5" id="secretsauce">
+                                <h1>SecretSauce</h1>
+                                <h3>An anonymous Dropbox.</h3>
+                                <br />
+                                <br />
+                                <div class="imagewrapper">
+
+                                    <img class="projectimage" src="http://www.themijachronicles.com/wp-content/uploads/2010/06/sauce_1.jpg"/>
+                                </div>
+                                <div class="projectdescription"> SecretSauce is a dropbox alternative, presenting shared files in way similar to reddit. The application centralized file sharing with a emphasis on privacy; there are no user accounts, no cookies, and no traces of a user having used the service. All for the sake of privacy. The application utilizes flask and can be run on practically any network connected system. (Created for SEHackDay 2014)</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10" style="float: none; margin: 0 auto;">
+
+                            <div class="projectview col-md-5" id="scribblerplaystwitch">
+                                <h1>ScribblerPlaysTwitch</h1>
+                                <h3>A Multiplayer Collaborative gaming experience.</h3>
+                                <br />
+                                <br />
+                                <div class="imagewrapper">
+
+                                    <img class="projectimage" src="http://www.parallax.com/sites/default/files/styles/full-size-product/public/28136a.png?itok=Kx3A_9vh"/>
+                                </div>
+                                <div class="projectdescription">ScribblerPlaysTwitch is exactly what the name suggests. Twitch plays but for the a scribbler robot, all running on a fluke board. Using various web technologies, such as sockets, users can communicate with one another and submit commands to the robot from anywhere in the world. They can also get a live video feed from the robot as well as from one more webcam to allow the users to get a good overview of the surrounding of the robot. The project also utilizes OpenCV for some of the image processing tasks. Users can play with anyone around the world and control the scribbler robot to complete various tasks. With a seamless interface coupled with exciting gameplay you'll be "Hooked" on the "Feeling" that the game gives you.
+                                </div> </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="projectview col-md-5" id="heartratemonitor">
-                    <h1>HeartRateMonitor</h1>
-                    <h3>Measure your heart rate anytime, anywhere.</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-                        <img class="projectimage" src="Images/heartrate.jpeg"/>
-                    </div>
-                    <div class="projectdescription"> Using some clever image processing algorithm, HeartRateMonitor accurately tracks one's heart rate and creates a moving average with sampled data. This data is then graphed with respect to time to show trends in the rate over a short period of time. (Created for Biology SBI4U)</div>
-
-                </div>
-                <div class="projectview col-md-5 center-block" id="textmetrics">
-                    <h1>TextMetrics</h1>
-                    <h3>Analyze your texting habits.</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-                        <img class="projectimage" src="https://lh4.ggpht.com/QphrOY7RCILYpElm82apYb6fYhPDEa9HERtYMv0iZFqNkN5lcZKsXFXGEN1sR6Td5CO5=w300-rw"/>
-                    </div>
-                    <div class="projectdescription">  TextMetrics creates a visual representation of who you text most often. The application scans all of a users messages and then displays a pie chart with a breakdown with respect to how many messages are sent to and from each contact.(Created for Computer Science ICS4U)</div>
-
-                </div>
-                <div class="projectview col-md-5" id="myounlock">
-                    <h1>MyoMove</h1>
-                    <h3>A gesture suite for the Myo wearable device.</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-
-                        <img class="projectimage" src="Images/myomove.png"/>
-                    </div>
-
-                    <div class="projectdescription "> MyoMove adds several useful features to the Myo through using several easy to perform gestures. MyoMove can control music playback as well as the lock state of the phone. The application uses a combination of gesture tracking on the Myo and accelerometer data from the phone to determine whether or not to unlock the phone.(Created for Hack the North 2014)</div>
-                </div>
-                <div class="projectview col-md-5" id="hive">
-                    <h1>Hive</h1>
-                    <h3>A Social Gathering Application</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-
-                        <img class="projectimage" src="https://raw.githubusercontent.com/andrew749/Hive/master/Hive/app/src/main/res/drawable-hdpi/ic_logo.png"/>
-                    </div>
-                    <div class="projectdescription">  Hive lets you see nearby events from a crowdsourced database. When the backend is running, the service allows user to submit events to the central database and for any user to see these events if they are withing a certain radius of the event geographically. (Created for YHack 2014)</div>
-                </div>
-                <div class="projectview col-md-5" id="secretsauce">
-                    <h1>SecretSauce</h1>
-                    <h3>An anonymous Dropbox.</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-
-                        <img class="projectimage" src="http://www.themijachronicles.com/wp-content/uploads/2010/06/sauce_1.jpg"/>
-                    </div>
-                    <div class="projectdescription"> SecretSauce is a dropbox alternative, presenting shared files in way similar to reddit. The application centralized file sharing with a emphasis on privacy; there are no user accounts, no cookies, and no traces of a user having used the service. All for the sake of privacy. The application utilizes flask and can be run on practically any network connected system. (Created for SEHackDay 2014)</div>
-
-                </div>
-                <div class="projectview col-md-5" id="scribblerplaystwitch">
-                    <h1>ScribblerPlaysTwitch</h1>
-                    <h3>A Multiplayer Collaborative gaming experience.</h3>
-                    <br />
-                    <br />
-                    <div class="imagewrapper">
-
-                        <img class="projectimage" src="http://www.parallax.com/sites/default/files/styles/full-size-product/public/28136a.png?itok=Kx3A_9vh"/>
-                    </div>
-                    <div class="projectdescription">ScribblerPlaysTwitch is exactly what the name suggests. Twitch plays but for the a scribbler robot, all running on a fluke board. Using various web technologies, such as sockets, users can communicate with one another and submit commands to the robot from anywhere in the world. They can also get a live video feed from the robot as well as from one more webcam to allow the users to get a good overview of the surrounding of the robot. The project also utilizes OpenCV for some of the image processing tasks. Users can play with anyone around the world and control the scribbler robot to complete various tasks. With a seamless interface coupled with exciting gameplay you'll be "Hooked" on the "Feeling" that the game gives you.
-                    </div> </div>
             </div>
-        </div>
-    </body>
-</html>
+            </body>
+        </html>
