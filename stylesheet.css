@@ -322,3 +322,7 @@ div .linkedindiv {
 }
 
 
+
+.row {
+    clear:both;
+}
