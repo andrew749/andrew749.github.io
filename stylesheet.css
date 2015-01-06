@@ -12,6 +12,10 @@ Styles the index page
     box-shadow: 1px 1px 10px #000;
 
 }
+p{
+ padding: 1em;
+
+}
 body{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
@@ -43,7 +47,7 @@ img{
 
 .mainimage{
     box-shadow: 5px 5px 10px #000;
-
+    width:70%;
 }
 .jumbotron-image{
     position:relative;
@@ -95,7 +99,12 @@ div .imagecarousel{
     vertical-align: middle;
 
 }
-
+.whoamiimage {
+    height: 50vh;
+    float: right;
+    display: block;
+    padding: 5vh;
+}
 @media (max-width:1000px){
     .platformsexplanation{
         display: block;
@@ -108,6 +117,14 @@ div .imagecarousel{
     .imagecarousel{
         margin: 0 auto;
         width: 100%;
+    }
+    .mainimage{
+        width: 100%;
+    }
+    .whoamiimage{
+        display: block;
+        float: none;
+        clear: both;
     }
 
 }
@@ -243,7 +260,7 @@ div .linkedindiv {
 }
 
 .projectview {
-    background-color: rgba(114, 114, 114, 0.37);
+    background-color: #E9ECEC;
     height: auto;
     position: relative;
     box-shadow: 5px 5px 10px #000;
@@ -275,7 +292,7 @@ div .linkedindiv {
         float: none;
         clear: both;
     }
-  
+
     .projectdescription{
         display: block;
         margin: 10px;
@@ -326,3 +343,5 @@ div .linkedindiv {
 .row {
     clear:both;
 }
+
+
