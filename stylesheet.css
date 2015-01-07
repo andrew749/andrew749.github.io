@@ -13,7 +13,11 @@ Styles the index page
 
 }
 p{
- padding: 1em;
+    padding: 1em;
+
+}
+h3{
+    font-weight: bold;
 
 }
 body{
@@ -105,7 +109,13 @@ div .imagecarousel{
     display: block;
     padding: 5vh;
 }
+
+
 @media (max-width:1000px){
+      .contactcardlayout{
+        font-size: 1em;
+        padding: 5px;
+    }
     .platformsexplanation{
         display: block;
         width:100%;
@@ -113,7 +123,6 @@ div .imagecarousel{
         left:0;
 
     }
-
     .imagecarousel{
         margin: 0 auto;
         width: 100%;
@@ -126,7 +135,6 @@ div .imagecarousel{
         float: none;
         clear: both;
     }
-
 }
 
 
@@ -176,10 +184,7 @@ Popup business card on first page
     margin:auto;
     display:block;
     top:10%;
-
-    margin: auto;
     font-family:'Open Sans Condensed', sans-serif;
-    font-size:200%;
 
 }
 .contacthide{
@@ -195,6 +200,7 @@ td{
 
 #contactinfo {
     margin: auto;
+    font-size:2em;
 }
 
 
