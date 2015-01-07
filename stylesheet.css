@@ -352,10 +352,25 @@ div .linkedindiv {
     clear:both;
 }
 
+.hidecard{
+    opacity: 0;
+}
+.animation{
 
-@keyframes cardinanimation{
-    from{
-        transform: translateY(300);}
-    to{transform:translateY(0);}
+    -webkit-animation: cardinanimation .5s ease-out;
+
+}
+@-webkit-keyframes cardinanimation{
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 
 }
