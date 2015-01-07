@@ -1,0 +1,30 @@
+.card{
+    height: 200px;
+    width: 30%;
+    background-color: #c3c3c3;
+    display: inline-block;
+    margin: 30px;
+
+}
+.hidecard{
+    opacity: 0;
+}
+.animation{
+
+    -webkit-animation: cardinanimation .5s ease-out;
+
+}
+@-webkit-keyframes cardinanimation{
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
