@@ -5,21 +5,17 @@ $(document).ready(function(){
         this.title=title;
         this.description=description;
         this.image=image;
-
     }
     //inflate the template and append to page
     for (var i in projectids){
         $.ajax({
             type: "GET",
-            url: "http://andrewcodispoti.me/content/"+projectids[i],
+            url: "content/"+projectids[i],
             dataType: "json" ,
             success: function (data) {
+                console.log(data);
                 var items = [];
-                $.each( data, function( key, val ) {
-                    items.push( "<li id='" + key + "'>" + val + "</li>" );
-                    console.log(key+":"+value+"\n");
-                });
-
+                items.push( "<li id='" + data.title + "'>" + data.description + "</li>" );
                 $( "<ul/>", {
                     "class": "my-new-list",
                     html: items.join( "" )
