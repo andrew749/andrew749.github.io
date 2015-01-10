@@ -1,28 +1,28 @@
 $(document).ready(function(){
     var projectids=["play","heartratemonitor","textmetrics","secretsauce","myomove","hive","scribblerplaystwitch"];
     //spec for entry
-    function Entry(title, description, image,subheading){
+    function Entry(title, description, url,subheading){
         this.title=title;
         this.description=description;
-        this.image=image;
+        this.url=url;
         this.subheading=subheading;
     }
-        //inflate the template and append to page
-        for (var i in projectids){
-            $.ajax({
-                type: "GET",
-                url: "content/"+projectids[i],
-                dataType: "json" ,
-                success: function (data) {
-                    console.log(data);
-                    var items = [];
-                    items.push( "<li id='" + data.title + "'>" +data.title+"<br>Subheading:"+data.subheading+"<br> Description:"+ data.description + "</li>" );
-                    $( "<ul/>", {
-                        "class": "my-new-list",
-                        html: items.join( "" )
-                    }).appendTo( "body" );
-                }
-            });
-        }
+    var items = [];
 
-    });
+    //inflate the template and append to page
+    for (var i in projectids){
+        $.ajax({
+            type: "GET",
+            url: "content/"+projectids[i],
+            dataType: "json" ,
+            success: function (data) {
+                console.log(data);
+                var element="<div class=\"projectview col-md-5 \" id=\""+data.title.toLowerCase()+"\"><h1>"+data.title+"</h1><h3>"+data.subheading+"</h3><br /><br /><div class=\"imagewrapper\"><img class=\"projectimage\" src=\""+data.url+"\"/></div><div class=\"projectdescription\"><p>"+data.description+"</p></div></div>"
+                items.push(element);
+                $('#stuff').append(element);
+
+            }
+        });
+    }
+
+});
