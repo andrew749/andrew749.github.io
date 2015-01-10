@@ -1,0 +1,5 @@
+{
+"title":"Hive",
+"url":"https://raw.githubusercontent.com/andrew749/Hive/master/Hive/app/src/main/res/drawable-hdpi/ic_logo.png",
+"description":"Hive lets you see nearby events from a crowdsourced database. When the backend is running, the service allows user to submit events to the central database and for any user to see these events if they are withing a certain radius of the event geographically. (Created for YHack 2014)"
+}
