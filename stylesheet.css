@@ -360,9 +360,28 @@ div .linkedindiv {
     -webkit-animation: cardinanimation .5s ease-out;
 
 }
+.animation_slide_in{
+
+    -webkit-animation: cardinanimationside .5s ease-out;
+
+}
 @-webkit-keyframes cardinanimation{
     0%{
         transform: translateY(300px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+@-webkit-keyframes cardinanimationside{
+    0%{
+        transform: translateX(-500px);
         opacity: 0;
     }
     50%{
