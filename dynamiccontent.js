@@ -9,24 +9,23 @@ $(document).ready(function(){
     }
     //inflate the template and append to page
     for (var i in projectids){
-        $.getJSON( "http://andrewcodispoti.me/content/"+projectids[i], function( data ) {
-            var items = [];
-            $.each( data, function( key, val ) {
-                items.push( "<li id='" + key + "'>" + val + "</li>" );
-                console.log(key+":"+value+"\n");
-            });
+        $.ajax({
+            type: "GET",
+            url: "http://andrewcodispoti.me/content/"+projectids[i],
+            dataType: "json" ,
+            success: function (data) {
+                var items = [];
+                $.each( data, function( key, val ) {
+                    items.push( "<li id='" + key + "'>" + val + "</li>" );
+                    console.log(key+":"+value+"\n");
+                });
 
-            $( "<ul/>", {
-                "class": "my-new-list",
-                html: items.join( "" )
-            }).appendTo( "body" );
-        }).done(function(){
-        console.log("done");
-        }).fail(function(){
-        
-        console.log("failed");
+                $( "<ul/>", {
+                    "class": "my-new-list",
+                    html: items.join( "" )
+                }).appendTo( "body" );
+            }
         });
-
     }
 
 });
