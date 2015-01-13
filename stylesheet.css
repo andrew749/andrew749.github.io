@@ -141,7 +141,7 @@ div .imagecarousel{
 
 #contact{
     margin-top: 30px;
-} 
+}
 
 
 .projectholder{
@@ -274,9 +274,8 @@ div .linkedindiv {
     position: relative;
     box-shadow: 5px 5px 10px #000;
     margin: 10 20;
-    animation: cardinanimation 4s linear;
+    
 }
-
 
 #textspamimage {
     float:right;
@@ -332,7 +331,7 @@ div .linkedindiv {
     float :left;
     width: auto;
     display: inline-block;
-    margin: 10px; 
+    margin: 10px;
 }
 
 
@@ -358,17 +357,17 @@ div .linkedindiv {
     opacity: 0;
 }
 .animation{
-
     -webkit-animation: cardinanimation .5s ease-out;
-
+    -moz-animation: cardinanimation .5s ease-out;
 }
 .animation_slide_in{
 
     -webkit-animation: cardinanimationside .5s ease-out;
-
+    -moz-animation:cardinanimationside .5s ease-out;
 }
 .contacthide{
     -webkit-animation: cardinanimationsideout .5s ease-in forwards;
+    -moz-animation: cardinanimationsideout .5s ease-in forwards;
 }
 .contacthideinitial{
     display:none;
@@ -402,6 +401,48 @@ div .linkedindiv {
 
 }
 @-webkit-keyframes cardinanimationsideout{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+
+}
+@-moz-keyframes cardinanimation{
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+@-moz-keyframes cardinanimationside{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+@-moz-keyframes cardinanimationsideout{
     0%{
         transform: translateX(0px);
         opacity: 1;
