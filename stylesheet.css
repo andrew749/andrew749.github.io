@@ -188,9 +188,11 @@ Popup business card on first page
     font-family:'Open Sans Condensed', sans-serif;
 
 }
+/*
 .contacthide{
-    display:none;
+display:none;
 }
+*/
 
 td{
     padding:10px;
@@ -365,6 +367,12 @@ div .linkedindiv {
     -webkit-animation: cardinanimationside .5s ease-out;
 
 }
+.contacthide{
+    -webkit-animation: cardinanimationsideout .5s ease-in forwards;
+}
+.contacthideinitial{
+    display:none;
+}
 @-webkit-keyframes cardinanimation{
     0%{
         transform: translateY(300px);
@@ -390,6 +398,20 @@ div .linkedindiv {
     100%{
         transform: translateY(0);
         opacity: 1;
+    }
+
+}
+@-webkit-keyframes cardinanimationsideout{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        transform: translateY(-500px);
+        opacity: 0;
     }
 
 }

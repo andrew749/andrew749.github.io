@@ -33,7 +33,17 @@ $(document).ready(function(){
         }
     });
     $("#contactfab").click(function(){
-        $(".contactcardlayout").toggleClass("contacthide");
+        if($(".contactcardlayout").hasClass("contacthideinitial")){
+            $(".contactcardlayout").removeClass("contacthideinitial");
+
+        }
+        if(!$(".contactcardlayout").hasClass("contacthide")){
+            $(".contactcardlayout").addClass("contacthide");
+
+        }else{
+            $(".contactcardlayout").removeClass("contacthide").addClass("animation_slide_in");
+        }
+
 
     });
     $("#emailcell").click(function(){
