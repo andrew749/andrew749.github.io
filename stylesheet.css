@@ -111,6 +111,15 @@ div .imagecarousel{
     padding: 5vh;
 }
 
+.skillslist{
+    display: table;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.skillslistcontainer{
+    width: 100%;
+    margin: 0 auto;
+}
 
 @media (max-width:1000px){
     .contactcardlayout{
@@ -274,7 +283,7 @@ div .linkedindiv {
     position: relative;
     box-shadow: 5px 5px 10px #000;
     margin: 10 20;
-    
+
 }
 
 #textspamimage {
