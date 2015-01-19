@@ -80,23 +80,12 @@ jumbotron{
     max-width:100%;
     height: auto;
 }
-div .imagecarousel{
-    cursor: move;
-    height: 512px;
-    max-width: 512px;
-    min-width: 100px;
-    text-align: center;
-    display: block;
-    margin:0 auto;
-    position: relative;
-    width: 100%;
-}
-
 .platformsexplanation{
     display:block;
     padding-left:2em;
     width: auto;
     height: auto;
+    font-size: 1em;
     position: relative;
     text-align: justify;
     vertical-align: middle;
@@ -118,34 +107,6 @@ div .imagecarousel{
     width: 100%;
     margin: 0 auto;
 }
-
-@media (max-width:1000px){
-    .contactcardlayout{
-        font-size: 1em;
-        padding: 5px;
-    }
-    .platformsexplanation{
-        display: block;
-        width:100%;
-        position: relative;
-        left:0;
-
-    }
-    .imagecarousel{
-        margin: 0 auto;
-        width: 100%;
-    }
-    .mainimage{
-        width: 100%;
-    }
-    .whoamiimage{
-        display: block;
-        float: none;
-        clear: both;
-    }
-}
-
-
 #contact{
     margin-top: 30px;
 }
@@ -189,7 +150,6 @@ Popup business card on first page
     background-color:rgb(252, 249, 229);
     z-index:1000;
     box-shadow: 10px 10px 5px #000;
-    margin:auto;
     display:block;
     top:10%;
     font-family:'Open Sans Condensed', sans-serif;
@@ -225,7 +185,7 @@ td{
 }
 
 .githubbackground{
-    background-image: url(Images/github.gif);
+    background-image: url(Images/github.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 200px;
@@ -333,18 +293,43 @@ div .linkedindiv {
     div .img-responsive{
         margin:0 auto;
     }
+     div .contactcardlayout{
+        font-size: 1em;
+        padding: 5px;
+        margin: 0 auto;
+    }
+    .platformsexplanation{
+        display: block;
+        width:100%;
+        position: relative;
+        left:0;
+        padding-left: 0em;
+
+    }
+    #jumbotroncaption {
+        text-align: center;
+        padding: 0em;
+    }
+    .mainimage{
+        width: 100%;
+    }
+    .whoamiimage{
+        display: block;
+        float: none;
+        clear: both;
+    }
 }
-.projectimage{
-    float :left;
-    width: auto;
-    display: inline-block;
-    margin: 10px;
+div .projectimage{
+    width: 100%;
+    float: left;
+    padding: 20px;
 }
 
 
 .projectdescription {
     display: inline;
-    margin: 10px;
+    padding: 10px;
+    font-size: 1.25em;
 }
 
 
@@ -475,4 +460,16 @@ div .linkedindiv {
 
 .language-container {
     padding-top: 2em;
+}
+
+#androidimg {
+    max-height: 30em;
+}
+
+div div .desktopsplit {
+    vertical-align: middle;
+}
+
+.other-container {
+    height: auto;
 }
