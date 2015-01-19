@@ -4,7 +4,7 @@ Styles the index page
 
 */
 .mainsection{
-    min-height: 20em;
+    min-height: 2em;
     height: auto;
     background-color: #E9ECEC;
     margin: 10px;
@@ -14,8 +14,6 @@ Styles the index page
 }
 p{
     padding: 1em;
-    font-size: 1.25em;
-
 }
 h3{
     font-weight: bold;
@@ -114,7 +112,7 @@ div .imagecarousel{
 .skillslist{
     display: table;
     margin: 0 auto;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 .skillslistcontainer{
     width: 100%;
@@ -464,4 +462,17 @@ div .linkedindiv {
         opacity: 0;
     }
 
+}
+
+#jumbotroncaption {
+    padding-left:1em;
+}
+
+.platformtext {
+    font-size-adjust: auto;
+    font-size: 1.25em;
+}
+
+.language-container {
+    padding-top: 2em;
 }

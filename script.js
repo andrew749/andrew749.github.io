@@ -1,9 +1,6 @@
 $(document).ready(function(){
     //handles the image carousel
-    var options = { $AutoPlay: true };
     var waypoints=[];
-    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-    $("#slider1_container").width("100%");
     //handles the button click to scroll the page
     $(".menubutton").on("click",function (event){
         //code for the event

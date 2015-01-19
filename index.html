@@ -2,16 +2,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <link rel="icon"
               type="image/png"
               href="Images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
+
         <script src="jssor.js"></script>
         <script src="jssor.slider.js"></script>
         <script src="jquery.waypoints.js"></script>
@@ -36,10 +39,10 @@
         <!--
 This is the main page
 -->
-        <div class="navbar navbar-default navbar-fixed-top navbarshadow" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -47,7 +50,7 @@ This is the main page
                     </button>
                     <a class="navbar-brand" href="#">Andrew Codispoti</a>
                 </div>
-                <div class="navbar-collapse collapse navbar-default">
+                <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav">
                         <li id="homebutton" class="selectednavbutton menubutton"><a>Home</a></li>
                         <li id="aboutbutton" class="menubutton"><a >About</a></li>
@@ -57,7 +60,7 @@ This is the main page
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
-        </div>
+        </nav>
 
         <div class="background">
             <div class="contentpage">
@@ -66,12 +69,12 @@ This is the main page
 
                 <div class="jumbotron">
 
-                    <h1 style="text-align:center;">ANDREW CODISPOTI</h1>
+                    <h1 style="text-align:center">ANDREW CODISPOTI</h1>
                     <div class="jumbotron-image-container">
                         <img class="jumbotron-image mainimage" src="Images/profile.JPG">
                     </div>
 
-                    <h1>Get to know me!</h1>
+                    <h1 id="jumbotroncaption">Get to know me!</h1>
                     <p>Explore my website and check out some of the projects I have done in the past. Also follow me on Twitter to actively follow my development.</p>
                 </div>
                 <!-- About Me-->
@@ -99,48 +102,46 @@ This is the main page
 
 
 
-                        <div class="imagecarousel" id="slider1_container">
-                            <!-- Slides Container -->
-
-                            <div  u="slides" style="position:relative; cursor: move; align:center;width:512px;height:512px; overflow: hidden; display:block;">
-                                <div><img u="image" src="Images/android.jpg" /></div>
-                                <div><img u="image" src="Images/java.jpg" /></div>
-                                <div><img u="image" src="Images/html5css3.jpg"></div>
-
-                            </div>
-                        </div>
-
-
-
                         <div class="platformsexplanation col-md-12">
 
 
+                            <div class="language-container col-md-12">
 
-                            <div class="android">
-                                <h3>Android</h3>
+                                <div class="android col-md-5">
+                                    <h2>Android</h2>
 
-                                <p>I have quite a bit of experience with Android and Java in general. I have developed over 30 applications for the Android platform (albeit some extremely basic) and have launched 4 full featured applications on the Google Play Store. </p>
+                                    <p class="platformtext">I have quite a bit of experience with Android and Java in general. I have developed over 30 applications for the Android platform (albeit some extremely basic) and have launched 4 full featured applications on the Google Play Store. </p>
+                                </div>
+                                <div class="col-md-7"><img class="img-responsive" src="Images/android.png"/></div>
+                            </div>
+                            <div class="language-container col-md-12">
+
+                                <div class="desktop col-md-12">
+                                    <h2>Desktop</h2>
+                                    <p class="platformtext">I know this is more of a platform than a language but I figured it was important enought to note. I have created applications in Python, Java, and C for the desktop. These programs have ranged from simple command line interfaces, to more complex GUI based programs and games. </p>
+                                </div>
                             </div>
 
-
-                            <div class="desktop">
-                                <h3>Desktop</h3>
-                                <p>I know this is more of a platform than a language but I figured it was important enought to note. I have created applications in Python, Java, and C for the desktop. These programs have ranged from simple command line interfaces, to more complex GUI based programs and games. </p>
+                            <div class="language-container col-md-12">
+                                <div class="web col-md-5">
+                                    <h2>Web</h2>
+                                    <p class="platformtext">I have also created several application for the web, using modern languages such as HTML5, CSS3, and JavaScript. I have also used Python extensively for both web and non web-related projects.</p>
+                                </div>
+                                <div class="col-md-7"><img class="img-responsive" src="Images/html5css3.jpg"/></div>
                             </div>
+                            <div class="language-container col-md-12">
 
+                                <div class="othertechnologies col-md-5">
+                                    <h2>Other</h2>
+                                    <p class="platformtext">I have also had exposure to several other languages and frameworks. I have completed a Stanford University course in iOS development using Objective C, worked on an application using NodeJS and MongoDB, and created a watchface for the Pebble smartwatch using C. To see more of my projects, visit my <a href="http://github.com/andrew749">Github</a> Account.</p>
 
+                                </div>
+                                <div class="other-container col-md-7">
+                                    <div class="col-md-7"><img class="img-responsive" src="Images/c++-logo.png"/></div>
+                                    <div class="col-md-5"><img class="img-responsive" src="Images/ios8-hero.png"/></div>
 
-                            <div class="web">
-                                <h3>Web</h3>
-                                <p>I have also created several application for the web, using modern languages such as HTML5, CSS3, and JavaScript. I have also used Python extensively for both web and non web-related projects.</p>
+                                </div>
                             </div>
-
-                            <div class="othertechnologies">
-                                <h3>Other</h3>
-                                <p>I have also had exposure to several other languages and frameworks. I have completed a Stanford University course in iOS development using Objective C, worked on an application using NodeJS and MongoDB, and created a watchface for the Pebble smartwatch using C. To see more of my projects, visit my <a href="http://github.com/andrew749">Github</a> Account.</p>
-
-                            </div>
-
                         </div>
                     </div>
 
