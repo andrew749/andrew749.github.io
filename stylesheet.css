@@ -182,13 +182,6 @@ td{
     box-shadow: 1px 2px 1px #000;
 }
 
-#twitterimage {
-    text-align: center;
-    margin: 0 auto;
-
-}
-
-
 /*Styles for the projects page*/
 .projectcontainer {
     width: auto;
@@ -229,6 +222,7 @@ td{
         margin:0 auto;
         float: none;
         clear: both;
+        top: 50%;
     }
 
     .projectdescription{
@@ -285,6 +279,7 @@ div .projectimage{
     width: 100%;
     float: left;
     padding: 20px;
+    vertical-align: middle;
 }
 
 
@@ -428,12 +423,17 @@ div .projectimage{
     max-height: 30em;
 }
 
-div div .desktopsplit {
+.desktopsplit {
     vertical-align: middle;
+    display: inline-block;
+
 }
 
 .other-container {
-    height: auto;
+    display: table;
+}
+.other-container > *{
+vertical-align: middle;
 }
 
 
@@ -452,4 +452,9 @@ div div .desktopsplit {
     text-align:center;
     /* inline-block space fix */
     margin-right:-4px;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
