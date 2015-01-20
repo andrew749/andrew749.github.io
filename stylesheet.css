@@ -189,19 +189,16 @@ td{
 
 /*Styles for the projects page*/
 .projectcontainer {
-    width: auto;
-    height: auto;
     position: relative;
     top:50px;
+    margin: 0 3em;
 }
 
 .projectview {
     background-color: #E9ECEC;
     height: auto;
-    position: relative;
     box-shadow: 5px 5px 10px #000;
-    margin: 10 20;
-
+    margin:1em;
 }
 
 #textspamimage {
@@ -472,4 +469,9 @@ div .projectimage{
 }
 i{
     color: #212121;
+}
+
+
+.styletitle {
+    text-align: left;
 }

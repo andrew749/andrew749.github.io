@@ -21,7 +21,7 @@ $(document).ready(function(){
                 success: function (data) {
                     console.log(data);
                     var projectView=$("<div/>");
-                    $(projectView).addClass("projectview col-md-5");
+                    $(projectView).addClass("projectview col-md-5 col-centered");
                     projectView.id=data.title.toLowerCase();
                     var subHeading=$('<h3/>').text(data.subheading);
                     var description=$("<p/>").text(data.description);
