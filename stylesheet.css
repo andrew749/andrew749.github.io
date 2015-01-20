@@ -5,7 +5,7 @@ Styles the index page
 */
 @font-face{
 
-font-family:'Roboto';
+    font-family:'Roboto';
     src:url('fonts/Roboto-Light.ttf');
 }
 .mainsection{
@@ -214,7 +214,12 @@ td{
 
 
 @media (max-width:976px){
-
+    .projectcontainer{
+        margin:0;
+    }
+    .projectview{
+        margin: 1em 0;
+    }
     #textspamimage{
         clear: both;
         display: block;
@@ -230,7 +235,7 @@ td{
 
     .projectdescription{
         display: block;
-        margin: 10px;
+        padding: 10px;
         float: none;
         width: auto;
     }
