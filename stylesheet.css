@@ -214,6 +214,11 @@ td{
 
 
 @media (max-width:976px){
+    .floatingbutton{
+        width:2.5em;
+        height: 2.5em;
+
+    }
     .projectcontainer{
         margin:0;
     }
