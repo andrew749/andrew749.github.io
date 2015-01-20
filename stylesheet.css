@@ -3,9 +3,7 @@ Styles the index page
 
 
 */
-i{
 
-}
 .mainsection{
     background-color: #fff;
     margin: 10px;
@@ -215,9 +213,7 @@ td{
 
 
 @media (max-width:976px){
-    i{
-    text-align: center;
-    }
+
     #textspamimage{
         clear: both;
         display: block;
@@ -469,4 +465,7 @@ div .projectimage{
 
 .projectimagewrapper {
     text-align: center;
+}
+i{
+    color: #212121;
 }
