@@ -277,6 +277,10 @@ td{
         float: none;
         clear: both;
     }
+    .vertical-align{
+        display: block;
+        clear: both;
+    }
 }
 div .projectimage{
     width: 100%;
@@ -436,7 +440,7 @@ div .projectimage{
     display: table-row;
 }
 .other-container > *{
-vertical-align: middle;
+    vertical-align: middle;
 }
 
 
@@ -455,9 +459,4 @@ vertical-align: middle;
     text-align:center;
     /* inline-block space fix */
     margin-right:-4px;
-}
-
-.vertical-align {
-    display: flex;
-    align-items: center;
 }
