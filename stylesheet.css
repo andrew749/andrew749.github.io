@@ -178,17 +178,6 @@ td{
     background-color: #cacbcb;
 }
 
-.githubbackground{
-    margin: 0 auto;
-
-}
-
-.linkedin{
-    position: relative;
-    background-color: #fff;
-
-}
-
 .navbarshadow {
     box-shadow: 1px 2px 1px #000;
 }
@@ -198,16 +187,6 @@ td{
     margin: 0 auto;
 
 }
-
-div .linkedindiv {
-    text-align: center;
-}
-
-
-
-
-
-
 
 
 /*Styles for the projects page*/
@@ -470,7 +449,7 @@ div div .desktopsplit {
     display:inline-block;
     float:none;
     /* reset the text-align */
-    text-align:left;
+    text-align:center;
     /* inline-block space fix */
     margin-right:-4px;
 }
