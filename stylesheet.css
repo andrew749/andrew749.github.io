@@ -200,6 +200,7 @@ td{
     height: auto;
     box-shadow: 5px 5px 10px #000;
     margin:1em;
+    vertical-align:top;
 }
 
 #textspamimage {
