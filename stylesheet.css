@@ -55,7 +55,8 @@ img{
 
 .mainimage{
     box-shadow: 5px 5px 10px #000;
-    width:70%;
+    width:40%;
+    border-radius:5%;
 }
 .jumbotron-image{
     position:relative;
