@@ -1,6 +1,8 @@
 header{
     font-size: 3em;
     font-family: 'Roboto';
+    background-color:#E0E0E0;
+    border-radius: 10px;
 }
 body{
     background-color: #0D47A1;
@@ -19,10 +21,17 @@ body{
 section{
     background-color: #FFF;
     border-radius: 10px;
-    padding: 10px;
-    margin: 20px auto;
+    padding: 20px;
+    margin: 25px auto;
     width: 90%;
     display: block;
+    font-size:1.5em;
+
+}
+p{
+padding-left:20px;
+padding-right:20px;
+
 }
 #tscustomerdescription{
     float: left;
@@ -57,7 +66,7 @@ section{
     clear: both;
 
 }
-@media (max-width:380px){
+@media (max-width:1000px){
     #textspamlogo{
         margin: 0 auto;
         display: block;
