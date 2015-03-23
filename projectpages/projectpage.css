@@ -57,7 +57,7 @@ section{
     clear: both;
 
 }
-@media (max-width:360px){
+@media (max-width:380px){
     #textspamlogo{
         margin: 0 auto;
         display: block;
