@@ -26,7 +26,7 @@ section{
     width: 90%;
     display: block;
     font-size:1.5em;
-
+    box-shadow: 3px 3px 5px #000;
 }
 p{
 padding-left:20px;
