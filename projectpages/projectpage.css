@@ -26,7 +26,7 @@ section{
     width: 90%;
     display: block;
     font-size:1.5em;
-    box-shadow: 3px 3px 5px #000;
+/*    box-shadow: 3px 3px 5px #888888;*/
 }
 p{
 padding-left:20px;
@@ -67,6 +67,12 @@ padding-right:20px;
 
 }
 @media (max-width:1000px){
+    header{
+        font-size: 2em;
+    }
+    section{
+        font-size: 1em;
+    }
     #textspamlogo{
         margin: 0 auto;
         display: block;
