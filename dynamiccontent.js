@@ -2,7 +2,7 @@ $(document).ready(function(){
         var items = [];
     var waypoint=[];
     addWaypoint(document.getElementById("textspam"));
-    var projectids=["play","heartratemonitor","textmetrics","secretsauce","myomove","hive","scribblerplaystwitch"];
+    var projectids=["play","heartratemonitor","textmetrics","secretsauce","myomove","hive","scribblerplaystwitch","decisions", "0xFACE"];
     //spec for entry
     function Entry(title, description, url,subheading){
         this.title=title;
