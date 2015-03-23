@@ -9,7 +9,9 @@ body{
 #textspamlogo{
     margin: 0 auto;
     display: block;
+    width: 40%;
 }
+
 #googleplay{
     display: block;
     margin: 0 auto;
@@ -54,4 +56,31 @@ section{
     display: table;
     clear: both;
 
+}
+@media (max-width:360px){
+    #textspamlogo{
+        margin: 0 auto;
+        display: block;
+        width: 70%;
+    }
+    #businessimage{
+        float: none;
+        clear:both;
+        display: block;
+        width:70%;
+        margin: 0px;
+        margin: 0 auto;
+    }
+    #tscustomerdescription{
+        float: none;
+        width: 100%;
+    }
+    #friendsimage{
+        width: 70%;
+        float:none;
+        clear:both;
+    }
+    #friendsspam{
+        width:100%;
+    }
 }
