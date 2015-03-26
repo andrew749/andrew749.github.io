@@ -29,7 +29,10 @@ $(document).ready(function(){
                     var d=x.description;
                     var item=$("<section/>");
                     var description=$("<p/>").text(d);
+                    $(item).append($("<header/>").text(t));
+
                     $(item).append(description);
+                    $(item).append($("<img/>").attr("src",i));
                     items.push(item);
                 }
                 $('body').append(items);
