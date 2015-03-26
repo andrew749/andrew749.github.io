@@ -30,7 +30,6 @@ $(document).ready(function(){
                     var item=$("<section/>");
                     var description=$("<p/>").text(d);
                     $(item).append($("<header/>").text(t));
-
                     $(item).append(description);
                     $(item).append($("<img/>").attr("src",i));
                     items.push(item);

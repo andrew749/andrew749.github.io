@@ -16,7 +16,7 @@ $(document).ready(function(){
         for (var i in projectids){
             $.ajax({
                 type: "GET",
-                url: "content/summarycontent"+projectids[i],
+                url: "content/summarycontent/"+projectids[i],
                 dataType: "json" ,
                 success: function (data) {
                     console.log(data);
