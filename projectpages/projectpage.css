@@ -3,8 +3,15 @@ header{
     font-family: 'Roboto';
     border-radius: 10px;
 }
-body{
+.textspambackground{
     background-color: #0D47A1;
+
+}
+.muzikbackground{
+    background-color:#f44336;
+
+}
+body{
     font-family: 'Roboto:300';
 }
 #textspamlogo{
