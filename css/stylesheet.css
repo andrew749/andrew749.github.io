@@ -552,10 +552,12 @@ i{
 
 /*detail view*/
 .detailView{
-    position: absolute;
-    width: 80%;
+    text-align: center;
+    position: relative;
     display: block;
     top: 50px;
+    float: none;
+    clear: both;
     margin: 0 auto;
     background-color: white;
     min-height: 70%;
@@ -575,10 +577,7 @@ i{
     height: 100vh;
     z-index: 10000000000;
 }
-.detailviewwrapper{
-    position: relative;
-    margin: 0 auto;
-}
+
 .detailView p{
     width:40%;
     float: right;

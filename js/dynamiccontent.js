@@ -62,8 +62,6 @@ $(document).ready(function(){
         console.log(description);
         var mainView = $('<div/>');
         mainView.addClass('detailmain');
-        var viewWrapper = $('<div/>');
-        viewWrapper.addClass('detailviewwrapper');
         var detailView = $('<div/>');
         $(detailView).addClass('detailView col-md-7 col-xs-12');
         
@@ -91,10 +89,8 @@ $(document).ready(function(){
         detailView.append(titleView);
         detailView.append(subHeading);
         detailView.append(contentView);
-        
-        viewWrapper.append(detailView);
-        
-        mainView.append(viewWrapper);
+                
+        mainView.append(detailView);
         return mainView;
     }
     
