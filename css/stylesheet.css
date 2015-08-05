@@ -565,6 +565,9 @@ i{
     background-color: white;
     height: 70%;
 }
+.detailprojectimage{
+    width:100%;
+}
 .detailimagewrapper{
     width:50%;
     display: inline-block;
