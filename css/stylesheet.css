@@ -336,14 +336,17 @@ td{
         display: block;
     }
     .detailView p{
+        height: 30% !important;
         display: block;
         width:100% !important;
     }
     .detailView{
+        top: 0px !important;
         width: 90% !important;
         margin: 0 auto !important;
+        height: 100% !important;
     }
-
+    
 }
 .projectimage{
     padding: 10px;
@@ -560,7 +563,7 @@ i{
     clear: both;
     margin: 0 auto;
     background-color: white;
-    min-height: 70%;
+    height: 70%;
 }
 .detailimagewrapper{
     width:50%;
@@ -580,5 +583,21 @@ i{
 
 .detailView p{
     width:40%;
+    height: 70%;
     float: right;
+    overflow: scroll;
+}
+.closeButton{
+    position: absolute;
+    top:-5px;
+    left: -5px;
+    height: 30px;
+    width: 30px;
+    color: red;
+    background-color: #e3e3e3;
+    border-radius: 100%;
+}
+.closeButton:hover{
+    background-color: #9b9999;
+
 }

@@ -78,6 +78,13 @@ $(document).ready(function(){
         image.attr('src',img);
         var imagewrapper=$("<div/>").addClass("detailimagewrapper");
         
+        var closeButton = $('<div/>');
+        closeButton.addClass('closeButton');
+        $(closeButton).click(function(e){
+            $('.detailmain').remove();
+        });
+        $(closeButton).text('X');
+        
         imagewrapper.append(image);
         
         var descriptionView = $('<p/>');
@@ -89,7 +96,8 @@ $(document).ready(function(){
         detailView.append(titleView);
         detailView.append(subHeading);
         detailView.append(contentView);
-                
+        detailView.append(closeButton);
+
         mainView.append(detailView);
         return mainView;
     }
