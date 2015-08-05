@@ -601,3 +601,7 @@ i{
     background-color: #9b9999;
 
 }
+.textspamlink{
+    color: #000 !important;
+    text-decoration: none !important;
+}
