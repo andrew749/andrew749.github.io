@@ -328,9 +328,10 @@ td{
 
 }
 .projectimage{
-    padding: 20px;
-    margin: 0 auto;
+    padding: 10px;
+    margin: auto auto;
     max-height: 270px;
+    height: 100%;
     vertical-align: middle;
 }
 
@@ -343,7 +344,7 @@ td{
 
 .imagewrapper {
     width: 50%;
-    height: auto;
+    height: 300px;
     float: right;
     display: inline-block;
 }
@@ -512,10 +513,6 @@ td{
     margin-right:-4px;
 }
 
-.projectimagewrapper {
-    text-align: center;
-}
-
 i{
     color: #212121;
 }
@@ -526,7 +523,6 @@ i{
 
 .fa-android{
     font-size:20em;
-
 }
 
 .cardTextWrapper{
