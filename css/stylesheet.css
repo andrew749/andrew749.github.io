@@ -331,6 +331,18 @@ td{
         width: 100% !important;
         height: auto !important;
     }
+    .detailimagewrapper{
+        width: 100% !important;
+        display: block;
+    }
+    .detailView p{
+        display: block;
+        width:100% !important;
+    }
+    .detailView{
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
 
 }
 .projectimage{
