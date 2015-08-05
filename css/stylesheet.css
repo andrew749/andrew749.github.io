@@ -1,13 +1,8 @@
-/*Styles for the first page
-Styles the index page
-
-
-*/
 @font-face{
-
     font-family:'Roboto';
-    src:url('fonts/Roboto-Light.ttf');
+    src:url('../fonts/Roboto-Light.ttf');
 }
+
 .mainsection{
     background-color: #fff;
     margin: 10px;
@@ -15,14 +10,17 @@ Styles the index page
     border-radius: 1.5em;;
     text-align: justify;
 }
+
 p{
     padding: 1em;
     text-align: justify;
 }
+
 h3{
     font-weight: bold;
 
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -30,19 +28,22 @@ body{
     width:auto;
     background-color: #424242;
 }
+
 h1{
     font-family: 'Lobster', cursive;
 }
+
 .contentpage{
     width: 80%;
     margin: auto;
     background-color: #E9ECEC;
 }
+
 .background{
     box-shadow: 2px 2px 10px #000;
     background-color: #2196F3;
-
 }
+
 .menubutton:hover{
     transition: opacity 1s ease-in-out;
 }
@@ -58,6 +59,7 @@ img{
     width:40%;
     border-radius:5%;
 }
+
 .jumbotron-image{
     position:relative;
     height:auto;
@@ -65,11 +67,12 @@ img{
     text-align: center;
     max-width: 100%;
     max-height: 40em;
-
 }
+
 jumbotron{
     text-align: center;
 }
+
 .platform{
     background-color: #CCFFFF;
 }
@@ -97,6 +100,7 @@ jumbotron{
     float: right;
     display: block;
     padding: 5vh;
+    border-radius: 5px;
 }
 
 .skillslist{
@@ -155,12 +159,6 @@ Popup business card on first page
     font-family:'Open Sans Condensed', sans-serif;
 
 }
-/*
-.contacthide{
-display:none;
-}
-*/
-
 td{
     padding:10px;
 }
@@ -215,11 +213,16 @@ td{
 }
 
 
-@media (max-width:976px){
+@media (max-width:969px){
+    .contentpage{
+        width:100%;
+        background-image: #bcbcbc;
+        margin: 0px;
+    }
+    
     .floatingbutton{
         width:2.5em;
         height: 2.5em;
-
     }
     .projectcontainer{
         margin:0;
@@ -257,13 +260,16 @@ td{
         clear: both;
         text-align: center;
     }
+    
     .imagewrapper{
         clear:both;
         height: auto;
     }
+    
     div .img-responsive{
         margin:0 auto;
     }
+    
     .contactcardlayout{
         font-size: 0.5em;
         padding: 5px;
@@ -280,25 +286,31 @@ td{
         padding-left: 0em;
 
     }
-    #jumbotroncaption {
+    
+    .jumbotroncaption {
         text-align: center;
-        padding: 0em;
+        padding: 0px 0px 0px 0px !important;
     }
+    
     .mainimage{
         width: 100%;
     }
+    
     .whoamiimage{
         display: block;
         float: none;
         clear: both;
     }
+    
     .vertical-align{
         display: block;
         clear: both;
     }
+    
     p{
       font-size:1em !important;
     }
+    
     .fa-5{
       font-size:5em !important;
     }
@@ -317,14 +329,10 @@ div .projectimage{
     font-size: 1.25em;
 }
 
-
-
 .imagewrapper {
     width: 50%;
     height: auto;
 }
-
-
 
 .row {
     clear:both;
@@ -333,22 +341,26 @@ div .projectimage{
 .hidecard{
     opacity: 0;
 }
+
 .animation{
     -webkit-animation: cardinanimation .5s ease-out;
     -moz-animation: cardinanimation .5s ease-out;
 }
-.animation_slide_in{
 
+.animation_slide_in{
     -webkit-animation: cardinanimationside .5s ease-out;
     -moz-animation:cardinanimationside .5s ease-out;
 }
+
 .contacthide{
     -webkit-animation: cardinanimationsideout .5s ease-in forwards;
     -moz-animation: cardinanimationsideout .5s ease-in forwards;
 }
+
 .contacthideinitial{
     display:none;
 }
+
 @-webkit-keyframes cardinanimation{
     0%{
         transform: translateY(300px);
@@ -361,8 +373,8 @@ div .projectimage{
         transform: translateY(0);
         opacity: 1;
     }
-
 }
+
 @-webkit-keyframes cardinanimationside{
     0%{
         transform: translateX(-500px);
@@ -377,6 +389,7 @@ div .projectimage{
     }
 
 }
+
 @-webkit-keyframes cardinanimationsideout{
     0%{
         transform: translateX(0px);
@@ -391,6 +404,7 @@ div .projectimage{
     }
 
 }
+
 @-moz-keyframes cardinanimation{
     0%{
         transform: translateY(300px);
@@ -405,6 +419,7 @@ div .projectimage{
     }
 
 }
+
 @-moz-keyframes cardinanimationside{
     0%{
         transform: translateX(-500px);
@@ -417,8 +432,8 @@ div .projectimage{
         transform: translateY(0);
         opacity: 1;
     }
-
 }
+
 @-moz-keyframes cardinanimationsideout{
     0%{
         transform: translateX(0px);
@@ -431,11 +446,10 @@ div .projectimage{
         transform: translateY(-500px);
         opacity: 0;
     }
-
 }
 
-#jumbotroncaption {
-    padding-left:1em;
+.jumbotroncaption {
+    padding: 0px 100px;
 }
 
 .platformtext {
@@ -460,19 +474,21 @@ div .projectimage{
 .other-container {
     display: table-row;
 }
+
 .other-container > *{
     vertical-align: middle;
 }
-
 
 .fa-5 {
     font-size: 12em;
     text-align: center;
 }
+
 /* centered columns styles */
 .row-centered {
     text-align:center;
 }
+
 .col-centered {
     display:inline-block;
     float:none;
@@ -485,14 +501,15 @@ div .projectimage{
 .projectimagewrapper {
     text-align: center;
 }
+
 i{
     color: #212121;
 }
 
-
 .styletitle {
     text-align: left;
 }
+
 .fa-android{
     font-size:20em;
 
