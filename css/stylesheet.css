@@ -100,7 +100,7 @@ jumbotron{
     float: right;
     display: block;
     padding: 5vh;
-    border-radius: 5px;
+    border-radius: 5%;
 }
 
 .skillslist{
@@ -201,6 +201,10 @@ td{
     vertical-align:top;
 }
 
+.projectview:hover{
+    background-color: #a8a7a7;
+}
+
 #textspamimage {
     float:right;
     text-align: center;
@@ -219,7 +223,7 @@ td{
         background-image: #bcbcbc;
         margin: 0px;
     }
-    
+
     .floatingbutton{
         width:2.5em;
         height: 2.5em;
@@ -250,7 +254,7 @@ td{
         width: auto;
     }
     div .imagewrapper{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         clear: both;
     }
@@ -260,16 +264,17 @@ td{
         clear: both;
         text-align: center;
     }
-    
+
     .imagewrapper{
         clear:both;
+        float: right;
         height: auto;
     }
-    
+
     div .img-responsive{
         margin:0 auto;
     }
-    
+
     .contactcardlayout{
         font-size: 0.5em;
         padding: 5px;
@@ -286,46 +291,46 @@ td{
         padding-left: 0em;
 
     }
-    
+
     .jumbotroncaption {
         text-align: center;
         padding: 0px 0px 0px 0px !important;
     }
-    
+
     .mainimage{
         width: 100%;
     }
-    
+
     .whoamiimage{
         display: block;
         float: none;
         clear: both;
     }
-    
+
     .vertical-align{
         display: block;
         clear: both;
     }
-    
+
     p{
-      font-size:1em !important;
+        font-size:1em !important;
     }
-    
+
     .fa-5{
-      font-size:5em !important;
+        font-size:5em !important;
     }
-    
+
     #contactfab{
         position: absolute;
         bottom: 20px;
         right: 20px;
     }
-    
+
 }
-div .projectimage{
-    width: 100%;
-    float: left;
+.projectimage{
     padding: 20px;
+    margin: 0 auto;
+    max-height: 270px;
     vertical-align: middle;
 }
 
@@ -339,6 +344,8 @@ div .projectimage{
 .imagewrapper {
     width: 50%;
     height: auto;
+    float: right;
+    display: inline-block;
 }
 
 .row {
@@ -520,4 +527,11 @@ i{
 .fa-android{
     font-size:20em;
 
+}
+
+.cardTextWrapper{
+    display: inline-block;
+    float: left;
+    height: 300px;
+    width: 50%;
 }

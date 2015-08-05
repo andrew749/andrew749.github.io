@@ -16,36 +16,44 @@ $(document).ready(function(){
         for (var i in projectids){
             $.ajax({
                 type: "GET",
-                url: "content/summarycontent/"+projectids[i],
+                url: "content/"+projectids[i],
                 dataType: "json" ,
                 success: function (data) {
-                    console.log(data);
-                    var projectView=$("<div/>");
-                    $(projectView).addClass("projectview col-md-5 col-xs-12 col-centered");
-                    projectView.id=data.title.toLowerCase();
-                    var subHeading=$('<h3/>').text(data.subheading);
-                    var description=$("<p/>").text(data.description);
-                    var descriptionWrapper=$("<div/>");
-                    $(descriptionWrapper).append(description);
-                    $(descriptionWrapper).addClass("projectdescription");
-                    var image=$("<img/>").addClass("projectimage");
-                    var imagewrapper=$("<div/>").addClass("imagewrapper");
-                    $(image).attr("src",data.url);
-                    $(imagewrapper).append(image);
-
-                    var title=$("<h1/>").text(data.title);
-                    $(projectView).append(title);
-                    $(projectView).append(subHeading);
-                    $(projectView).append(imagewrapper);
-                    $(projectView).append(descriptionWrapper);
-                    items.push(projectView);
+                    var projectView = createCardView(data.title,data.subheading,data.url);
                     $('#stuff').append(projectView);
                     addWaypoint(projectView);
+                    items.push(projectView);
                 }
             });
         }
     }
+    
+    function createCardView(title, subheading, img){
+        var projectView=$("<div/>");
+        $(projectView).addClass("projectview col-md-5 col-xs-12 col-centered");
+        projectView.id=title.toLowerCase();
+        
+        var subHeading=$('<h3/>').text(subheading);
+        var title=$("<h1/>").text(title);
+        
+        var textWrapper = $('<div/>');
+        $(textWrapper).addClass("cardTextWrapper");
+        textWrapper.append(title);
+        textWrapper.append(subHeading);
+        
+        var image=$("<img/>").addClass("projectimage");
+        var imagewrapper=$("<div/>").addClass("imagewrapper");
+        $(image).attr("src",img);
+        $(imagewrapper).append(image);
+
+
+        $(projectView).append(textWrapper);
+        $(projectView).append(imagewrapper);
+        return projectView;
+    }
+    
     generateContent();
+    
     function addWaypoint(element){
         $(element).addClass("hidecard");
         var tempwaypoint = new Waypoint({
