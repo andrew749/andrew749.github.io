@@ -244,6 +244,7 @@ td{
         margin:0 auto;
         float: none;
         clear: both;
+        width: 100%;
         top: 50%;
     }
 
@@ -266,9 +267,10 @@ td{
     }
 
     .imagewrapper{
+        display: block;
         clear:both;
         float: right;
-        height: auto;
+        height: auto !important;
     }
 
     div .img-responsive{
@@ -324,6 +326,10 @@ td{
         position: absolute;
         bottom: 20px;
         right: 20px;
+    }
+    .cardTextWrapper{
+        width: 100% !important;
+        height: auto !important;
     }
 
 }
@@ -530,4 +536,38 @@ i{
     float: left;
     height: 300px;
     width: 50%;
+}
+
+/*detail view*/
+.detailView{
+    position: absolute;
+    width: 80%;
+    display: block;
+    top: 50px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 70%;
+}
+.detailimagewrapper{
+    width:50%;
+    display: inline-block;
+    height:auto;
+}
+.detailmain{
+    text-align: center;
+    background-color: rgba(64, 64, 64, 0.58);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000000000;
+}
+.detailviewwrapper{
+    position: relative;
+    margin: 0 auto;
+}
+.detailView p{
+    width:40%;
+    float: right;
 }

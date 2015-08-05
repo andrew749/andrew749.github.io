@@ -19,7 +19,7 @@ $(document).ready(function(){
                 url: "content/"+projectids[i],
                 dataType: "json" ,
                 success: function (data) {
-                    var projectView = createCardView(data.title,data.subheading,data.url);
+                    var projectView = createCardView(data.title,data.subheading,data.url,data.description);
                     $('#stuff').append(projectView);
                     addWaypoint(projectView);
                     items.push(projectView);
@@ -28,17 +28,17 @@ $(document).ready(function(){
         }
     }
     
-    function createCardView(title, subheading, img){
+    function createCardView(title, subheading, img, description){
         var projectView=$("<div/>");
         $(projectView).addClass("projectview col-md-5 col-xs-12 col-centered");
-        projectView.id=title.toLowerCase();
+        projectView.attr('id',items.length);
         
         var subHeading=$('<h3/>').text(subheading);
-        var title=$("<h1/>").text(title);
+        var titleView=$("<h1/>").text(title);
         
         var textWrapper = $('<div/>');
         $(textWrapper).addClass("cardTextWrapper");
-        textWrapper.append(title);
+        textWrapper.append(titleView);
         textWrapper.append(subHeading);
         
         var image=$("<img/>").addClass("projectimage");
@@ -49,7 +49,53 @@ $(document).ready(function(){
 
         $(projectView).append(textWrapper);
         $(projectView).append(imagewrapper);
+        
+        $(projectView).click(function(e){
+            var detailView = createDetailView(title,subheading,img, description);
+            console.log(detailView);
+            $('body').append(detailView);
+        });
         return projectView;
+    }
+    
+    function createDetailView(title,subheading,img, description){
+        console.log(description);
+        var mainView = $('<div/>');
+        mainView.addClass('detailmain');
+        var viewWrapper = $('<div/>');
+        viewWrapper.addClass('detailviewwrapper');
+        var detailView = $('<div/>');
+        $(detailView).addClass('detailView col-md-7 col-xs-12');
+        
+        var titleView = $('<h1/>');
+        $(titleView).text(title);
+        
+        var subHeading = $('<h3/>');
+        $(subHeading).text(subheading);
+        
+        var contentView = $('<div/>');
+        contentView.addClass('detailContentView col-xs-12 col-md-12');
+        
+        var image=$("<img/>").addClass("detailprojectimage");
+        image.attr('src',img);
+        var imagewrapper=$("<div/>").addClass("detailimagewrapper");
+        
+        imagewrapper.append(image);
+        
+        var descriptionView = $('<p/>');
+        $(descriptionView).text(description);
+        
+        contentView.append(imagewrapper);
+        contentView.append(descriptionView);
+        
+        detailView.append(titleView);
+        detailView.append(subHeading);
+        detailView.append(contentView);
+        
+        viewWrapper.append(detailView);
+        
+        mainView.append(viewWrapper);
+        return mainView;
     }
     
     generateContent();
