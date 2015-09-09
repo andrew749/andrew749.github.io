@@ -1,4 +1,5 @@
 html{
+  line-height:1em;
 }
 ul{
   list-style: none;
@@ -13,6 +14,7 @@ h2{
   width:100%;
   padding:5px;
   background-color:#DADADA;
+  border-radius:5px;
 }
 #name-title{
   font-size:2.25em;
@@ -24,7 +26,23 @@ h2{
 }
 .resume-header{
   font-family:courier;
+  width:80%;
+  margin:0 auto;
+  color:#FFF;
+}
+.resume-header-wrapper{
+  background-color: #03A9F4;
+}
+.main-list{
+  margin:0 auto;
+  width:80%;
 }
 .contact-table{
   width:100%;
+}
+.contact-heading{
+  font-weight:bold;
+}
+.summary-list{
+  list-style:circle;
 }
