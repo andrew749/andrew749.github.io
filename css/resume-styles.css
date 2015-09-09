@@ -1,0 +1,30 @@
+html{
+}
+ul{
+  list-style: none;
+}
+ul ul ul{
+  list-style:circle;
+}
+.main-list{
+  width:100%;
+}
+h2{
+  width:100%;
+  padding:5px;
+  background-color:#DADADA;
+}
+#name-title{
+  font-size:2.25em;
+  text-align:center;
+}
+#occupation-title{
+  text-align:center;
+  font-size:1.25em;
+}
+.resume-header{
+  font-family:courier;
+}
+.contact-table{
+  width:100%;
+}
