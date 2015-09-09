@@ -102,4 +102,26 @@ a{
 }
 @media (max-width:360px){
 
+  .resume-header{
+    width:100%;
+  }
+  .main-list{
+    width:90%;
+  }
+  ul ul ul{
+     list-style:none;
+  }
+  li{
+    line-height:1.25em;
+    margin:10px 0px;
+  }
+  .contact-table div{
+    display:block;
+  }
+  .summary-list{
+    list-style:none;
+  }
+  ul{
+    padding:0px;
+  }
 }
