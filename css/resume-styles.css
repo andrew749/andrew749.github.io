@@ -95,8 +95,11 @@ a{
   .main-list{
     width:100%;
   }
+  .contact-table{
+    text-align:left;
+  }
   body{
-    margin: 10mm;
+    margin: 10px;
   }
   .highlight{
     color:black;
@@ -105,6 +108,10 @@ a{
     border-radius:0px;
     border:0px;
     background-color:white;
+    line-height:normal;
+  }
+  #name-title{
+    font-size:2em;
   }
 }
 @media (max-width:480px){
