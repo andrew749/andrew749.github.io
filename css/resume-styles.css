@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 html{
   font-family: "Roboto", sans-serif;
+  line-height:1.5em;
 }
 ul{
   list-style: none;
@@ -56,8 +57,11 @@ a{
 }
 .highlight{
   font-weight:900;
-  color:teal;
-  background-color:lightgrey;
+  color:#2196F3;
+  padding:2px;
+  border-radius:5px;
+  border:2px solid  blue;
+  background-color:#F5F5F5;
 }
 /*MEDIA*/
 @media print{
@@ -76,6 +80,14 @@ a{
   }
   body{
     margin: 10mm;
+  }
+  .highlight{
+    color:black;
+    padding:0px;
+    font-weight:bold;
+    border-radius:0px;
+    border:0px;
+    background-color:white;
   }
 }
 @media (max-width:360px){
