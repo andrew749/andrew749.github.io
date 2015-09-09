@@ -16,7 +16,8 @@ ul ul ul{
 h2{
   width:100%;
   padding:5px;
-  background-color:#DADADA;
+  color:white;
+  background-color: #2196F3;
   border-radius:5px;
   margin: 10px 0px;
 }
@@ -42,6 +43,11 @@ h2{
 }
 .contact-table{
   width:100%;
+  text-align:center;
+}
+.contact-table div{
+  padding:0px 10px;
+  display:inline-block;
 }
 .contact-heading{
   font-weight:bold;
@@ -68,6 +74,10 @@ a{
   html{
     line-height:1em;
     font-size:0.75em;
+  }
+  h2{
+    color:black;
+    background-color:#DADADA;
   }
   h4{
     margin:8px 0px;
