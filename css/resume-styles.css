@@ -6,7 +6,11 @@ html{
 ul{
   list-style: none;
 }
+ul ul{
+  padding:0px 15px;
+}
 ul ul ul{
+  padding:0px 25px;
   list-style:circle;
 }
 .main-list{
@@ -53,6 +57,7 @@ h2{
   font-weight:bold;
 }
 .summary-list{
+  padding:0px 40px;
   list-style:disc;
 }
 h4{
@@ -68,6 +73,8 @@ a{
   border-radius:5px;
   border:2px solid  blue;
   background-color:#F5F5F5;
+  white-space:nowrap;
+  line-height:30px;
 }
 /*MEDIA*/
 @media print{
@@ -100,7 +107,7 @@ a{
     background-color:white;
   }
 }
-@media (max-width:360px){
+@media (max-width:480px){
 
   .resume-header{
     width:100%;
