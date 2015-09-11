@@ -81,16 +81,18 @@ a{
   #phone-element{
     display:block;
   }
+  #email-element{
+    display:block;
+  }
   .contact-table div{
     padding:0px 5px;
   }
   .left-align-print{
-    display:inline-block;
-    width:30%;
+    display:block;
   }
   .right-align-print{
-    display:inline-block;
-    width:60%;
+    float:right;
+    width:auto%;
   }
   html{
     line-height:1em;
