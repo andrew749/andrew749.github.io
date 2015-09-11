@@ -2,6 +2,6 @@
 "title":"Chordi.co",
 "subheading":"Procedurally generated music using a neural network.",
 
-"url":"Images/muziklogo.png",
+"url":"Images/chordi.jpg",
 "description":"Chordi uses PyBrain to implement a feed-forward, backward propagated neural network. This network is trained with the midi's of several songs of a similar genre to procedurally generate a song. A pseudo-random beginning sequence of chords are chosen as inputs for the network and then the output of one cycle is used as one of the inputs to the neural network to continually generate more and more chords. The output is then encoded from a midi to an mp3 and voila, the next major hit."
 }
