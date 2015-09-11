@@ -78,13 +78,19 @@ a{
 }
 /*MEDIA*/
 @media print{
+  #phone-element{
+    display:block;
+  }
+  .contact-table div{
+    padding:0px 5px;
+  }
   .left-align-print{
-    position:relative;
-    left:0px;
+    display:inline-block;
+    width:30%;
   }
   .right-align-print{
-    position:relative;
-    right:0px;
+    display:inline-block;
+    width:60%;
   }
   html{
     line-height:1em;
