@@ -78,6 +78,12 @@ a{
 }
 /*MEDIA*/
 @media print{
+  #name-title{
+    margin-bottom:8px;
+  }
+  #occupation-title{
+    margin-top:5px;
+  }
   #phone-element{
     display:block;
   }
