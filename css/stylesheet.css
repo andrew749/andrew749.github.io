@@ -30,7 +30,6 @@ body{
 }
 
 h1{
-    font-family: 'Lobster', cursive;
 }
 
 .contentpage{
@@ -69,10 +68,19 @@ img{
     max-height: 40em;
 }
 
-jumbotron{
+.jumbotron{
+    display:flex;
     text-align: center;
+    align-items:center;
+    justify-content:center;
+    height:90vh;
 }
-
+.name-title{
+  flex:grow;
+}
+.jumbo-content-wrapper{
+  flex;
+}
 .platform{
     background-color: #CCFFFF;
 }
@@ -81,13 +89,6 @@ jumbotron{
     text-align: center;
     max-width: 100%;
 
-}
-.jumbotron-image-container{
-    margin: auto;
-    text-align: center;
-    max-height: 100%;
-    max-width:100%;
-    height: auto;
 }
 .platformsexplanation{
     font-size: 1em;
@@ -346,7 +347,7 @@ td{
         margin: 0 auto !important;
         height: 100% !important;
     }
-    
+
 }
 .projectimage{
     padding: 10px;
