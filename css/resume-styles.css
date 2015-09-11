@@ -78,6 +78,14 @@ a{
 }
 /*MEDIA*/
 @media print{
+  .left-align-print{
+    position:relative;
+    left:0px;
+  }
+  .right-align-print{
+    position:relative;
+    right:0px;
+  }
   html{
     line-height:1em;
     font-size:0.75em;
