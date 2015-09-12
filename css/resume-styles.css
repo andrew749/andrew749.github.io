@@ -137,11 +137,17 @@ a{
   }
 }
 @media (max-width:480px){
+  .summary-list{
+    padding:0px 0px;
+  }
   .resume-header{
     width:100%;
   }
   .main-list{
     width:90%;
+  }
+  .main-list-item ul{
+    padding:0px 0px;
   }
   ul ul ul{
      list-style:none;
