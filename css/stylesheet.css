@@ -18,7 +18,9 @@ p{
 
 h3{
     font-weight: bold;
-
+}
+h2{
+  text-align:left;
 }
 
 body{
@@ -317,6 +319,7 @@ td{
 
     p{
         font-size:1em !important;
+        padding:0px 0px;
     }
 
     .fa-5{
