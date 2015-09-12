@@ -137,7 +137,6 @@ a{
   }
 }
 @media (max-width:480px){
-
   .resume-header{
     width:100%;
   }
@@ -159,5 +158,38 @@ a{
   }
   ul{
     padding:0px;
+  }
+}
+@media (max-width:1561px){
+  .contact-table{
+    text-align:left;
+  }
+  #name-title{
+    margin-bottom:8px;
+  }
+  #occupation-title{
+    margin-top:5px;
+  }
+  #phone-element{
+    display:block;
+  }
+  #email-element{
+    display:block;
+  }
+  .contact-table div{
+    padding:0px 5px;
+  }
+  .left-align-print{
+    display:block;
+  }
+  .right-align-print{
+    float:right;
+    width:auto%;
+  }
+}
+@media (max-width:860px){
+  .right-align-print{
+    float:none !important;
+    display:block;
   }
 }
