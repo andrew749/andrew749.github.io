@@ -8,45 +8,32 @@ $(document).ready(function(){
             case "aboutbutton":
                 clickHandler("#about");
                 purgeClass();
-
                 $("#aboutbutton").addClass("selectednavbutton");
-
                 break;
             case "contactbutton":
                 clickHandler("#contact");
                 purgeClass();
-
                 $("#contactbutton").addClass("selectednavbutton");
-
                 break;
             case "homebutton":
                 clickHandler("#home");
                 purgeClass();
-
                 $("#homebutton").addClass("selectednavbutton");
-
                 break;
-
         }
     });
-    $("#contactfab").click(function(){
+    $("#contactfab").on("click",function(event){
         if($(".contactcardlayout").hasClass("contacthideinitial")){
             $(".contactcardlayout").removeClass("contacthideinitial");
-
         }
         if(!$(".contactcardlayout").hasClass("contacthide")){
             $(".contactcardlayout").addClass("contacthide");
-
         }else{
             $(".contactcardlayout").removeClass("contacthide").addClass("animation_slide_in");
         }
-
-
     });
     $("#emailcell").click(function(){
         window.location.href = "mailto:andrewcod749@gmail.com";
-
-
     });
     function clickHandler(id){
         console.log(id);
@@ -56,10 +43,7 @@ $(document).ready(function(){
         $("#aboutbutton").removeClass("selectednavbutton");
         $("#contactbutton").removeClass("selectednavbutton");
         $("#homebutton").removeClass("selectednavbutton");
-
-
     }
-
     function slideInInformation(element){
         $(element).addClass("hidecard");
         var tempwaypoint = new Waypoint({
@@ -70,12 +54,11 @@ $(document).ready(function(){
             }
             ,
             offset:'60%'
-        });   
+        });
         waypoints.push(tempwaypoint);
     }
     var sections=document.getElementsByClassName('mainsection');
     for(var i in sections){
         slideInInformation(sections[i]);
     }
-
 });
