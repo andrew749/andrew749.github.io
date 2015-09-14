@@ -72,16 +72,23 @@ img{
 
 .jumbotron{
     display:flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
     text-align: center;
+    -webkit-align-items:center;
+    -moz-align-items:center;
     align-items:center;
     justify-content:center;
     height:90vh;
 }
 .name-title{
   flex:grow;
+  -webkit-flex:grow;
+  -moz-flex:grow;
+  -ms-flex:grow;
 }
 .jumbo-content-wrapper{
-  flex;
 }
 .platform{
     background-color: #CCFFFF;
