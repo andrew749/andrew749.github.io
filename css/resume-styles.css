@@ -138,6 +138,9 @@ a{
   #name-title{
     font-size:2em;
   }
+  .experience-section{
+    page-break-after:always;
+  }
 }
 @media (max-width:480px){
   .summary-list{
