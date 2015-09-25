@@ -138,8 +138,12 @@ a{
   #name-title{
     font-size:2em;
   }
-  .experience-section{
-    page-break-after:always;
+  .contact-table{
+    text-align:center !important;
+  }
+  .subheading{
+    width:40%;
+    text-align:left;
   }
 }
 @media (max-width:480px){
