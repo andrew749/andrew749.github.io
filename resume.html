@@ -17,7 +17,7 @@
                         <div id="website-element"><div class="contact-heading">Website:</div><div><a href="http://andrewcodispoti.me">andrewcodispoti.me</a></div></div>
                     </div>
                     <div class="right-align-print">
-                        <div id="email-element"><div class="contact-heading">Email:</div><div><a href="mailto:acodispo@uwaterloo.ca">acodispo@uwaterloo.ca</a> || <a href="mailto:andrew.codispoti@gmail.com">andrew.codispoti@gmail.com</a></div></div>
+                        <div id="email-element"><div class="contact-heading">Email:</div><div><a href="mailto:andrew.codispoti@gmail.com">andrew.codispoti@gmail.com</a></div></div>
                         <div id="github-element"><div class="contact-heading">GitHub:</div><div><a href="http://github.com/andrew749">github.com/andrew749</a></div></div>
                     </div>
                 </div>
@@ -28,10 +28,11 @@
             <li class="main-list-item">
                 <h2 class="main-list-item-title">Summary of Qualifications</h2>
                 <ul class="summary-list">
-                    <li>Over 6 years of programming experience.</li>
                     <li>Experience in supporting a wide range of devices, API levels, and localizations through the development of several applications for the <span class="highlight">Android</span> and <span class="highlight">iOS</span> platforms.</li>
                     <li>Knowledge of the fundamentals of several <span class="highlight">Machine Learning</span> algorithms, as well as the ability to practically apply these algorithms to real world problems.</li>
-                    <li>Proficient in a plethora of languages including: Java, Swift, Objective C, HTML, CSS, JavaScript (JQuery), Python, Android (Java and XML), C, and C++. Familiar with: MySQL, SQLite, MongoDB, and Gradle.</li>
+                    <li>Experience using <span class="highlight">scikit-learn</span>, <span class="highlight">PyBrain</span>, and several other machine learning libraries.</li>
+                    <li>Proficient in a plethora of languages including: Java, Swift, Objective C, HTML, CSS, JavaScript (JQuery), Python, Android (Java and XML), C, and C++.</li>
+                    <li>Familiar with several database technologies including: MySQL, SQLite, and MongoDB.</li>
                     <li>Experience using Amazon Web Services, including EC2, RDS, Elastic Beanstalk, and Elastic Load Balancer.</li>
                 </ul>
             </li>
@@ -44,61 +45,111 @@
                     <ul>
                         <li>Maintained the XE <span  class="highlight">iOS</span> and <span class="highlight">Apple Watch</span> applications through the addition of new features and bug fixes. Used a combination of <span class="highlight">Swift</span> and <span class="highlight">Objective C</span> in an agile development process.</li>
                         <li>Independently designed and created the XE <span class="highlight">Android Wear</span> client from scratch and interfaced it with the XE app.</li>
-                        <li>Prepared the XE application for it's iOS 9 launch, interfacing it with Apple's Search Api's.</li>
+                        <li>Prepared the XE application for it's iOS 9 launch, interfacing it with Apple's Search APIs.</li>
                     </ul>
                 </ul>
             </li>
             <li class="main-list-item experience-section">
-                <h2 class="main-list-item-title">Programming Experience</h2>
+                <h2 class="main-list-item-title">Projects</h2>
                 <ul>
                     <li>
-                        <h4>Java (Android), 2010 - Present</h4>
+                        <h4>Muzik</h4>
                         <ul>
-                            <li>Several Android applications in active development, one of which has achieved approximately 100,000 downloads on the Google Play Store.</li>
                             <li>Effectively used <span class="highlight">SQLite</span>, <span class="highlight">XML</span>, and Java to create well-structured, visually appealing, modular programs, which scale effectively on all devices. [Muzik and HeartRateMonitor]</li>
-                            <li>Leveraged <span class="highlight">Google Analytics</span> to improve distribution and localization for users all over the world.</li>
-                            <li>Designed and implemented an image processing algorithm which would compute a person's heart rate. [HeartRateMonitor]
-                            <li>Designed an algorithm for the IBM Cascon Programming competition which raced an autonomous car, completing certain tasks such as refueling, hitting checkpoints, and battling against other teams.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Python, 2013 - Present</h4>
-                        <ul>
-                            <li>Created an API using Python with the <span class="highlight">Flask</span> framework and a <span class="highlight">MySQL</span> Database (<span class="highlight">Amazon RDS</span>). [muzik-webapp]</li>
-                            <li>Utilized <span class="highlight">Scikit-Learn</span> and <span class="highlight">PyBrain</span> for <span class="highlight">Machine Learning</span> related applications. [Chordi.co]</li>
                             <li><span class="highlight">Dockerized</span> several applications and deployed some to <span class="highlight">Amazon Web Services</span> and <span class="highlight">Heroku</span>. [muzik-webapp]</li>
-                            <li>Created an autonomous robot which could complete several tasks in a dynamic environment.</li>
+                            <li>Created an API using Python with the <span class="highlight">Flask</span> framework and a <span class="highlight">MySQL</span> Database (<span class="highlight">Amazon RDS</span>). [muzik-webapp]</li>
+                            <li>Interfaced the Android application with Google's Cast API.</li>
+                            <li>Created an API in Flask </li>
                         </ul>
                     </li>
                     <li>
-                        <h4>Machine Learning/Data Science, 2015 - Present</h4>
+                        <h4>Chordi.co</h4>
                         <ul>
-                            <li>Completed the Stanford Machine Learning course offered on Coursera.</li>
-                            <li>Created a music generation program which used a Feed-Forward <span class="highlight">Neural Network</span> to procedurally generate a song. [Chordi.co]</li>
+                            <li>Created a music generation program which utilized a Feed-Forward <span class="highlight">Neural Network</span> to procedurally generate a song.</li>
+                            <li>Training was done using a backpropagation algorithm.</li>
+                            <li>Network was created in PyBrain, and trained with several different chord sequences to produce a song.</li>
+                            <li>Backend was written in <span class="highlight">Python</span> with Flask. Frontend utlized D3.js for animations.</li>
+                            <li>Developed during PennApps 2015.</li>
                         </ul>
                     </li>
                     <li>
-                        <h4>Swift/Objective C (iOS), 2014 - Present</h4>
+                        <h4>HeartRateMonitor</h4>
                         <ul>
-                            <li>Developed 4 applications for the iOS platform using a combination of Swift and Objective C. [Muzik-iOS]</li>
+                            <li>Designed and implemented an image processing algorithm which would compute a person's heart rate.</li>
+                            <li>No external library used for image processing. Algorithm utilized the camera image feed to provide real time insight into the flow of blood into an out of a finger.</li>
+                            <li>Created a visually appealing <span class="highlight">Android</span> application with a flexible UI which scaled on all device sizes.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Note-It-Now</h4>
+                        <ul>
+                            <li>Developed an application which would take an image of a student's notes, analyze the contents, and automatically bookmark it based on headings. [Note-it-Now]</li>
+                            <li>Technologies included Python with Flask for the backend, and OpenCV to perform image processing and detection of features in an image.</li>
+                            <li>Created for Hack the North 2015</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>TextSpam</h4>
+                        <ul>
+                            <li>Created an application which enabled a user to maintain mailing lists of clients and send out messages to batches of people using their existing mobile plan.</li>
+                            <li>Achieved approximately 100,000 downloads on the Google Play Store.</li>
+                            <li>Leveraged <span class="highlight">Google Analytics</span> to improve distribution and localization for users all over the world.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Vicinime</h4>
+                        <ul>
                             <li>Experience using <span class="highlight">Core Data</span>, <span class="highlight">Map Kit</span>, <span class="highlight">Core Location</span> and other iOS frameworks. [Sportify and Vicinime]</li>
                             <li>Experience using <span class="highlight">Cocoa Pods</span> for dependency management</li>
+
+                            <li></li>
                         </ul>
                     </li>
                     <li>
-                        <h4>Javascript/Node.js, 2014 - Present</h4>
+                        <h4>Panic.io</h4>
                         <ul>
-                            <li>Created several API's using Node.js, <span class="highlight">Express</span> and <span class="highlight">MongoDB</span>. [Krimea-Backend and Vicinime]</li>
-                            <li>Used JavaScript and <span class="highlight">JQuery</span> to create responsive websites.</li>
-                            <li>Created a library for custom animation on the website as well as a CMS for dynamic content.</li>
+                            <li>Created a <span class="highlight">Node.js</span> server, with an <span class="highlight">Android</span> and web client, which would stream a user's location in real-time to a web interface using <span class="highlight">Socket.io</span> and <span class="highlight">Angular JS</span>. [Panic.io and Krimea-Backend]</li>
+                            <li>Created for AngelHack 2015.</li>
                         </ul>
                     </li>
                     <li>
-                        <h4>C/C++, 2013 - Present</h4>
+                        <h4>AndrewCodispoti.me</h4>
                         <ul>
-                            <li>Developed and currently maintaining 2 watch faces for the <span class="highlight">Pebble</span> smartwatch using the C language.</li>
-                            <li>Completed the CS137 course focused around programming principles, with all assignments completed in C.</li>
-                            <li>Completed the CS138 course focused on data structures and OOP entirely in C++.</li>
+                            <li>Created my own personal website using a combination of pure Javascript, JQuery</li>
+                            <li>Developed a front-end content management system using Javascript to read formatted text files to populate the pages on my website.</li>
+                            <li>Designed a custom animation library for the effects seen on my website</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h4>LoanMate</h4>
+                        <ul>
+                            <li>Developed a loan sharing application, where a user's loan would be crowdfunded among a group of potential lenders.</li>
+                            <li>Backend was developed in <span class="highlight">Python</span> with <span class="highlight">Flask</span>.</li>
+                            <li>Frontend client was an iOS application written in a combination of <span class="highlight">Swift</li> and <span class="highlight">Objective C</span></li>
+                            <li>Created for Battlehack 2015.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Hive</h4>
+                        <ul>
+                            <li>Created an real-time local event sharing and discovery application.</li>
+                            <li>Application was written in <span class="highlight">Node.js</span> with an <span class="highlight">Android</span> client.</li>
+                            <li>Developed for YHack 2014</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>0xFACE</h4>
+                        <ul>
+                            <li>Created a watch face for the Pebble Smartwatch which would display the current time in hexadecimal format.</li>
+                            <li>Developer entirely in C.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>MyoMove</h4>
+                        <ul>
+                            <li>Created one of the first applications in the world to use the Myo armband.</li>
+                            <li>Developed for Hack the North 2014</li>
                         </ul>
                     </li>
                 </ul>
@@ -117,47 +168,6 @@
                         <ul>
                             <li>Android Studio, Vim, XCode, Brackets, Dreamweaver, Eclipse, Microsoft Office Suite</li>
                             <li>Experience with Linux (Ubuntu and Arch), Mac OS X, Microsoft Windows (XP/7/8/8.1/10)</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="main-list-item">
-                <h2 class="main-list-item-title">Hackathons</h2>
-                <ul>
-                    <li>
-                        <h4>PennApps, 2015</h4>
-                        <ul>
-                            <li>Created a program to procedurally generate music using a <span class="highlight">Neural Network</span> written in <span class="highlight">PyBrain</span>. [Chordi.co]</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Hack the North, 2015</h4>
-                        <ul>
-                            <li>Developed an application using <span class="highlight">Python</span> and <span class="highlight">OpenCV</span> which would take an image of a student's notes, analyze the contents, and automatically bookmark it based on headings. [Note-it-Now]</li>
-                        </ul>
-                        </li>
-                    <li>
-                        <h4>Battlehack, 2015</h4>
-                        <ul>
-                            <li>Created a loan sharing application in <span class="highlight">Python</span>, where a user's loan would be crowdfunded among a group of potential lenders. [LoanMate]</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>AngelHack, 2015</h4>
-                        <ul>
-                            <li>Created a <span class="highlight">Node.js</span> server, with an <span class="highlight">Android</span> and web client, which would stream a user's location in real-time to a web interface using <span class="highlight">Socket.io</span> and <span class="highlight">Angular JS</span>. [Panic.io and Krimea-Backend]</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Hack the North, 2014</h4>
-                        <ul>
-                            <li>Produced one of the first applications in the world for the <span class="highlight">Myo</span> wearable device. [MyoMove]</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>YHack, 2014</h4>
-                        <ul>
-                            <li>Created an real-time local event sharing and discovery application written in <span class="highlight">Node.js</span> with an <span class="highlight">Android</span> client. [Hive]</li>
                         </ul>
                     </li>
                 </ul>
@@ -186,9 +196,15 @@
                 <h2 class="main-list-item-title">Education</h2>
                 <ul>
                     <li>
-                        <h4>Candidate for Bachelor of Software Engineering, Co-operative Program, University of Waterloo, Waterloo, Ontario, 2014 - Present</h4>
+                        <h4>Bachelor of Software Engineering, Co-operative Program, University of Waterloo, Waterloo, Ontario, 2014 - Present</h4>
                         <ul>
                             <li>CS137 Programming Principles, CS138 Data Abstraction and Implementation</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Introduction to Machine Learning</h4>
+                        <ul>
+                            <li>Completed the Stanford machine learning course offered on Coursera by Andrew Ng.</li>
                         </ul>
                     </li>
                     <li>
