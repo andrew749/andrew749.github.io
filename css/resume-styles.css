@@ -78,6 +78,10 @@ a{
 }
 /*MEDIA*/
 @media print{
+  a{
+    color:#000;
+    text-decoration:none;
+  }
   #name-title{
     margin-bottom:8px;
   }
