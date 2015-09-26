@@ -82,6 +82,12 @@ a{
     color:#000;
     text-decoration:none;
   }
+  .vicinime{
+    page-break-after:always;
+  }
+  .project{
+    page-break-after: auto;
+  }
   #name-title{
     margin-bottom:8px;
   }
