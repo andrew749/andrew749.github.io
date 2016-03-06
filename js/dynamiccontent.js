@@ -98,7 +98,7 @@ $(document).ready(function(){
 
   function addWaypoint(element){
     $(element).addClass("hidecard");
-    element.waypoint({
+    $(element).waypoint({
       element: element,
       handler: function() {
         $(this.element).removeClass("hidecard");

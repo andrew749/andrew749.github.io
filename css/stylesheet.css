@@ -137,7 +137,7 @@ img{
 .floatingbutton{
     width: 4em;
     height: 4em;
-    background-color: #00FFFF;
+    background-color: rgb(41, 186, 255);
     border-radius: 50px;
     position: fixed;
     right: 30px;
@@ -147,7 +147,7 @@ img{
 
 }
 .floatingbutton:hover{
-    background-color: #80FFFF;
+    background-color: rgb(110, 162, 187);
     z-index: 100;
 }
 /*End floating button*/
