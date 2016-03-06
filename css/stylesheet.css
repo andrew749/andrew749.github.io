@@ -510,6 +510,7 @@ td{
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:center;
+    align-items:center;
 }
 
 #androidimg {
@@ -519,7 +520,6 @@ td{
 .desktopsplit {
     display: table-cell;
     vertical-align: baseline;
-
 }
 
 .other-container {
