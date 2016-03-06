@@ -7,7 +7,7 @@
     background-color: #fff;
     margin: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.46);
-    border-radius: 1.5em;;
+    border-radius: 5px;;
     text-align: justify;
 }
 
@@ -135,8 +135,8 @@ img{
 
 /*Floating action button*/
 .floatingbutton{
-    width:5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
     background-color: #00FFFF;
     border-radius: 50px;
     position: fixed;
@@ -161,9 +161,9 @@ Popup business card on first page
     position:fixed;
     padding:20px;
     border: 5px groove;
-    background-color:rgb(252, 249, 229);
+    background-color:#FFF;
     z-index:1000;
-    box-shadow: 10px 10px 5px #000;
+    box-shadow: 5px 5px 5px #000;
     display:block;
     top:10%;
     font-family:'Open Sans Condensed', sans-serif;
@@ -501,7 +501,7 @@ td{
 
 .platformtext {
     font-size-adjust: auto;
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .language-container {
@@ -509,7 +509,7 @@ td{
 }
 
 #androidimg {
-    max-height: 30em;
+    max-height: 200px;
 }
 
 .desktopsplit {
@@ -527,7 +527,7 @@ td{
 }
 
 .fa-5 {
-    font-size: 12em;
+    font-size: 10em;
     text-align: center;
 }
 
@@ -554,7 +554,7 @@ i{
 }
 
 .fa-android{
-    font-size:20em;
+    font-size:15em;
 }
 
 .cardTextWrapper{
