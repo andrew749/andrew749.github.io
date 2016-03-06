@@ -363,7 +363,8 @@ td{
     padding: 10px;
     margin: auto auto;
     max-height: 270px;
-    height: 100%;
+    width:100%;
+    height: auto;
     vertical-align: middle;
 }
 
@@ -564,7 +565,7 @@ i{
 .cardTextWrapper{
     display: inline-block;
     float: left;
-    height: 300px;
+    height: auto;
     width: 50%;
 }
 

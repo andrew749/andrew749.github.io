@@ -1,5 +1,5 @@
 {
-"title":"ScribblerPlaysTwitch",
+"title":"Scribbler Plays Twitch",
 "url":"Images/scribbler.png",
 "subheading":"A Multiplayer Collaborative gaming experience.",
 "description":"ScribblerPlaysTwitch is exactly what the name suggests. Twitch plays but for the a scribbler robot, all running on a fluke board. Using various web technologies, such as sockets, users can communicate with one another and submit commands to the robot from anywhere in the world. They can also get a live video feed from the robot as well as from one more webcam to allow the users to get a good overview of the surrounding of the robot. The project also utilizes OpenCV for some of the image processing tasks. Users can play with anyone around the world and control the scribbler robot to complete various tasks. With a seamless interface coupled with exciting gameplay you'll be \"Hooked\" on the \"Feeling\" that the game gives you."
