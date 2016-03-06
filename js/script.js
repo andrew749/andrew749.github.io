@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    //handles the image carousel
-    var waypoints=[];
     //handles the button click to scroll the page
     $(".menubutton").on("click",function (event){
         //code for the event
@@ -36,7 +34,6 @@ $(document).ready(function(){
         window.location.href = "mailto:andrewcod749@gmail.com";
     });
     function clickHandler(id){
-        console.log(id);
         $('html, body').animate({scrollTop: $(id).offset().top-100}, 500);
     }
     function purgeClass(){
@@ -46,7 +43,7 @@ $(document).ready(function(){
     }
     function slideInInformation(element){
         $(element).addClass("hidecard");
-        var tempwaypoint = new Waypoint({
+        $(element).waypoint({
             element: element,
             handler: function() {
                 $(this.element).removeClass("hidecard");
@@ -55,10 +52,9 @@ $(document).ready(function(){
             ,
             offset:'60%'
         });
-        waypoints.push(tempwaypoint);
     }
-    var sections=document.getElementsByClassName('mainsection');
-    for(var i in sections){
+    var sections = document.getElementsByClassName('mainsection');
+    for(var i in sections) {
         slideInInformation(sections[i]);
     }
 });

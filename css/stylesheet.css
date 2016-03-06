@@ -330,7 +330,7 @@ td{
     }
 
     .fa-5{
-        font-size:5em !important;
+        font-size:10em !important;
     }
 
     #contactfab{
@@ -506,6 +506,10 @@ td{
 
 .language-container {
     padding-top: 2em;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 #androidimg {

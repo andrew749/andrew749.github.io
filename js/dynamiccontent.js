@@ -98,10 +98,9 @@ $(document).ready(function(){
 
   function addWaypoint(element){
     $(element).addClass("hidecard");
-    var tempwaypoint = new Waypoint({
+    element.waypoint({
       element: element,
       handler: function() {
-        console.log("addingclass");
         $(this.element).removeClass("hidecard");
         $(this.element).addClass("animation");
       }
