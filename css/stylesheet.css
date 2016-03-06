@@ -377,7 +377,8 @@ td{
 
 .imagewrapper {
     width: 50%;
-    height: 300px;
+    min-height: 250px;
+    height:auto;
     float: right;
     display: inline-block;
 }
