@@ -107,6 +107,5 @@ $(document).ready(function(){
       ,
     offset:'70%'
     });
-    waypoint.push(tempwaypoint);
   };
 });
