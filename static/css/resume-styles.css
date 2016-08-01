@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html{
+  font-family: "Roboto", sans-serif;
+  line-height:1.5em;
+}
+ul{
+  list-style: none;
+}
+ul ul{
+  padding:0px 15px;
+}
+ul ul ul{
+  padding:0px 25px;
+  list-style:circle;
+}
+.main-list{
+  padding-left: 0px;
+  width:100%;
+}
+h2{
+  width:100%;
+  padding:5px;
+  color:white;
+  background-color: #2196F3;
+  border-radius:5px;
+  margin: 10px 0px;
+}
+#name-title{
+  font-size:2.25em;
+  text-align:center;
+}
+#occupation-title{
+  text-align:center;
+  font-size:1.25em;
+}
+.resume-header{
+  font-family: "Courier New";
+  width:80%;
+  margin:0 auto;
+}
+.resume-header-wrapper{
+
+}
+.main-list{
+  margin:0 auto;
+  width:80%;
+}
+.contact-table{
+  width:100%;
+  text-align:center;
+}
+.contact-table div{
+  padding:0px 10px;
+  display:inline-block;
+}
+.contact-heading{
+  font-weight:bold;
+}
+.summary-list{
+  padding:0px 40px;
+  list-style:circle;
+}
+h4{
+  margin:15px 0px;
+}
+a{
+  color:black;
+}
+.highlight{
+  font-weight:900;
+  color:#2196F3;
+  padding:2px;
+  font-family: 'Roboto';
+  font-size: .9em;
+  border-radius:5px;
+  white-space:nowrap;
+  line-height:30px;
+}
+/*MEDIA*/
+@media print{
+  a{
+    color:#000;
+    text-decoration:none;
+  }
+  .vicinime{
+    page-break-after:always;
+  }
+  .project{
+    page-break-after: auto;
+  }
+  #name-title{
+    margin-bottom:8px;
+  }
+  #occupation-title{
+    margin-top:5px;
+  }
+  #phone-element{
+    display:block;
+  }
+  #email-element{
+    display:block;
+  }
+  .contact-table div{
+    padding:0px 5px;
+  }
+  .contact-table{
+    font-size:0.77em;
+  }
+  .left-align-print{
+    display:block;
+  }
+  .right-align-print{
+    float:right;
+    width:auto%;
+  }
+  html{
+    line-height:1em;
+    font-size:0.75em;
+  }
+  h2{
+    color:black;
+    background-color:#DADADA;
+  }
+  h4{
+    margin:8px 0px;
+  }
+  .resume-header{
+    width:100%;
+  }
+  .main-list{
+    width:100%;
+  }
+  .contact-table{
+    text-align:left;
+  }
+  body{
+    margin: 10px;
+  }
+  .highlight{
+    color:black;
+    padding:0px;
+    font-weight:bold;
+    border-radius:0px;
+    border:0px;
+    background-color:white;
+    line-height:normal;
+  }
+  #name-title{
+    font-size:2em;
+  }
+  .contact-table{
+    text-align:center !important;
+  }
+  .subheading{
+    width:40%;
+    text-align:left;
+  }
+}
+@media (max-width:480px){
+  .summary-list{
+    padding:0px 0px;
+  }
+  .resume-header{
+    width:100%;
+  }
+  .main-list{
+    width:90%;
+  }
+  .main-list-item ul{
+    padding:0px 0px;
+  }
+  ul ul ul{
+     list-style:none;
+  }
+  li{
+    line-height:1.25em;
+    margin:10px 0px;
+  }
+  .contact-table div{
+    display:block;
+  }
+  .summary-list{
+    list-style:none;
+  }
+  ul{
+    padding:0px;
+  }
+}
+@media (max-width:1561px){
+  .contact-table{
+    text-align:left;
+  }
+  #name-title{
+    margin-bottom:8px;
+  }
+  #occupation-title{
+    margin-top:5px;
+  }
+  #phone-element{
+    display:block;
+  }
+  #email-element{
+    display:block;
+  }
+  .contact-table div{
+    padding:0px 5px;
+  }
+  .left-align-print{
+    display:block;
+  }
+  .right-align-print{
+    float:right;
+    width:auto%;
+  }
+}
+@media (max-width:860px){
+  .right-align-print{
+    float:none !important;
+    display:block;
+  }
+}

@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+{% block header%}
+<script src="{{url_for('static', filename='js/dynamiccontent.js')}}"></script>
+{%endblock%}
+{% block body %}
+<!--        will hold all projects which have the same class but different id-->
+<div class="projectcontainer row">
+    <div class="projectview col-md-12 col-xs-12 col-centered" id="textspam">
+        <a class="textspamlink" href="projectpages/textspam.html">
+            <div class="styletitle">
+                <h1>TextSpam</h1>
+                <img  id="textspamimage" src="{{url_for('static', filename='Images/textspamlogo.png')}}"/>
+                <h3> The most popular batch messaging application on the Google Play Store. Ever.</h3>
+            </div>
+            <br />
+            <br />
+
+            <p> Its no wonder over 90,000 people have chosen TextSpam for their texting needs. With a simplistic UI, coupled with its powerful functionality, TextSpam makes it easier than ever to create mailing lists and avoid those high costs that third party services charge for sending out batch messages.</p>
+            <br/>
+            <p>Whether you need to reach 2 people or 10 million people, TextSpam is the right tool for you. Imagine a world where all your customers are at a button click away. TextSpam makes this possible.</p>                    </a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 row-fluid row-centered">
+            <div id="stuff"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

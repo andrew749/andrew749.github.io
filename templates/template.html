@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Custom Fonts For Page-->
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/font-mfizz.css')}}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+        <link rel="icon" type="image/png" href="{{url_for('static', filename='Images/favicon.ico')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesheet.css')}}">
+
+        <!--Javascript-->
+        <script src="{{url_for('static', filename='js/jquery-2.1.1.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.waypoints.js')}}"></script>
+        {%block header%} {%endblock%}
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-46422801-5', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <title>{{title}}</title>
+    </head>
+
+    <body >
+        <!--This is the main page-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Andrew Codispoti</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li id="homebutton" class="selectednavbutton menubutton"><a>Home</a></li>
+                        <li id="aboutbutton" class="menubutton"><a>About</a></li>
+                        <li id="contactbutton" class="menubutton"><a>Contact</a></li>
+                        <li id="projects" class="menubutton"><a href="{{url_for('projects')}}">Projects</a></li>
+                        <li class="menubutton"><a href="resume.html">Resume</a></li>
+                        <li id="github" class="menubutton"><a href="http://github.com/andrew749">GitHub</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!--Start body section-->
+        {% block body %} {% endblock %}
+        </body>
+    </html>

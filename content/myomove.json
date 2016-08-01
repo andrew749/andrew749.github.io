@@ -1,0 +1,7 @@
+{
+"title":"MyoMove",
+"url":"Images/myomove.png",
+"subheading":"A gesture suite for the Myo wearable device",
+
+"description":"MyoMove adds several useful features to the Myo through using several easy to perform gestures. MyoMove can control music playback as well as the lock state of the phone. The application uses a combination of gesture tracking on the Myo and accelerometer data from the phone to determine whether or not to unlock the phone.(Created for Hack the North 2014)"
+}
