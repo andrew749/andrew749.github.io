@@ -1,6 +1,0 @@
-{
-"title":"Heart Rate Monitor",
-"subheading":"Measure your heart rate anytime, anywhere.",
-"url":"Images/heart.png",
-"description":"Using a clever image processing algorithm, HeartRateMonitor accurately tracks one's heart rate and creates a moving average with sampled data. This data is then graphed with respect to time to show trends in the rate over a short period of time. (Created for Biology SBI4U)"
-}
