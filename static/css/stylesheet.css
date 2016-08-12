@@ -1,52 +1,13 @@
-@font-face{
+/* Font faces. */
+@font-face {
     font-family:'Roboto';
     src:url('../fonts/Roboto-Light.ttf');
 }
 
-.mainsection{
-    background-color: #fff;
-    margin: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.46);
-    border-radius: 5px;;
+/* General Html Styles sitewide */
+
+p {
     text-align: justify;
-}
-
-p{
-    padding: 1em;
-    text-align: justify;
-}
-
-h3{
-    font-weight: bold;
-}
-h2{
-  text-align:center;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    overflow-x: hidden;
-    width:auto;
-    background-color: #424242;
-}
-
-h1{
-}
-
-.contentpage{
-    width: 80%;
-    margin: auto;
-    background-color: #E9ECEC;
-}
-
-.background{
-    box-shadow: 2px 2px 10px #000;
-    background-color: #2196F3;
-}
-
-.menubutton:hover{
-    transition: opacity 1s ease-in-out;
 }
 
 img{
@@ -55,23 +16,111 @@ img{
     height:auto;
 }
 
+h2 {
+  text-align:center;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+    width:auto;
+    background-color: #9E9E9E;
+}
+
+i {
+    color: #212121;
+}
+
+.rounded-image {
+    border-radius:50%;
+}
+
+.inline-header {
+    display:inline;
+    vertical-align:middle;
+}
+
+.inline-header + i {
+    margin-left: 20px;
+}
+
+.hidden {
+    display:none;
+}
+
+/* Colours */
+.facebook-blue {
+    color:#3b5998;
+}
+
+/* Navigation bar styles*/
+
+nav * {
+    color: black !important;
+}
+
+.brand-logo {
+    font-size:1em !important;
+    margin-left: 10px;
+}
+
+#profile-pic {
+    width:80%;
+    margin:20px;
+}
+
+.hidecard {
+    visibility:hidden;
+}
+
+.profile-pic-wrapper {
+    min-width:300px;
+    flex-basis:40%;
+}
+
+.main_section{
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.46);
+    border-radius: 5px;;
+    text-align: justify;
+}
+
+.language-header {
+    display:flex;
+    align-items:center;
+}
+
+.project-subtitle{
+    font-size:1em;
+    text-align:left;
+}
+
+.contentpage{
+    width: 80%;
+    margin: auto;
+}
+
+.menubutton:hover{
+    transition: opacity 1s ease-in-out;
+}
+
 .mainimage{
     box-shadow: 5px 5px 10px #000;
     width:40%;
     border-radius:5%;
 }
 
-.jumbotron-image{
-    position:relative;
-    height:auto;
-    margin: auto;
-    text-align: center;
-    max-width: 100%;
-    max-height: 40em;
+.jumbo-content-wrapper {
+    width:60%;
 }
 
-.jumbotron{
-    display:flex;
+.first_section{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -80,139 +129,215 @@ img{
     -moz-align-items:center;
     align-items:center;
     justify-content:center;
-    height:90vh;
+    min-height:90vh;
+    height:auto;
 }
+
 .name-title{
   flex:grow;
   -webkit-flex:grow;
   -moz-flex:grow;
   -ms-flex:grow;
 }
+
 .jumbo-content-wrapper{
+    flex-basis:60%;
 }
+
 .platform{
     background-color: #CCFFFF;
 }
-.image4{
-    height: auto;
-    text-align: center;
-    max-width: 100%;
 
-}
 .platformsexplanation{
     font-size: 1em;
     text-align: justify;
     vertical-align: middle;
-
 }
+
 .whoamiimage {
-    height: 50vh;
+    max-width:30%;
+    max-height: 100%;
+    width:auto;
     float: right;
-    display: block;
-    padding: 5vh;
-    border-radius: 5%;
+    padding: 30px;
+    border-radius: 50%;
 }
 
-.skillslist{
-    display: table;
-    margin: 0 auto;
-    font-size: 1.25em;
-}
-.skillslistcontainer{
-    width: 100%;
-    margin: 0 auto;
-}
-#contact{
-    margin-top: 30px;
+.jumbotroncaption {
+    padding: 0px 100px;
 }
 
+.language-container {
+    padding-top: 2em;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.styletitle {
+    text-align: left;
+}
+
+.fa {
+    display:inline;
+}
+
+.card-text-wrapper {
+    display: inline-block;
+    float: left;
+    height: auto;
+    width: 50%;
+}
 
 .projectholder{
     position: relative;
     width: 100%;
 }
 
-
-/*Floating action button*/
-.floatingbutton{
-    width: 4em;
-    height: 4em;
-    background-color: rgb(41, 186, 255);
-    border-radius: 50px;
-    position: fixed;
-    right: 30px;
-    bottom: 100px;
-    margin: auto;
-    box-shadow: 1px 1px 5px #000;
-
-}
-.floatingbutton:hover{
-    background-color: rgb(110, 162, 187);
-    z-index: 100;
-}
-/*End floating button*/
-
-
-/*Contact card styles
-Popup business card on first page
-
-*/
-.contactcardlayout{
-    position:fixed;
-    padding:20px;
-    border: 5px groove;
-    background-color:#FFF;
-    z-index:1000;
-    box-shadow: 5px 5px 5px #000;
-    display:block;
-    top:10%;
-    font-family:'Open Sans Condensed', sans-serif;
-
-}
-td{
-    padding:10px;
-}
-.cardinfo {
-    text-align: right;
-}
-
-#contactinfo {
-    margin: auto;
-    font-size:2em;
-}
-
-
-
-
-/*End contact*/
-
-
-
-.selectednavbutton{
-    background-color: #cacbcb;
-}
-
-.navbarshadow {
-    box-shadow: 1px 2px 1px #000;
-}
-
-/*Styles for the projects page*/
+/* Projects Page */
 .projectcontainer {
+    display:flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
     position: relative;
     top:56px;
     margin: 0 3em;
 }
 
-.projectview {
-    background-color: #E9ECEC;
+.project {
+    flex-basis: 500px;
+    background-color: #FFF;
     height: auto;
     box-shadow: 5px 5px 10px #000;
-    margin:1em;
+    margin:20px;
+    padding:20px;
     vertical-align:top;
 }
 
-.projectview:hover{
+.project:hover{
     background-color: #a8a7a7;
+}
+
+.projectbody {
+    width: 100%;
+    position: relative;
+}
+
+.projectimage{
+    padding: 10px;
+    margin: auto auto;
+    max-height: 270px;
+    max-width: 270px;
+    width:100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.projectdescription {
+    display: inline;
+    padding: 10px;
+    font-size: 1.25em;
+}
+
+.imagewrapper {
+    width: 50%;
+    min-height: 250px;
+    height:auto;
+    float: right;
+    display: inline-block;
+}
+
+.row {
+    clear:both;
+}
+
+/*Detail View*/
+.detail-view{
+    text-align: center;
+    position: relative;
+    display: block;
+    top: 50px;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    background-color: white;
+    max-height: 80%;
+    height:auto;
+    width:auto;
+    max-width:80%;
+}
+
+.detail-content {
+    height:auto;
+    font-size: 1em;
+    padding: 20px;
+}
+
+.detail-content-view {
+    height:100%;
+    width:auto;
+}
+
+.detail-project-image{
+    width:auto;
+    height: auto;
+    max-height:100%;
+    padding: 20px;
+}
+
+.detail-image-wrapper{
+    width:auto;
+    height:auto;
+    max-width:50%;
+    min-width:20%;
+    max-height:70%;
+    display: inline-block;
+}
+
+.detailmain{
+    text-align: center;
+    background-color: rgba(64, 64, 64, 0.58);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000000;
+}
+
+.detail-view p{
+    width:40%;
+    height: 70%;
+    float: right;
+    overflow: scroll;
+}
+
+.closeButton{
+    position: absolute;
+    top:-5px;
+    left: -5px;
+    height: 30px;
+    width: 30px;
+    color: red;
+    background-color: #e3e3e3;
+    border-radius: 100%;
+}
+
+.closeButton:hover{
+    background-color: #9b9999;
+
+}
+
+.textspamlink{
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+#textspam {
+    flex-basis:100%;
 }
 
 #textspamimage {
@@ -221,34 +346,53 @@ td{
     margin: 0 auto;
 }
 
-.projectbody {
-    width: 100%;
-    position: relative;
+/* END PROJECTS PAGE */
+
+/* Animations */
+
+.animation_slide_in {
+    visibility:visible;
+    -webkit-animation: cardinanimationside .5s ease-out;
+    -moz-animation:cardinanimationside .5s ease-out;
 }
 
+@-webkit-keyframes cardinanimationside{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Phone styles */
 
 @media (max-width:969px){
+
     .contentpage{
         width:100%;
-        background-image: #bcbcbc;
         margin: 0px;
     }
 
-    .floatingbutton{
-        width:2.5em;
-        height: 2.5em;
-    }
     .projectcontainer{
         margin:0;
     }
+
     .projectview{
         margin: 1em 0;
     }
+
     #textspamimage{
         clear: both;
         display: block;
         float: none;
     }
+
     .projectimage{
         display:block;
         margin:0 auto;
@@ -264,11 +408,13 @@ td{
         float: none;
         width: auto;
     }
+
     div .imagewrapper{
         width: 100%;
         margin: 0 auto;
         clear: both;
     }
+
     .imagewrapper::after {
         content: "";
         display: table;
@@ -295,6 +441,7 @@ td{
         left:0;
         right:0;
     }
+
     .platformsexplanation{
         display: block;
         width:100%;
@@ -317,6 +464,7 @@ td{
         display: block;
         float: none;
         clear: both;
+        max-width: 70%;
     }
 
     .vertical-align{
@@ -324,306 +472,36 @@ td{
         clear: both;
     }
 
-    p{
+    p {
         font-size:1em !important;
         padding:0px 0px;
     }
 
-    .fa-5{
-        font-size:10em !important;
-    }
-
-    #contactfab{
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
-    .cardTextWrapper{
+    .card-text-wrapper{
         width: 100% !important;
         height: auto !important;
     }
-    .detailimagewrapper{
+
+    .detail-image-wrapper{
         width: 100% !important;
         display: block;
     }
-    .detailView p{
+
+    .detail-project-image {
+        margin: 0 auto;
+    }
+
+    .detail-content{
         height: 30% !important;
         display: block;
         width:100% !important;
     }
-    .detailView{
+
+    .detail-view{
         top: 0px !important;
         width: 90% !important;
         margin: 0 auto !important;
-        height: 100% !important;
+        height: auto !important;
+        max-height: none !important;
     }
-
-}
-.projectimage{
-    padding: 10px;
-    margin: auto auto;
-    max-height: 270px;
-    max-width: 270px;
-    width:100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-
-.projectdescription {
-    display: inline;
-    padding: 10px;
-    font-size: 1.25em;
-}
-
-.imagewrapper {
-    width: 50%;
-    min-height: 250px;
-    height:auto;
-    float: right;
-    display: inline-block;
-}
-
-.row {
-    clear:both;
-}
-
-.hidecard{
-    opacity: 0;
-}
-
-.animation{
-    -webkit-animation: cardinanimation .5s ease-out;
-    -moz-animation: cardinanimation .5s ease-out;
-}
-
-.animation_slide_in{
-    -webkit-animation: cardinanimationside .5s ease-out;
-    -moz-animation:cardinanimationside .5s ease-out;
-}
-
-.contacthide{
-    -webkit-animation: cardinanimationsideout .5s ease-in forwards;
-    -moz-animation: cardinanimationsideout .5s ease-in forwards;
-}
-
-.contacthideinitial{
-    display:none;
-}
-
-@-webkit-keyframes cardinanimation{
-    0%{
-        transform: translateY(300px);
-        opacity: 0;
-    }
-    50%{
-        opacity: .2;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes cardinanimationside{
-    0%{
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-    50%{
-        opacity: .2;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-}
-
-@-webkit-keyframes cardinanimationsideout{
-    0%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-    50%{
-        opacity: .7;
-    }
-    100%{
-        transform: translateY(-500px);
-        opacity: 0;
-    }
-
-}
-
-@-moz-keyframes cardinanimation{
-    0%{
-        transform: translateY(300px);
-        opacity: 0;
-    }
-    50%{
-        opacity: .2;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-}
-
-@-moz-keyframes cardinanimationside{
-    0%{
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-    50%{
-        opacity: .2;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes cardinanimationsideout{
-    0%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-    50%{
-        opacity: .7;
-    }
-    100%{
-        transform: translateY(-500px);
-        opacity: 0;
-    }
-}
-
-.jumbotroncaption {
-    padding: 0px 100px;
-}
-
-.platformtext {
-    font-size-adjust: auto;
-    font-size: 1em;
-}
-
-.language-container {
-    padding-top: 2em;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-}
-
-#androidimg {
-    max-height: 200px;
-}
-
-.desktopsplit {
-    display: table-cell;
-    vertical-align: baseline;
-}
-
-.other-container {
-    display: table-row;
-}
-
-.other-container > *{
-    vertical-align: middle;
-}
-
-.fa-5 {
-    font-size: 10em;
-    text-align: center;
-}
-
-/* centered columns styles */
-.row-centered {
-    text-align:center;
-}
-
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:center;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-
-i{
-    color: #212121;
-}
-
-.styletitle {
-    text-align: left;
-}
-
-.fa-android{
-    font-size:15em;
-}
-
-.cardTextWrapper{
-    display: inline-block;
-    float: left;
-    height: auto;
-    width: 50%;
-}
-
-/*detail view*/
-.detailView{
-    text-align: center;
-    position: relative;
-    display: block;
-    top: 50px;
-    float: none;
-    clear: both;
-    margin: 0 auto;
-    background-color: white;
-    height: 70%;
-}
-.detailprojectimage{
-    width:100%;
-    padding: 20px;
-}
-.detailimagewrapper{
-    width:50%;
-    display: inline-block;
-    height:auto;
-}
-.detailmain{
-    text-align: center;
-    background-color: rgba(64, 64, 64, 0.58);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10000000000;
-}
-
-.detailView p{
-    width:40%;
-    height: 70%;
-    float: right;
-    overflow: scroll;
-}
-.closeButton{
-    position: absolute;
-    top:-5px;
-    left: -5px;
-    height: 30px;
-    width: 30px;
-    color: red;
-    background-color: #e3e3e3;
-    border-radius: 100%;
-}
-.closeButton:hover{
-    background-color: #9b9999;
-
-}
-.textspamlink{
-    color: #000 !important;
-    text-decoration: none !important;
 }

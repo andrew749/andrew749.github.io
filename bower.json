@@ -1,0 +1,9 @@
+{
+  "name": "andrew_codispoti",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "materialize": "^0.97.7"
+  },
+  "private": true
+}

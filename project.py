@@ -1,5 +1,7 @@
 from flask import url_for
 import re
+import json
+import pdb
 class Project:
     def __init__(self, title, subtitle, content, path):
         self.title = title
@@ -11,4 +13,8 @@ class Project:
             self.path = path
         else:
             self.path = url_for('static', filename=path)
+
+    def json(self):
+        return json.dumps(self.__dict__)
+
 

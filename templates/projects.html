@@ -5,7 +5,7 @@
 {% block body %}
 <!--        will hold all projects which have the same class but different id-->
 <div class="projectcontainer row">
-    <div class="projectview col-md-12 col-xs-12 col-centered" id="textspam">
+    <div class="project col-centered" id="textspam">
         <a class="textspamlink" href="projectpages/textspam.html">
             <div class="styletitle">
                 <h1>TextSpam</h1>
@@ -21,13 +21,28 @@
     </div>
 
     {% for project in projects%}
-    <div class="projectview col-md-5 col-xs-12 col-centered">
-        <div class="cardTextWrapper">
-            <h1>{{project.title}}</h1>
-            <h3>{{project.subtitle}}</h3>
+    <div class="project">
+        <div class="card-text-wrapper">
+            <h3 class="project-title">{{project.title}}</h3>
+            <p class="project-subtitle">{{project.subtitle}}</p>
         </div>
         <div class="imagewrapper">
             <img class="projectimage" src="{{project.path}}">
+        </div>
+    </div>
+    <div class="detailmain hidden">
+        <div class="detail-view">
+            <h1>{{project.title}}</h1>
+            <h3>{{project.subtitle}}</h3>
+            <div class="detail-content-view">
+                <div class="detail-image-wrapper">
+                    <img class="detail-project-image" src="{{project.path}}"/>
+                </div>
+                <p class="detail-content">
+                    {{project.content}}
+                </p>
+            </div>
+            <div class="closeButton">X</div>
         </div>
     </div>
     {% endfor %}
