@@ -54,6 +54,16 @@ i {
     color:#3b5998;
 }
 
+#about {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+#about > h2 {
+    flex: 0 0 100%;
+}
+
 /* Navigation bar styles*/
 
 nav * {
