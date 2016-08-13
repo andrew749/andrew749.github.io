@@ -417,7 +417,11 @@ nav * {
     -moz-animation:cardinanimationside .5s ease-out;
 }
 
-@-webkit-keyframes cardinanimationside{
+.animation_slide_up {
+    -webkit-animation: project-slide-up-animation .5s ease-out;
+}
+
+@keyframes cardinanimationside{
     0%{
         transform: translateX(-500px);
         opacity: 0;
@@ -427,6 +431,21 @@ nav * {
     }
     100%{
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes project-slide-up-animation {
+    0% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(100px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0px);
         opacity: 1;
     }
 }

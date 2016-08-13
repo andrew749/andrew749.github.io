@@ -42,3 +42,7 @@ def blog_post(blog_slug):
                            subtitle = post.subtitle,
                            date     = post.date,
                            content  = Markup(markdown.markdown(post.content)))
+
+@application.route('/project/textspam')
+def textspam():
+    return render_template('textspam.html')

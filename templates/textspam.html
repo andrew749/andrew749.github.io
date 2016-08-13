@@ -7,13 +7,13 @@
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/font-mfizz.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <link rel="icon"
         type="image/png"
-        href="Images/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="projectpage.css">
+        href="{{url_for('static', filename='Images/favicon.ico')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/projectpage.css')}}">
 
         <script src="../js/jquery-2.1.1.min.js"></script>
 
@@ -23,13 +23,13 @@
             <section>
                 <header><p>Welcome to TextSpam, one of the most popular batch messaging applications in the world.</p></header>
                 <div class="imagewrap">
-                    <img id="textspamlogo" src="../Images/textspamlogo.png"/>
-                    <img class="screenshot" src="../Images/screenshot2.png"/>
+                    <img id="textspamlogo" src="{{url_for('static', filename='Images/textspamlogo.png')}}"/>
+                    <img class="screenshot" src="{{url_for('static', filename='Images/screenshot2.png')}}"/>
                     <div id="phonespacer"></div>
                     <img class="screenshot" id="screenshot2"
-                    src="../Images/screenshot4.png"/>
+                    src="{{url_for('static', filename='Images/screenshot4.png')}}"/>
                 </div>
-                <a href="https://play.google.com/store/apps/details?id=com.andrew749.textspam"><img id="googleplay" src="../Images/googleplay.png"/></a>
+                <a href="https://play.google.com/store/apps/details?id=com.andrew749.textspam"><img id="googleplay" src="{{url_for('static', filename='Images/googleplay.png')}}"/></a>
 
             </section>
             <section>
@@ -57,13 +57,19 @@
                 <div id="tscustomerdescription"><p >Textspam makes it easy to maintain a mailing list. Send out large batches of messages using your existing cellular plan and avoid the costly fees of other services.</p>
                     <br> <p>Most people don't use their texting plan to begin with, why not take advantage of the tremendous capabilities that you pay for anyways.</p>
                 </div>
-                <div id="bimagewrapper"><img id="businessimage" src="../Images/Agreement.jpg"/></div>
+                <div id="bimagewrapper"><img id="businessimage" src="{{url_for('static', filename='Images/Agreement.jpg')}}"/></div>
                 <p>Check back soon for a business focused solution.</p>
             </section>
 
             <section>
                 <header>Spam Friends</header>
-                <div id="friendsspam"><p>Being honest, TextSpam is first and foremost an application to send out a single message to a small subset of users. Use the application and push your friends to their limits :P.</p><br><p>TextSpam can trace back it's origins to February 2013. At the time, me and my friends had started so called "texting wars" where we would spam each other with messages. At the time my friends had BlackBerries, meaning that they could send messages at a much faster rate than with my phone. This made me think, why not automate the process (Robots work more efficient than humans right :) ). Later that night, the first alpha of TextSpam was created and the texting wars ceased after textspam allowed me to exercise attrition warfare.</p></div><div id="friendsimagewrapper"><img id="friendsimage" src="../Images/friends.jpg"/></div>
+                <div id="friendsspam">
+                    <p>Being honest, TextSpam is first and foremost an application to send out a single message to a small subset of users. Use the application and push your friends to their limits :P.</p>
+                    <br>
+                    <p>TextSpam can trace back it's origins to February 2013. At the time, me and my friends had started so called "texting wars" where we would spam each other with messages. At the time my friends had BlackBerries, meaning that they could send messages at a much faster rate than with my phone. This made me think, why not automate the process (Robots work more efficient than humans right :) ). Later that night, the first alpha of TextSpam was created and the texting wars ceased after textspam allowed me to exercise attrition warfare.</p></div>
+                <div id="friendsimagewrapper">
+                    <img id="friendsimage" src="{{url_for('static', filename='Images/friends.jpg')}}"/>
+                </div>
             </section>
             <p>Please note that TextSpam is no longer available on the Google Play Store.</p>
         </div>
