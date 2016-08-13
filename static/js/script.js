@@ -43,7 +43,7 @@ $(document).ready(function(){
       $(this.element).removeClass("hidecard");
       $(this.element).addClass("animation_slide_in");
     } , {
-      offset:'60%'
+      offset:'90%'
     }
     );
 
