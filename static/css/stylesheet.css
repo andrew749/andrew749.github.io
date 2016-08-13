@@ -435,6 +435,14 @@ nav * {
 
 @media (max-width:969px){
 
+    .project {
+        flex-basis:100%;
+    }
+
+    .projectcontainer {
+        justify-content:center;
+    }
+
     .contentpage{
         width:100%;
         margin: 0px;
