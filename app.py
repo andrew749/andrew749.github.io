@@ -8,33 +8,33 @@ application = Flask(__name__)
 
 content_dir = 'content'
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html', title="Andrew Codispoti")
 
-@app.route('/projects')
+@application.route('/projects')
 def projects():
     return render_template('projects.html', title="Projects", projects=db_helper.getProjects())
 
-@app.route('/resume')
+@application.route('/resume')
 def resume():
     return render_template('resume.html', title="Resume")
 
 # find the project files
-@app.route('/getProjects')
+@application.route('/getProjects')
 def getProjects():
     return json.dumps([project.title for project in db_helper.getProjects()])
 
 # load the project data
-@app.route('/project/<project_name>')
+@application.route('/project/<project_name>')
 def project(project_name):
     return next(filter(lambda x: x.title.lower() == project_name.lower(), db_helper.getProjects())).json()
 
-@app.route('/blog')
+@application.route('/blog')
 def blog():
     return render_template('blog_main.html', title="Blog", posts=db_helper.getBlogPosts())
 
-@app.route('/blog/<blog_slug>')
+@application.route('/blog/<blog_slug>')
 def blog_post(blog_slug):
     post = db_helper.getBlogPost(blog_slug)
     return render_template('blog_post.html',
