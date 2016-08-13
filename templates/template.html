@@ -34,6 +34,8 @@
             ga('send', 'pageview');
         </script>
 
+        <script src="{{url_for('static', filename='js/common_script.js')}}"></script>
+
         {%block header%} {%endblock%}
 
         <title>{{title}}</title>
@@ -60,7 +62,7 @@
                     <li id="contactbutton" class="menubutton"><a href="#contact">Contact</a></li>
                     <li id="projects" class="menubutton"><a href="{{url_for('projects')}}">Projects</a></li>
                     <li class="menubutton"><a href="{{url_for('resume')}}">Resume</a></li>
-                    <li id="blog" class="menubutton"><a href="http://google.ca">Blog</a></li>
+                    <li id="blog" class="menubutton"><a href="{{url_for('blog')}}">Blog</a></li>
                     <li id="github" class="menubutton"><a href="http://github.com/andrew749">GitHub</a></li>
                 </ul>
             </div>

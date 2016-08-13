@@ -4,6 +4,7 @@ import json
 import os
 import db_constants
 import markdown
+import frontmatter
 
 create_projects_table = 'CREATE TABLE IF NOT EXISTS {table_name} ({title} TEXT, {subtitle} TEXT, {content} TEXT, {image_path} TEXT);'
 insert_project_query = 'INSERT OR REPLACE INTO {table_name} (title,subtitle, content, image_path) VALUES (?, ?, ?, ?);'
@@ -26,16 +27,16 @@ c.execute(create_blog_table.format(table_name      = db_constants.blog_table,
                                    date            = db_constants.blog_date))
 
 def insert_project(title, subtitle, content, path):
-    c.execute(insert_project_query, (title,
-                                    subtitle,
-                                    content,
-                                    path))
+    c.execute(insert_project_query.format(table_name=db_constants.project_table), (title,
+                                                    subtitle,
+                                                    content,
+                                                    path))
 
 def insert_blog(title, subtitle, content, date):
-    c.execute(insert_blog_query, (title,
-                                  subtitle,
-                                  content,
-                                  date))
+    c.execute(insert_blog_query.format(table_name=db_constants.blog_table), (title,
+                                                  subtitle,
+                                                  content,
+                                                  date))
 
 # updateProjectDatabase
 # Search for JSON files with content to render and parse them
@@ -44,7 +45,7 @@ def updateProjectDatabase():
         if (x.endswith('.json')):
             with open(os.path.join(os.getcwd(), db_constants.content_dir, x)) as file:
                 jsondata = json.loads(file.read())
-                insert_project(db_constants.project_table,
+                insert_project(
                                jsondata['title'],
                                jsondata['subheading'],
                                jsondata['description'],
@@ -84,17 +85,13 @@ function   = function to apply to all the front matter (i.e. insert all into a b
 def updateDBMarkdown(directory, table_name, function):
     for x in os.listdir(os.path.join(os.getcwd(), directory)):
         if (x.endswith('.md')):
-            import yaml
             with open(os.path.join(os.getcwd(), directory, x)) as file:
-                front_matter, content = list(yaml.load_all(file))[:2]
-
-                print ( front_matter )
-                return front_matter
-                function(table_name,
-                            data['title'],
-                            data['subtitle'],
-                            file.read(),
-                            data['date'])
+                data = frontmatter.load(file)
+                function(
+                         data['title'],
+                         data['subtitle'],
+                         data.content,
+                         data['date'])
 
 """
 Specialized helper to get notes from folder and render markdown

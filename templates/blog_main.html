@@ -6,6 +6,17 @@
 {% block body %}
 <h5>Welcome to my blog. A place for my ramblings and (sometimes) unpopular opinions.</h5>
 
-
+<div class="post_container">
+{%for post in posts%}
+<a href="{{url_for('blog_post', blog_slug=post.title)}}">
+<div class="blog_post">
+    <h3 class="blog_main_title">{{post.title}}</h3>
+    <h4 class="blog_main_subtitle">{{post.subtitle}}</h4>
+    <h5 class="blog_main_date">{{post.date}}</h5>
+    <img class="blog_main_image" src="{{post.image}}" />
+</div>
+</a>
+{%endfor%}
+</div>
 
 {% endblock %}

@@ -1,7 +1,8 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, Markup
 import os
 import json
 import db_helper
+import markdown
 
 app = Flask(__name__)
 
@@ -31,8 +32,13 @@ def project(project_name):
 
 @app.route('/blog')
 def blog():
-    return render_template('blog_main.html')
+    return render_template('blog_main.html', title="Blog", posts=db_helper.getBlogPosts())
 
 @app.route('/blog/<blog_slug>')
 def blog_post(blog_slug):
-    abort(404)
+    post = db_helper.getBlogPost(blog_slug)
+    return render_template('blog_post.html',
+                           title    = post.title,
+                           subtitle = post.subtitle,
+                           date     = post.date,
+                           content  = Markup(markdown.markdown(post.content)))

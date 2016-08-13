@@ -17,7 +17,6 @@ img{
 }
 
 h2 {
-  text-align:center;
 }
 
 body{
@@ -173,6 +172,10 @@ nav * {
     border-radius: 50%;
 }
 
+.main_section_header_text {
+    text-align:center;
+}
+
 .jumbotroncaption {
     padding: 0px 100px;
 }
@@ -204,6 +207,54 @@ nav * {
 .projectholder{
     position: relative;
     width: 100%;
+}
+
+/* Blog Post page*/
+
+.blog_view {
+    margin:0 auto;
+    margin-top: 30px;
+    background-color: #FFF;
+    width:80%;
+    box-shadow: 2px 2px 10px black;
+    padding: 30px;
+}
+
+.blog_content {
+    text-align:left;
+}
+
+.blog_title {
+    text-align:left;
+}
+
+.blog_subtitle {
+    text-align:left;
+}
+
+.blog_date {
+    text-align:left;
+}
+
+/* Blog main page*/
+.post_container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.blog_post {
+    width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 2px 2px 3px black;
+}
+
+.post_container a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Projects Page */

@@ -3,3 +3,4 @@ bin/
 __pycache__/
 bower_components/
 generated_content/
+*.pyc
