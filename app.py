@@ -4,7 +4,7 @@ import json
 import db_helper
 import markdown
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 content_dir = 'content'
 
