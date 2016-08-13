@@ -321,8 +321,6 @@ nav * {
     position: relative;
     display: block;
     top: 50px;
-    float: none;
-    clear: both;
     margin: 0 auto;
     background-color: white;
     max-height: 80%;
@@ -338,7 +336,7 @@ nav * {
 }
 
 .detail-content-view {
-    height:100%;
+    height:auto;
     width:auto;
 }
 
@@ -359,6 +357,7 @@ nav * {
 }
 
 .detailmain{
+    display:flex;
     text-align: center;
     background-color: rgba(64, 64, 64, 0.58);
     position: fixed;
@@ -553,6 +552,7 @@ nav * {
 
     .detail-image-wrapper{
         width: 100% !important;
+        margin: 0 auto;
         display: block;
     }
 
