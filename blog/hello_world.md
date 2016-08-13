@@ -1,7 +1,7 @@
 ---
 title : Hello World
 subtitle : A Long overdue project.
-
+date: Saturday August 13 2016
 ---
 
 So as the title implies, this is my first blog post. Over the years, I've
