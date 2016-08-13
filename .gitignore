@@ -4,7 +4,6 @@ __pycache__/
 bower_components/
 generated_content/
 *.pyc
-*.sqlite
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
