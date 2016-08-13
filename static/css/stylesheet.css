@@ -246,6 +246,7 @@ nav * {
 
 .blog_post {
     flex-basis:500px;
+    max-width:500px;
     margin: 20px;
     padding: 20px;
     background-color: #FFF;

@@ -2,6 +2,7 @@ content_path    = 'content.sqlite'
 
 content_dir  = 'content'
 blog_dir     = 'blog'
+notes_dir    = 'notes'
 
 """
 Table for projects
@@ -20,3 +21,13 @@ blog_title    = 'title'
 blog_subtitle = 'subtitle'
 blog_content  = 'content'
 blog_date     = 'date'
+
+"""
+Table for notes
+"""
+notes_table    = 'notes'
+notes_title    = 'title'
+notes_subtitle = 'subtitle'
+notes_content  = 'content'
+notes_date     = 'date'
+
