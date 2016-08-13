@@ -100,7 +100,7 @@ def updateBlogPosts():
     updateDBMarkdown(db_constants.blog_dir, db_constants.blog_table, insert_blog)
 
 ## operations to perform
-# updateProjectDatabase()
+updateProjectDatabase()
 updateBlogPosts()
 
 conn.commit()
