@@ -1,9 +1,13 @@
 {%extends "template.html"%}
 {%block header%}
 <script src="{{url_for('static', filename='js/script.js')}}"></script>
+<script src="{{url_for('static', filename='js/rhill-voronoi-core.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/background.js')}}"></script>
 {%endblock%}
 {%block body%}
 <div class="background">
+    <canvas id="mosaic-background"></canvas>
+
     <div class="contentpage">
 
         <!--Main Page-->
@@ -120,5 +124,6 @@
 
         </div>
     </div>
+
 </div>
 {%endblock%}

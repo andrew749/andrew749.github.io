@@ -24,7 +24,7 @@ body{
     font-size: 20px;
     overflow-x: hidden;
     width:auto;
-    background-color: #9E9E9E;
+    /*background-color: #9E9E9E;*/
 }
 
 i {
@@ -95,6 +95,8 @@ nav * {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.46);
     border-radius: 5px;;
     text-align: justify;
+    opacity: 0.95;
+    -webkit-backdrop-filter:blur(10px);
 }
 
 .language-header {
@@ -110,6 +112,7 @@ nav * {
 .contentpage{
     width: 80%;
     margin: auto;
+    z-index:10;
 }
 
 .menubutton:hover{
@@ -448,6 +451,13 @@ nav * {
         transform: translateY(0px);
         opacity: 1;
     }
+}
+
+#mosaic-background {
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:-10;
 }
 
 /* Phone styles */
