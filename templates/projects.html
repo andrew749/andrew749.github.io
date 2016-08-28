@@ -4,7 +4,7 @@
 {%endblock%}
 {% block body %}
 <!--        will hold all projects which have the same class but different id-->
-<div class="projectcontainer row">
+<div class="projectcontainer">
     <div class="project col-centered" id="textspam">
         <a class="textspamlink" href="{{url_for('textspam')}}">
             <div class="styletitle">
@@ -46,10 +46,5 @@
         </div>
     </div>
     {% endfor %}
-    <div class="row">
-        <div class="col-md-12 row-fluid row-centered">
-            <div id="stuff"></div>
-        </div>
-    </div>
 </div>
 {% endblock %}

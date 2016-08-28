@@ -24,7 +24,6 @@ body{
     font-size: 20px;
     overflow-x: hidden;
     width:auto;
-    /*background-color: #9E9E9E;*/
 }
 
 i {
@@ -315,10 +314,6 @@ nav * {
     display: inline-block;
 }
 
-.row {
-    clear:both;
-}
-
 /*Detail View*/
 .detail-view{
     text-align: center;
@@ -334,7 +329,6 @@ nav * {
 }
 
 .detail-content {
-    height:auto;
     font-size: 1em;
     padding: 20px;
 }
@@ -342,6 +336,8 @@ nav * {
 .detail-content-view {
     height:auto;
     width:auto;
+    display:flex;
+    flex-direction: row;
 }
 
 .detail-project-image{
@@ -357,7 +353,6 @@ nav * {
     max-width:50%;
     min-width:20%;
     max-height:70%;
-    display: inline-block;
 }
 
 .detailmain{
@@ -374,8 +369,7 @@ nav * {
 
 .detail-view p{
     width:40%;
-    height: 70%;
-    float: right;
+    min-height: 70%;
     overflow: scroll;
 }
 
