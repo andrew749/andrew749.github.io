@@ -34,7 +34,7 @@
         <div class="detail-view">
             <h1>{{project.title}}</h1>
             <h3>{{project.subtitle}}</h3>
-            <div class="detail-content-view">
+            <div class="detail-content-view clearfix">
                 <div class="detail-image-wrapper">
                     <img class="detail-project-image" src="{{project.path}}"/>
                 </div>
@@ -42,7 +42,7 @@
                     {{project.content}}
                 </p>
             </div>
-            <div class="closeButton">X</div>
+            <a class="closeButton material-icons btn-floating btn-large waves-effect waves-light red"><i  class="fa fa-times"></i></a>
         </div>
     </div>
     {% endfor %}
