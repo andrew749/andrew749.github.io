@@ -73,3 +73,5 @@ network will only be looking at individual words rather than sequences of
 words. Another issue that this solution would impose would be the fact that
 some sort of text would have to already be summarized in order to provide the
 training data.
+
+> Andrew

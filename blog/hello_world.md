@@ -18,3 +18,5 @@ a unique and alternative perspective on problem solving that others may find
 useful.
 
 Hopefully this will grow into something that I can be proud of!
+
+> Andrew

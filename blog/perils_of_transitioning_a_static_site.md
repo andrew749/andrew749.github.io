@@ -67,12 +67,11 @@ essentially provides additional information for Elastic Beanstalk to configure
 itself outside of the default settings. Below is a snippet of what I had to
 include for my website.
 
-```
-option_settings:
-  - namespace: aws:elasticbeanstalk:container:python
-    option_name: WSGIPath
-    value: app.py
-```
+    option_settings:
+      - namespace: aws:elasticbeanstalk:container:python
+        option_name: WSGIPath
+        value: app.py
+
 
 So as you can see, I specify a namespace for the container (how Elastic
 Beanstalk determines what type of environment you are running since all
@@ -80,3 +79,5 @@ applications need to be placed in a container), as well as a key `WSGIPath` and
 finally the value for the key. Though the process was not extremely
 straighforward, I found that after a little research, the true power of
 Amazon's command line tool started to come to light.
+
+> Andrew
