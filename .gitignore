@@ -1,9 +1,13 @@
 .DS_Store
 bin/
+include/
+lib/
 __pycache__/
 bower_components/
 generated_content/
 *.pyc
+pip-selfcheck.json
+.Python
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
