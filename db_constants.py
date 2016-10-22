@@ -1,4 +1,6 @@
-content_path    = 'content.sqlite'
+import os
+
+content_path    = os.path.join(os.path.dirname(__file__),'content.sqlite')
 
 content_dir  = 'content'
 blog_dir     = 'blog'
