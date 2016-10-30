@@ -243,12 +243,14 @@ nav * {
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 .blog_post {
     flex-basis:500px;
     max-width:500px;
+    min-width:500px;
+    height:300px;
     margin: 20px;
     padding: 20px;
     background-color: #FFF;

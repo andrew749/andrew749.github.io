@@ -5,6 +5,7 @@ import os
 import db_constants
 import markdown
 import frontmatter
+from datetime import datetime
 
 create_projects_table = 'CREATE TABLE IF NOT EXISTS {table_name} ({title} TEXT, {subtitle} TEXT, {content} TEXT, {image_path} TEXT);'
 insert_project_query = 'INSERT OR REPLACE INTO {table_name} (title,subtitle, content, image_path) VALUES (?, ?, ?, ?);'
@@ -101,15 +102,17 @@ table_name = name of table in database to store the information
 function   = function to apply to all the front matter (i.e. insert all into a blog post)
 """
 def updateDBMarkdown(directory, function):
+    data_to_write = []
     for x in os.listdir(os.path.join(os.getcwd(), directory)):
         if (x.endswith('.md')):
             with open(os.path.join(os.getcwd(), directory, x)) as file:
                 data = frontmatter.load(file)
-                function(
-                         data['title'],
-                         data['subtitle'],
-                         data.content,
-                         data['date'])
+                data_to_write.append(data)
+
+    data_to_write = sorted(data_to_write, key=lambda x: datetime.strptime(x['date'], "%A %B %d, %Y"), reverse=True)
+    for data in data_to_write:
+        print (data['date'])
+        function( data['title'], data['subtitle'], data.content, data['date'])
 
 """
 Specialized helper to get notes from folder and render markdown
