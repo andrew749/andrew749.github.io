@@ -6,7 +6,7 @@ date: Sunday October 23, 2016
 
 If you've been following my GitHub, you would have noticed I've amassed
 a healthy number of commits over the last week on a new project aptly named
-Distribute. The goal of this project is to provide a proof of concept of
+[Distribute](http://github.com/andrew749/distribute "Distribute"). The goal of this project is to provide a proof of concept of
 a system which takes advantage of a large number of clients on a particular
 website or service, and uses these clients as slave nodes in a giant "cluster"
 which can be used to solve computational problems. The idea was taken from

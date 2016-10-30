@@ -600,3 +600,7 @@ nav * {
 .clearfix {
     overflow: auto;
 }
+
+.nav-wrapper li {
+    list-style-type: none;
+}
