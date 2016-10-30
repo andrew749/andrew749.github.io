@@ -25,7 +25,7 @@ much communication with the server.
 
 Some of the most notable challenges of this project were managing the locks for
 nodes. Node states must be constantly updated, and must never get into a stale
-unsynced state. If we send payload data/execution instructions to a node that
+un-synced state. If we send payload data/execution instructions to a node that
 does not exist any more, expecting it to return data, we might have an
 incomplete result set of data. This problem was tackled by tracking the state
 of the browser window, sending events back to the master server in the event of
@@ -37,7 +37,7 @@ a particular jobs status. The best solution in my opinion would be to create
 some sort of helper method to report status, and leave it up to the person
 creating a payload to pepper in these calls with custom status checkpoints.
 Since each payload is unique, it doesn't make sense to infer where a program is
-in its exceution as this would be outright wrong. Certain computations are
+in its execution as this would be outright wrong. Certain computations are
 inherently more expensive and cannot be accurately estimated. By providing
 a status call, the onus is on the user to manage the state reporting of their
 program. This solution has the added benefit of allowing a user to provide
@@ -59,20 +59,20 @@ the way we send data to a particular variable, as its payload data parameter).
 Another use case that I find interesting and much safer and more effective is
 to distribute map reduce jobs that are aimed at solving machine learning
 problems. Problems such as batch gradient descent can be tackled using a large
-number of slave nodes. After the intial transfer of data, models can be trained
+number of slave nodes. After the initial transfer of data, models can be trained
 to large epochs without any interaction from an external server. Once the model
 is trained on a particular set of data, a VERY small result can be sent back to
 the master server, thus reducing the amount of io that needs to be done by this
 critical keystone.
 
-One last use case that I am hesistant to mention for this distributed computing
+One last use case that I am hesitant to mention for this distributed computing
 system is a botnet. At some point during the development of this project
 I realized that this system is pretty much the textbook definition of a botnet:
 a master or set of master nodes, sending payloads(potentially malicious) to
 a set of client nodes, making these client nodes blindly execute the payload
 node. More specifically, this cluster can be used to create DDOS attacks on
 certain clients (simply point each client node to make requests to a particular
-target). Luckly, cross origin policies help to mitigate this issue by
+target). Luckily, cross origin policies help to mitigate this issue by
 preventing clients from asking external servers for data.
 
 ## Dangers
@@ -93,7 +93,7 @@ nodes from getting more than one payload. If there is a bug in the payload
 it will be blocked indefinitely, or until the user manually kills the node or
 refreshes the page. This can be mitigated by doing some analysis of the code
 while running and having sane default kill switches which can stop a job after
-an exorbant amount of time.
+an exorbitant amount of time.
 
 ## Planned improvements
 
