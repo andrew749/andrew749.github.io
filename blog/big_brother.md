@@ -1,6 +1,6 @@
 ---
 title: Analyzing trips to the kitchen
-subtitle: An exercise in OpenCV, scipy and pandas
+subtitle: An exercise in OpenCV, scipy, and pandas
 date: Friday October 28, 2016
 ---
 
