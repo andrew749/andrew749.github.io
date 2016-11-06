@@ -76,6 +76,10 @@ a{
   white-space:nowrap;
   line-height:30px;
 }
+.page-break-print {
+    display:none;
+}
+
 /*MEDIA*/
 @media print{
   a{
@@ -86,7 +90,11 @@ a{
     page-break-after:always;
   }
   .project{
-    page-break-after: auto;
+    page-break-after:auto;
+    page-break-inside: avoid;
+  }
+  .page-break-print {
+      display:block;
   }
   #name-title{
     margin-bottom:8px;
