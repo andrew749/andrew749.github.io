@@ -91,7 +91,6 @@ a{
   }
   .project{
     page-break-after:auto;
-    page-break-inside: avoid;
   }
   .page-break-print {
       display:block;
