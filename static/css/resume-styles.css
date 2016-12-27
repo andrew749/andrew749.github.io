@@ -80,6 +80,69 @@ a{
     display:none;
 }
 
+.company-info {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+
+.company-info-text {
+    display:inline-block;
+}
+
+.company-info-logo {
+    right:0px;
+    position:relative;
+    display: inline-block;
+    width:auto;
+    vertical-align: middle;
+}
+.company-info h3 {
+    margin: 5px 0px;
+}
+.company-info h4 {
+    margin: 4px 0px;
+}
+.company-info h5 {
+    margin: 4px 0px;
+}
+
+.company-logo {
+    width: auto;
+    max-height: 90px;
+    max-width:200px;
+    padding:10px;
+}
+
+.company-list > li {
+    margin: 15px 0px 5px;
+}
+
+.education-list li {
+    margin: 5px 0px;
+}
+
+.education-list li > h4 {
+    margin: 15px 0px 5px;
+}
+
+.institution-name {
+    margin: 5px 0px;
+}
+
+.education-points {
+    margin: 5px 0px;
+}
+
+.project{
+    margin: 15px 0px;
+}
+
+.project > h4 {
+    margin: 5px 0px;
+}
+
 /*MEDIA*/
 @media print{
   a{
@@ -161,6 +224,13 @@ a{
   .subheading{
     width:40%;
     text-align:left;
+  }
+  .company-logo {
+      max-height:50px !important;
+      max-width: 100px;
+  }
+  .company-list > li {
+      margin: 10px 0px 5px;
   }
 }
 @media (max-width:480px){
