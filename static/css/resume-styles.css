@@ -84,6 +84,7 @@ a{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     width:100%;
 }
 
@@ -187,10 +188,6 @@ a{
     line-height:1em;
     font-size:0.75em;
   }
-  h2{
-    color:black;
-    background-color:#DADADA;
-  }
   h4{
     margin:8px 0px;
   }
@@ -230,7 +227,7 @@ a{
       max-width: 100px;
   }
   .company-list > li {
-      margin: 10px 0px 5px;
+      margin: 10px 0px 10px;
   }
 }
 @media (max-width:480px){
@@ -262,6 +259,18 @@ a{
   ul{
     padding:0px;
   }
+
+  .company-info-logo {
+      display:block;
+  }
+
+  .company-info {
+      align-items:stretch;
+      flex-direction: column;
+  }
+  .company-info-logo {
+      text-align: center;
+  }
 }
 @media (max-width:1561px){
   .contact-table{
@@ -287,9 +296,10 @@ a{
   }
   .right-align-print{
     float:right;
-    width:auto%;
+    width:auto;
   }
 }
+
 @media (max-width:860px){
   .right-align-print{
     float:none !important;
