@@ -229,6 +229,13 @@ a{
   .company-list > li {
       margin: 10px 0px 10px;
   }
+  .main-list-item-title {
+    color: black;
+    background-color:#E0E0E0;
+  }
+  .company-logo {
+      display: none;
+  }
 }
 @media (max-width:480px){
   .summary-list{
