@@ -67,8 +67,10 @@ $(document).ready(function() {
         i++;
         if(i === steps) { // stop if done
           clearInterval(interval);
+          cell['highlighted'] = false;
         }
       }, 5);
+
   }
 
   // highlight the cell
@@ -112,7 +114,8 @@ $(document).ready(function() {
   // helper to find the cells that intersect and to perform the fade out operation.
   function highlightIntersection(context, cells, x, y) {
     for (var cell in cells){
-      if (doesIntersect(cells[cell], x, y)) {
+      if (doesIntersect(cells[cell], x, y) && !cells[cell]['highlighted'] ) {
+        cells[cell]['highlighted'] = true;
         highlightCell(context, cells[cell]);
       }
     }
