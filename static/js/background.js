@@ -69,7 +69,7 @@ $(document).ready(function() {
           clearInterval(interval);
           cell['highlighted'] = false;
         }
-      }, 50);
+      }, 30);
 
   }
 
