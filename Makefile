@@ -3,3 +3,6 @@ default:
 db:
 	rm -f content.sqlite
 	python db_insert.py
+clean:
+	rm -rf *.pyc
+
