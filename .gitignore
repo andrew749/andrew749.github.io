@@ -10,6 +10,7 @@ build/
 pip-selfcheck.json
 .Python
 static/css/resume-styles.css
+.sass-cache
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
