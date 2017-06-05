@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/resume-styles.css')}}">
         <title>Andrew Codispoti</title>
         <link rel="icon" type="image/png" href="Images/favicon.ico">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,27 +19,28 @@ ga('send', 'pageview');
     <body>
         <div class="resume-header-wrapper">
             <div class="resume-header">
-                <p id="name-title">Andrew Codispoti</p>
-                <p id="occupation-title">Software Engineering Student</p>
+                <div class="info">
+                    <p id="name-title">Andrew Codispoti</p>
+                    <p id="occupation-title">Software Engineer</p>
+                </div>
                 <div class="contact-table">
-                    <div class="left-align-print subheading">
-                        <div id="phone-element"><div class="contact-heading">Cell:</div><div><a href="tel://416-528-7547">416-528-7547</a></div></div>
-                        <div id="website-element"><div class="contact-heading">Website:</div><div><a href="http://andrewcodispoti.me">andrewcodispoti.me</a></div></div>
-                    </div>
-                    <div class="right-align-print subheading">
-                        <div id="email-element"><div class="contact-heading">Email:</div><div><a href="mailto:andrew.codispoti@gmail.com">andrew.codispoti@gmail.com</a></div></div>
-                        <div id="github-element"><div class="contact-heading">GitHub:</div><div><a href="http://github.com/andrew749">github.com/andrew749</a></div></div>
-                    </div>
+                    <table>
+                        <tr><td><i class="fa fa-globe" aria-hidden="true"></i></td><td> <a href="http://andrewcodispoti.me">andrewcodispoti.me</a></td></tr>
+                        <tr><td><i class="fa fa-mobile" aria-hidden="true"></i></td><td> <a href="tel://416-528-7547">416-528-7547</a></td></tr>
+                        <tr><td> <i class="fa fa-envelope-o" aria-hidden="true"></i></td><td> <a href="mailto:andrew.codispoti@gmail.com">andrew.codispoti@gmail.com</a></td></tr>
+                        <tr><td> <i class="fa fa-github" aria-hidden="true"></i></td><td> <a href="http://github.com/andrew749">andrew749</a></td></tr>
+                    </table>
+
                 </div>
             </div>
         </div>
         <hr>
         <ul class="main-list">
             <li class="main-list-item">
-                <h2 class="main-list-item-title">Summary of Skills</h2>
+                <h2 class="main-list-item-title">Skills</h2>
                 <ul class="summary-list">
                     <li>
-                        Proficient languages:
+                        Languages:
                         <span class="highlight">Python</span>,
                         <span class="highlight">Java</span>,
                         <span class="highlight">C++</span>,
@@ -50,14 +52,14 @@ ga('send', 'pageview');
                         <span class="highlight">C</span>,
                         and <span class="highlight">Kotlin</span>.</li>
                     <li>
-                        Database technologies:
+                        Databases:
                         <span class="highlight">MySQL</span>,
                         <span class="highlight">SQLite</span>,
                         <span class="highlight">PostgreSQL</span>,
                         and <span class="highlight">MongoDB</span>.
                     </li>
                     <li>
-                        Data analysis technologies:
+                        Data analysis:
                         <span class="highlight">pandas</span>,
                         <span class="highlight">numpy</span>,
                         <span class="highlight">scikit-learn</span>.
@@ -93,7 +95,6 @@ ga('send', 'pageview');
                     </li>
                     <li>
                         <div class="company-info" id="wish">
-
                             <div class="company-info-text">
                                 <div class="logistics log-left">
                                     <h3><a href="http://wish.com">Wish</a></h3>
@@ -104,9 +105,7 @@ ga('send', 'pageview');
                                     <p>San Francisco, California </p>
                                 </div>
                             </div>
-
                         </div>
-
                         <ul>
                             <li>
                                 Implemented payment processing pipelines responsible for disbursing hundreds of millions of dollars monthly.
@@ -236,7 +235,6 @@ ga('send', 'pageview');
                     </li>
                 </ul>
             </li>
-
         </ul>
     </body>
 </html>

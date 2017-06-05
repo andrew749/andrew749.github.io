@@ -1,22 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+
 html{
   font-family: "Roboto", sans-serif;
   line-height:1.5em;
 }
+
 ul{
   list-style: none;
 }
+
 ul ul{
   padding:0px 15px;
 }
+
 ul ul ul{
   padding:0px 25px;
   list-style:circle;
 }
+
 .main-list{
   padding-left: 0px;
   width:100%;
 }
+
 h2{
   width:100%;
   padding:5px;
@@ -25,36 +31,36 @@ h2{
   border-radius:5px;
   margin: 10px 0px;
 }
+
 #name-title{
   font-size:2.25em;
-  text-align:center;
 }
+
 #occupation-title{
-  text-align:center;
   font-size:1.25em;
 }
+
 .resume-header{
   font-family: "Courier New";
-  width:80%;
-  margin:0 auto;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
-.resume-header-wrapper{
 
+.resume-header-wrapper{
+}
+.info {
 }
 .main-list{
   margin:0 auto;
   width:80%;
 }
 .contact-table{
-  width:100%;
-  text-align:center;
 }
 .contact-table div{
   padding:0px 10px;
-  display:inline-block;
-}
-.contact-heading{
-  font-weight:bold;
 }
 .summary-list{
   padding:0px 40px;
