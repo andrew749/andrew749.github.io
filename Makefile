@@ -6,3 +6,6 @@ db:
 clean:
 	rm -rf *.pyc
 
+build_css:
+	sass static/css/resume-styles.scss > static/css/resume-styles.css
+
