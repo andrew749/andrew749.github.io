@@ -1,0 +1,239 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em; }
+
+ul {
+  list-style: none;
+  padding: 0px; }
+
+h4 {
+  margin: 10px 0px; }
+
+.education-detail {
+  display: inline-block; }
+
+#education .course {
+  margin: 10px 0px; }
+#education .date {
+  margin: 10px 0px;
+  font-size: 0.9em; }
+#education .education-list li {
+  margin: 0px 0px; }
+#education .education-list li > h4 {
+  margin: 5px 0px 5px; }
+#education .education-list-item > h4 {
+  margin: 10px 0px;
+  flex-basis: auto; }
+#education .education-list-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px; }
+#education .institution {
+  display: block;
+  margin: 5px 0px; }
+
+.horizontal-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 300px; }
+
+.main-list-item {
+  padding: 5px;
+  min-width: 300px;
+  flex-basis: 300px; }
+
+h2 {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px 0px; }
+
+.main-list-item-title {
+  padding: 0px; }
+
+#name-title {
+  font-size: 2.25em; }
+
+#occupation-title {
+  font-size: 1.25em; }
+
+.resume-header {
+  font-family: "Courier New";
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+#projects .project-info {
+  display: flex;
+  justify-content: space-between; }
+#projects .date {
+  margin: 10px 0px; }
+#projects .project {
+  margin: 10px 0px 15px; }
+
+.sidebar {
+  background-color: #ededed;
+  width: 400px; }
+
+.main-list {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 70%; }
+
+.summary-list {
+  padding: 0px 0px; }
+
+a {
+  color: black; }
+
+.highlight {
+  font-weight: 900;
+  color: #2196F3;
+  padding: 2px;
+  font-family: 'Roboto';
+  font-size: .9em;
+  border-radius: 5px;
+  white-space: nowrap;
+  line-height: 30px; }
+
+.contact-table {
+  display: flex;
+  align-items: center; }
+
+.page-break-print {
+  display: none; }
+
+.company-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%; }
+
+.company-info-text {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.company-info-text {
+  font-size: 0.9em; }
+
+.company-info-text > p {
+  margin: 0px 0px; }
+
+.logistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.log-left {
+  align-items: flex-start; }
+
+.log-right {
+  align-items: flex-end; }
+
+.logistics > p {
+  margin: 3px 0px; }
+
+.company-info-logo {
+  right: 0px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  vertical-align: middle; }
+
+.company-info h3 {
+  margin: 3px 0px; }
+
+.company-logo {
+  width: auto;
+  max-height: 90px;
+  max-width: 200px;
+  padding: 10px; }
+
+.company-list > li {
+  margin: 15px 0px 5px; }
+
+@media print {
+  a {
+    color: #000;
+    text-decoration: none; }
+
+  .project {
+    page-break-after: auto;
+    margin: 5px 0px 0px; }
+
+  .page-break-print {
+    display: block; }
+
+  #name-title {
+    margin-bottom: 8px; }
+
+  #occupation-title {
+    margin-top: 5px; }
+
+  .contact-table div {
+    padding: 0px 5px; }
+
+  .contact-table {
+    font-size: 0.85em; }
+
+  .left-align-print {
+    display: block; }
+
+  .right-align-print {
+    float: right;
+    width: auto; }
+
+  html {
+    line-height: 1em;
+    font-size: 0.75em; }
+
+  h4 {
+    margin: 8px 0px; }
+
+  .resume-header {
+    width: 100%; }
+
+  .main-list {
+    width: 100%; }
+
+  .contact-table {
+    text-align: left; }
+
+  body {
+    margin: 10px; }
+
+  .highlight {
+    color: black;
+    padding: 0px;
+    font-weight: bold;
+    border-radius: 0px;
+    border: 0px;
+    background-color: white;
+    line-height: normal; }
+
+  #name-title {
+    font-size: 2em; }
+
+  .contact-table {
+    text-align: center !important; }
+
+  .subheading {
+    width: 40%;
+    text-align: left; }
+
+  .company-logo {
+    max-height: 50px !important;
+    max-width: 100px; }
+
+  .company-list > li {
+    margin: 5px 0px 0px; }
+
+  .company-logo {
+    display: none; } }

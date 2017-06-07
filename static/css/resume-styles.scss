@@ -5,6 +5,7 @@ $medium-font: 1.25em;
 $default-spacing: 10px;
 $default-padding: 5px;
 $page-width-proportion: 70%;
+$list-item-separator-spacing: 5px;
 
 html{
   font-family: "Roboto", sans-serif;
@@ -17,9 +18,60 @@ ul{
 
 }
 
+h4 {
+  margin: $default-spacing 0px;
+}
+
+.education-detail {
+   display: inline-block;
+}
+
+#education {
+  .course {
+    margin: $default-spacing 0px;
+  }
+  .date {
+    margin: $default-spacing 0px;
+    font-size: 0.9em;
+  }
+
+  .education-list li {
+    margin: 0px 0px;
+  }
+
+  .education-list li > h4 {
+    margin: 5px 0px 5px;
+  }
+
+  .education-list-item > h4 {
+    margin: 10px 0px;
+    flex-basis: auto;
+  }
+
+  .education-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px;
+  }
+
+  .institution {
+    display:block;
+    margin: 5px 0px;
+  }
+
+}
+
 .horizontal-view {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+  flex-basis:300px;
+}
+
+.main-list-item {
+  padding: $default-padding;
+  min-width: 300px;
+  flex-basis: 300px;
 }
 
 h2{
@@ -27,6 +79,11 @@ h2{
   padding: $default-padding;
   border-radius: $default-padding;
   margin: $default-spacing 0px;
+
+}
+
+.main-list-item-title {
+  padding: 0px;
 }
 
 #name-title{
@@ -43,10 +100,27 @@ h2{
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+#projects {
+
+  .project-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .date {
+    margin: $default-spacing  0px;
+  }
+  .project{
+    margin: $default-spacing  0px ($default-spacing + $list-item-separator-spacing);
+  }
 }
 
 .sidebar {
-    background-color: #ededed;
+  background-color: #ededed;
+  width: 400px;
 }
 
 .main-list{
@@ -57,10 +131,6 @@ h2{
 
 .summary-list{
   padding:0px 0px;
-}
-
-h4{
-  margin:15px 0px;
 }
 
 a{
@@ -76,6 +146,11 @@ a{
   border-radius:5px;
   white-space:nowrap;
   line-height:30px;
+}
+
+.contact-table {
+  display: flex;
+  align-items: center;
 }
 
 .page-break-print {
@@ -145,64 +220,6 @@ a{
     margin: 15px 0px 5px;
 }
 
-.education-list {
-    padding: 0px auto;
-}
-
-.education-list li {
-    margin: 0px 0px;
-}
-
-.education-list li > h4 {
-    margin: 5px 0px 5px;
-}
-
-.institution-name {
-    margin: 5px 0px;
-}
-
-.education-points {
-    margin: 5px 0px;
-}
-
-.project{
-    margin: 15px 0px;
-}
-
-.project > h4 {
-    margin: 5px 0px 0px;
-    display: inline;
-}
-.project li {
-    margin: 5px 0px;
-}
-
-.right-align {
-    float:right;
-}
-
-.date {
-    font-size: 0.9em;
-    margin: 5px 0px;
-}
-
-.education > h4 {
-    margin: 10px 0px;
-    flex-basis: auto;
-}
-
-.education {
-    display: flex;
-    align-items: top;
-    margin: 0px 0px;
-}
-
-.institution {
-    flex: 1;
-    margin: 5px 0px;
-}
-
-/*MEDIA*/
 @media print{
   a{
     color:#000;
@@ -281,81 +298,5 @@ a{
   }
   .company-logo {
       display: none;
-  }
-}
-@media (max-width:480px){
-  .summary-list{
-    padding:0px 0px;
-  }
-  .resume-header{
-    width:100%;
-  }
-  .main-list{
-    width:90%;
-  }
-  .main-list-item ul{
-    padding:0px 0px;
-  }
-  ul ul ul{
-     list-style:none;
-  }
-  li{
-    line-height:1.25em;
-    margin:10px 0px;
-  }
-  .contact-table div{
-    display:block;
-  }
-  .summary-list{
-    list-style:none;
-  }
-  ul{
-    padding:0px;
-  }
-
-  .company-info-logo {
-      display:block;
-  }
-
-  .company-info {
-      align-items:stretch;
-      flex-direction: column;
-  }
-  .company-info-logo {
-      text-align: center;
-  }
-}
-@media (max-width:1561px){
-  .contact-table{
-    text-align:left;
-  }
-  #name-title{
-    margin-bottom:8px;
-  }
-  #occupation-title{
-    margin-top:5px;
-  }
-  #phone-element{
-    display:block;
-  }
-  #email-element{
-    display:block;
-  }
-  .contact-table div{
-    padding:0px 5px;
-  }
-  .left-align-print{
-    display:block;
-  }
-  .right-align-print{
-    float:right;
-    width:auto;
-  }
-}
-
-@media (max-width:860px){
-  .right-align-print{
-    float:none !important;
-    display:block;
   }
 }
