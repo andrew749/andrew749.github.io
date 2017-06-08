@@ -2,7 +2,7 @@
 
 # setup environment variables
 
-export CODE_HOME=/var/app;
+export CODE_HOME=/var/www/andrew749.github.io;
 
 # build all necessary files
 
