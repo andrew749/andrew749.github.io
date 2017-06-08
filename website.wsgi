@@ -4,6 +4,6 @@ import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/andrew749.github.io/")
 
-logging.info('pls')
+logging.info('Starting Webserver')
 from app import application
-application.secret_key = 'ayy dank memes'
+application.secret_key = 'Replace with secret key'
