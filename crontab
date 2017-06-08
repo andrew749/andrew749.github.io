@@ -1,0 +1,4 @@
+# Crontab for automatic deployment
+
+# Deploy every hour
+0 * * * * $CODE_HOME/deploy.sh

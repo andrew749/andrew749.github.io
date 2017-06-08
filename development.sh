@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Watch the filesystem and on certain file type changes, perform actions.
+
 fswatch -0 . | while read -d "" event
 do
     # Handle file change events and reload appropriate services
