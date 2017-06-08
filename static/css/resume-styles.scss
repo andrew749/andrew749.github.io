@@ -8,12 +8,12 @@ $small-margin: 5px;
 $page-width-proportion: 70%;
 $list-item-separator-spacing: 5px;
 
-html{
+html {
   font-family: "Roboto", sans-serif;
-  line-height:1.5em;
+  line-height: 1.5em;
 }
 
-ul{
+ul {
   list-style: none;
   padding: 0px;
 
@@ -24,7 +24,7 @@ ul{
   flex-direction: row;
   //flex-wrap: wrap;
   justify-content: space-between;
-  flex-basis:300px;
+  flex-basis: 300px;
 }
 
 .vertical-view {
@@ -32,8 +32,8 @@ ul{
   flex-shrink: 1;
 }
 
-a{
-  color:black;
+a {
+  color: black;
 }
 
 #work-experience {
@@ -50,16 +50,16 @@ a{
     margin: $small-margin 0px;
   }
   .company-info {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    width:100%;
+    width: 100%;
   }
 
   .company-info-text {
-    display:flex;
-    width:100%;
+    display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -73,7 +73,7 @@ a{
   }
 
   .logistics {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -120,7 +120,7 @@ a{
   }
 
   .institution {
-    display:block;
+    display: block;
     margin: 5px 0px;
   }
 
@@ -136,7 +136,7 @@ a{
   flex-grow: 2;
 }
 
-h2{
+h2 {
   width: 100%;
   padding: $default-padding;
   border-radius: $default-padding;
@@ -148,15 +148,15 @@ h2{
   padding: 0px;
 }
 
-#name-title{
+#name-title {
   font-size: $large-font;
 }
 
-#occupation-title{
+#occupation-title {
   font-size: $medium-font;
 }
 
-.resume-header{
+.resume-header {
   font-family: "Courier New";
   width: $page-width-proportion;
   margin: 0 auto;
@@ -174,11 +174,11 @@ h2{
   }
 
   .date {
-    margin: $default-spacing  0px;
+    margin: $default-spacing 0px;
   }
 
-  .project{
-    margin: $default-spacing  0px ($default-spacing + $list-item-separator-spacing);
+  .project {
+    margin: $default-spacing 0px ($default-spacing + $list-item-separator-spacing);
   }
 
   .project-name {
@@ -192,25 +192,25 @@ h2{
   flex-grow: 0;
 }
 
-.main-list{
-  margin:0 auto;
+.main-list {
+  margin: 0 auto;
   max-width: 1200px;
   min-width: 70%
 }
 
-.summary-list{
-  padding:0px 0px;
+.summary-list {
+  padding: 0px 0px;
 }
 
-.highlight{
-  font-weight:900;
-  color:#2196F3;
-  padding:2px;
+.highlight {
+  font-weight: 900;
+  color: #2196F3;
+  padding: 2px;
   font-family: 'Roboto';
   font-size: .9em;
-  border-radius:5px;
-  white-space:nowrap;
-  line-height:30px;
+  border-radius: 5px;
+  white-space: nowrap;
+  line-height: 30px;
 }
 
 .contact-table {
@@ -219,87 +219,87 @@ h2{
 }
 
 .page-break-print {
-    display:none;
+  display: none;
 }
 
-@media print{
-  a{
-    color:#000;
-    text-decoration:none;
+@media print {
+  a {
+    color: #000;
+    text-decoration: none;
   }
-  .project{
-    page-break-after:auto;
+  .project {
+    page-break-after: auto;
     margin: 5px 0px 0px;
   }
   .page-break-print {
-      display:block;
+    display: block;
   }
-  #name-title{
-    margin-bottom:8px;
+  #name-title {
+    margin-bottom: 8px;
   }
-  #occupation-title{
-    margin-top:5px;
+  #occupation-title {
+    margin-top: 5px;
   }
-  .contact-table div{
-    padding:0px 5px;
+  .contact-table div {
+    padding: 0px 5px;
   }
-  .contact-table{
-    font-size:0.85em;
+  .contact-table {
+    font-size: 0.85em;
   }
-  .left-align-print{
-    display:block;
+  .left-align-print {
+    display: block;
   }
-  .right-align-print{
-    float:right;
-        width: auto;
+  .right-align-print {
+    float: right;
+    width: auto;
   }
-  html{
-    line-height:1em;
-    font-size:0.75em;
+  html {
+    line-height: 1em;
+    font-size: 0.75em;
   }
-  h4{
-    margin:8px 0px;
+  h4 {
+    margin: 8px 0px;
   }
-  .resume-header{
-    width:100%;
+  .resume-header {
+    width: 100%;
   }
-  .main-list{
-    width:100%;
+  .main-list {
+    width: 100%;
   }
-  .contact-table{
-    text-align:left;
+  .contact-table {
+    text-align: left;
   }
-  body{
+  body {
     margin: 10px;
   }
-  .highlight{
-    color:black;
-    padding:0px;
-    font-weight:bold;
-    border-radius:0px;
-    border:0px;
-    background-color:white;
-    line-height:normal;
+  .highlight {
+    color: black;
+    padding: 0px;
+    font-weight: bold;
+    border-radius: 0px;
+    border: 0px;
+    background-color: white;
+    line-height: normal;
   }
-  #name-title{
-    font-size:2em;
+  #name-title {
+    font-size: 2em;
   }
-  .contact-table{
-    text-align:center !important;
+  .contact-table {
+    text-align: center !important;
   }
-  .subheading{
-    width:40%;
-    text-align:left;
+  .subheading {
+    width: 40%;
+    text-align: left;
   }
   .company-logo {
-      max-height:50px !important;
-      max-width: 100px;
+    max-height: 50px !important;
+    max-width: 100px;
   }
   .company-list > li {
-      margin: 5px 0px 0px;
+    margin: 5px 0px 0px;
   }
   .company-logo {
-      display: none;
+    display: none;
   }
 }
 
