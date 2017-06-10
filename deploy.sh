@@ -10,6 +10,7 @@ make -C $CODE_HOME db
 make -C $CODE_HOME build_css
 
 # restart the webserver
-service nginx restart
+service apache2 restart
 
+# setup this to run periodically
 crontab $CODE_HOME/crontab
