@@ -1,4 +1,4 @@
 # Crontab for automatic deployment
 
 # Deploy every hour
-0 * * * * $CODE_HOME/deploy.sh >> /var/log/cron.txt
+0 * * * * unbuffer $CODE_HOME/deploy.sh  | ts >> /var/log/cron.txt
