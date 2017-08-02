@@ -1,4 +1,4 @@
 # Crontab for automatic deployment
 
 # Deploy every hour
-0 * * * * unbuffer $CODE_HOME/deploy.sh  | ts >> /var/log/cron.txt
+0 * * * * unbuffer /var/www/andrew749.github.io/deploy.sh  | ts 2| ts  >> /var/log/cron.txt  2>> /var/log/cron_error.txt
