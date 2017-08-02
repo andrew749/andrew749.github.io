@@ -6,7 +6,9 @@ $default-spacing: 10px;
 $default-padding: 5px;
 $small-margin: 5px;
 $page-width-proportion: 70%;
+$full-width: 100%;
 $list-item-separator-spacing: 5px;
+$main-content-padding: 25px;
 
 html {
   font-family: "Roboto", sans-serif;
@@ -161,8 +163,7 @@ h2 {
 
 .resume-header {
   font-family: "Courier New";
-  width: $page-width-proportion;
-  margin: 0 auto;
+  margin: $main-content-padding - 5 $main-content-padding;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -197,8 +198,8 @@ h2 {
 
 .main-list {
   margin: 0 auto;
-  max-width: 1200px;
-  min-width: 70%
+  min-width: 70%;
+  margin: $main-content-padding;
 }
 
 .summary-list {
@@ -275,11 +276,12 @@ h2 {
   }
 
   .resume-header {
-    width: 100%;
+      margin: 0px;
   }
 
   .main-list {
-    width: 100%;
+      margin: 0px;
+      width: 100%;
   }
 
   .contact-table {
