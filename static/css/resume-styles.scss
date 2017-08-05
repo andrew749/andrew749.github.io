@@ -334,6 +334,10 @@ h2 {
   .company-list > li {
     margin: $default-spacing 0px 0px !important;
   }
+
+  .sidebar {
+      flex-basis: 470px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
