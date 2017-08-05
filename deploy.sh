@@ -4,6 +4,8 @@
 
 export CODE_HOME=/var/www/andrew749.github.io;
 
+cd CODE_HOME;
+
 # update the code to the latest revision
 # TODO: Base this off tags so that its easier to revert code.
 git pull
