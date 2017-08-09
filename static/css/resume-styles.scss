@@ -9,6 +9,7 @@ $page-width-proportion: 70%;
 $full-width: 100%;
 $list-item-separator-spacing: 5px;
 $main-content-padding: 25px;
+$sidebar-to-main-spacing: 20px;
 
 html {
   font-family: "Roboto", sans-serif;
@@ -41,15 +42,15 @@ a {
 #work-experience {
   .job-title {
     font-style: italic;
-    margin: $small-margin 0px;
   }
 
   .company-name {
-    margin: $small-margin 0px;
+    margin: 0px 0px $small-margin 0px;
   }
 
   p {
     margin: $small-margin 0px;
+    margin: 0px 0px $small-margin 0px;
   }
   .company-info {
     display: flex;
@@ -90,6 +91,13 @@ a {
 
   .company-list > li {
     margin: 15px 0px 5px;
+  }
+
+  .company-description {
+  }
+
+  .company-description > li {
+    list-style: circle inside;
   }
 }
 
@@ -194,6 +202,7 @@ h2 {
   background-color: #ededed;
   flex-grow: 0;
   flex-shrink: 2;
+  margin-left: $sidebar-to-main-spacing;
 }
 
 .main-list {
