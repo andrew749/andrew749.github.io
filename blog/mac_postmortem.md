@@ -1,6 +1,6 @@
 ---
 title : Postmortem for my Mac
-subtitle : Lessons learned from what could have been a devastating loss
+subtitle : Takeaways from the downtime
 date: Saturday January 28, 2017
 ---
 
