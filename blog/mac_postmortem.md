@@ -1,6 +1,6 @@
 ---
 title : Postmortem for my Mac
-subtitle : Some general lessons learned from what could have been a devastating loss.
+subtitle : Lessons learned from what could have been a devastating loss
 date: Saturday January 28, 2017
 ---
 
