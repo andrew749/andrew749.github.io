@@ -1,5 +1,6 @@
 import markdown
 import frontmatter
+import codecs
 
 def _generateHTMLFromMarkdown(text):
     """
@@ -23,7 +24,7 @@ def _generateHTMLFileFromMarkdown(input_file, output_file_name):
     input_file = codecs.open(input_file, mode="r", encoding="utf-8")
     text = input_file.read()
     html = _generateHTMLFromMarkdown(text)
-    output_file = codecs.open("generated_content/{}.html".format(output_file_name),
+    output_file = codecs.open(output_file_name,
                               "w",
                               encoding="utf-8",
                               errors="xmlcharrefreplace"
