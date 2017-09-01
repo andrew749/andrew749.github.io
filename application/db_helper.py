@@ -1,5 +1,5 @@
 import sqlite3
-import  db_constants
+import db_constants
 import project
 import Post
 
