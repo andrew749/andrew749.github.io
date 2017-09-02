@@ -1,7 +1,7 @@
 import sqlite3
-import db_constants
-import project
-import Post
+from application import db_constants
+from application import project
+from application import Post
 
 
 def open_connection(path):
