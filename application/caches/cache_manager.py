@@ -38,7 +38,7 @@ class CacheManager(Cache):
 		for x in self._caches:
 
 			# Early exit condition
-			if numberOfLevels and level_counter >= numberOfLevels:
+			if numberOfLevels is not None and level_counter >= numberOfLevels:
 				return None
 
 			temp_value = x.get(key)
