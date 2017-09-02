@@ -19,7 +19,7 @@ class TestCacheManager(unittest.TestCase):
 		self.cache_manager.add("test.key", "test.value")
 
 		self.assertEqual(self.cache_manager.get("test.key"), "test.value")
-		self.cache.get.assert_called_with("test.key")
+		cache.get.assert_called_with("test.key")
 
 	def test_addElementMultiCache(self):
 		cache = Mock()
@@ -34,8 +34,8 @@ class TestCacheManager(unittest.TestCase):
 		self.cache_manager.add("test.key", "test.value")
 
 		self.assertEqual(self.cache_manager.get("test.key"), "test.value")
-		self.cache.get.assert_called_with("test.key")
-		self.cache2.get.assert_called_with("test.key")
+		cache.get.assert_called_with("test.key")
+		cache2.get.assert_called_with("test.key")
 
 if __name__ == "__main__":
 	unittest.main()

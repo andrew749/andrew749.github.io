@@ -41,7 +41,7 @@ class CacheManager(Cache):
 			if numberOfLevels and level_counter >= numberOfLevels:
 				return None
 
-			temp_value = x.get(key, None)
+			temp_value = x.get(key)
 			if temp_value is not None:
 				return temp_value
 			else:
@@ -50,6 +50,17 @@ class CacheManager(Cache):
 		# didnt find any value in any of the caches
 		return None
 
-def getDefaultCacheManager()
+_cache_manager_instance = None
+def getDefaultCacheManager():
 	from application.caches.local_cache import LocalCache
 	from application.caches.google_memcache import GoogleMemcache
+
+	if _cache_manager_instance is None:
+		_cache_manager_instance = CacheManager()
+		local_cache = LocalCache()
+		google_memcache = GoogleMemcache()
+		_cache_manager_instance.add_cache(local_cache)
+		_cache_manager_instance.add_cache(google_memcache)
+		
+	return _cache_manager_instance
+
