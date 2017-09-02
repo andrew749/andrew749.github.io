@@ -2,10 +2,11 @@ import sys
 from flask import Flask, url_for, render_template, Markup
 import os
 import json
-from application.datastore import ApplicationDatastore as datastore
+from application.datastore import getDefaultDatastore 
 import markdown
 
 application = Flask(__name__)
+datastore = getDefaultDatastore()
 
 content_dir = 'content'
 
