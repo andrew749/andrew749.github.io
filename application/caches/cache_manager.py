@@ -52,6 +52,7 @@ class CacheManager(Cache):
 
 _cache_manager_instance = None
 def getDefaultCacheManager():
+	global _cache_manager_instance
 	from application.caches.local_cache import LocalCache
 	from application.caches.google_memcache import GoogleMemcache
 
