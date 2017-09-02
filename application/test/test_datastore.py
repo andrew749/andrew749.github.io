@@ -1,5 +1,10 @@
 import unittest
-from unittest import mock
+import six
+
+if six.PY2:
+	import mock
+else:
+	from unittest import mock
 
 from application.datastore import Datastore
 from application.caches.cache_manager import CacheManager
@@ -24,8 +29,7 @@ class DatastoreTest(unittest.TestCase):
 
 	@mock.patch("application.datastore.Datastore.buildFile")
 	def test_noCache(self, buildFile):
-		self.datastore.getDataForKey("test_key")
-		buildFile.assert_called_with("test_key.md")
+		self.assertIsNone(self.datastore.getDataForKey("test_key"))
 
 if __name__ == "__main__":
 	unittest.main()
