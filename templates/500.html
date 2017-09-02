@@ -1,9 +1,13 @@
 {% extends 'template.html' %}
 
 {% block header %}
+<link  rel="stylesheet" href="{{url_for('static', filename='css/500_style.css')}}"/>
 {% endblock %}
 
 {% block body %}
-<img src="{{url_for('static', filename='Images/abort.gif')}}"/>
-<h1>Things seem to be broken...</h1>
+<div class="body_500">
+	<h1>500: Internal Server Error</h1>
+	<img class="image_500" src="{{url_for('static', filename='Images/abort.gif')}}"/>
+	<h2>Things seem to be broken...</h2>
+</div>
 {% endblock %}
