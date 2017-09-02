@@ -1,9 +1,11 @@
 import sys
-from flask import Flask, url_for, render_template, Markup
+from flask import Flask, url_for, render_template, Markup, abort
 import os
 import json
-from application.datastore import getDefaultDatastore 
 import markdown
+
+from application.valid_pages import projects as valid_projects, blog_post_titles as valid_blog_posts
+from application.datastore import getDefaultDatastore 
 
 application = Flask(__name__)
 datastore = getDefaultDatastore()
@@ -30,6 +32,8 @@ def getProjects():
 # load the project data
 @application.route('/project/<project_name>')
 def project(project_name):
+    if project_name not in valid_projects:
+      abort(404)
     return next(filter(lambda x: x.title.lower() == project_name.lower(), datastore.getProjects())).json()
 
 @application.route('/blog')
@@ -38,6 +42,8 @@ def blog():
 
 @application.route('/blog/<blog_slug>')
 def blog_post(blog_slug):
+    if blog_slug not in valid_blog_posts:
+      abort(404)
     post = datastore.getBlogPostByTitle(blog_slug)
     return render_template('blog_post.html',
                            title    = post.title,
@@ -48,3 +54,9 @@ def blog_post(blog_slug):
 @application.route('/project/textspam')
 def textspam():
     return render_template('textspam.html')
+
+@application.errorhandler(404)
+def page_not_found(e):
+    return render_template(
+      '404.html'
+    ) 

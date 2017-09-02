@@ -5,6 +5,8 @@ Layer to cache datastore queries and provide a uniform interface to access data 
 from application.markdown_object import MarkdownObject, markdownObjectFromFile
 from application.caches.cache_manager import getDefaultCacheManager
 from application.project import Project
+from application.valid_pages import projects as valid_projects
+from application.valid_pages import blog_posts as valid_blog_posts
 import logging
 import json
 import os
@@ -18,32 +20,8 @@ logger.addHandler(ch)
 
 class Datastore:
     def __init__(self, cache_manager):
-        self.projects = {
-            "0xFACE",
-            "chordi",
-            "decisions",
-            "drizio",
-            "heartratemonitor",
-            "hive",
-            "myomove",
-            "note-it-now",
-            "panic.io",
-            "play",
-            "scribblerplaystwitch",
-            "secretsauce",
-            "tennisscore",
-            "textmetrics"
-        }
-
-        self.blog_posts = {
-            "big_brother",
-            "hello_world",
-            "mac_postmortem",
-            "ongoing_challenges_creating_a_distributed_system",
-            "writing_a_summarizer",
-            "perils_of_transitioning_a_static_site"
-        }
-
+        self.projects = valid_projects
+        self.blog_posts = valid_blog_posts 
         self.cache_manager = cache_manager
 
     def getCachedData(self, key):
