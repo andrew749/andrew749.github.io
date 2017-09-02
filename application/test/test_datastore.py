@@ -25,7 +25,7 @@ class DatastoreTest(unittest.TestCase):
 	@mock.patch("application.datastore.Datastore.buildFile")
 	def test_noCache(self, buildFile):
 		self.datastore.getDataForKey("test_key")
-		buildFile.assert_called_with("test_key", "test_key.md")
+		buildFile.assert_called_with("test_key.md")
 
 if __name__ == "__main__":
 	unittest.main()

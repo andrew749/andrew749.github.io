@@ -2,20 +2,47 @@
 Layer to cache datastore queries and provide a uniform interface to access data in the application.
 """
 
-from application.markdown_object import MarkdownObject
+from application.markdown_object import MarkdownObject, markdownObjectFromFile
 from application.caches.cache_manager import getDefaultCacheManager
+from application.project import Project
 import logging
+import json
 import os
 import sys
 
-logging.basicConfig(stream=sys.stdout)
-logger = logging.getLogger("Datastore",)
+ch = logging.StreamHandler(sys.stdout)
+ch.setLevel(logging.DEBUG)
+logger = logging.getLogger("Datastore")
+logger.setLevel(logging.DEBUG)
+logger.addHandler(ch)
 
 class Datastore:
     def __init__(self, cache_manager):
-        self.projects = {}
+        self.projects = {
+            "0xFACE",
+            "chordi",
+            "decisions",
+            "drizio",
+            "heartratemonitor",
+            "hive",
+            "myomove",
+            "note-it-now",
+            "panic.io",
+            "play",
+            "scribblerplaystwitch",
+            "secretsauce",
+            "tennisscore",
+            "textmetrics"
+        }
 
-        self.blog_posts = {}
+        self.blog_posts = {
+            "big_brother",
+            "hello_world",
+            "mac_postmortem",
+            "ongoing_challenges_creating_a_distributed_system",
+            "writing_a_summarizer",
+            "perils_of_transitioning_a_static_site"
+        }
 
         self.cache_manager = cache_manager
 
@@ -24,6 +51,8 @@ class Datastore:
         if local_cache_result is not None:
             logger.debug("Cache hit for key: {}".format(key))
             return local_cache_result
+        else:
+            logger.debug("Cache miss for key: {}".format(key))
 
         return None
 
@@ -37,27 +66,41 @@ class Datastore:
             logging.debug("Cache miss for key: {}".format(key))
             # we should fallback to database here
             # TODO: integrate with some database (for now just rebuild)
-            cached_data = self.buildFile(key, os.path.join(directory, "{}.md".format(key)))
         return cached_data
 
-    def buildFile(self, key, file_path):
+    def buildFile(self, file_path):
         logger.debug("Building html for file: {}".format(file_path))
-        data = builder.MarkdownObject.markdownObjectFromFile(file_path) 
-        ret = self.putDataCache(key, data)
-        return data
+        data = markdownObjectFromFile(file_path) 
+        post = data.toPost()
+        blog_post_key = self._blog_post_key(post.title)
+        ret = self.putDataCache(blog_post_key, post)
+        return post
 
     def _build_project(self, project_slug):
+        logger.debug("Building project with slug: {}".format(project_slug))
         project_key = self._project_key(project_slug)
-        project_path = os.path.join("projects", self._markdownify(project_slug)) 
-        return self.buildFile(project_path)
+        project_path = os.path.join("projects", self._jsonify(project_slug)) 
+        file = open(project_path, 'r')
+        json_data = json.loads(file.read())
+        project = Project(
+            title=json_data['title'],
+            subtitle=json_data['subheading'],
+            content=json_data['description'],
+            path=json_data['url']
+        )
+        self.putDataCache(project_key, project)
+        return project
 
     def _build_blog_post(self, post_slug):
-        blog_post_key = self._blog_post_key(post_slug)
+        logger.debug("Building blog post for key: {}".format(post_slug))
         blog_post_path = os.path.join("blog", self._markdownify(post_slug))
         return self.buildFile(blog_post_path)
 
     def _markdownify(self, file_name):
         return "{}.md".format(file_name)
+
+    def _jsonify(self, file_name):
+        return "{}.json".format(file_name)
 
     def _project_key(self, project_slug):
         return "project.{}".format(project_slug)
@@ -72,19 +115,27 @@ class Datastore:
         return data
 
     def getProjects(self):
-        return [getProjectBySlug(slug) for slug in self.projects]
+        return [self.getProjectBySlug(slug) for slug in self.projects]
 
-    def getBlogPostBySlug(self, post_slug):
-        data = self.getDataForKey(self._blog_post_key(post_slug))
+    def getBlogPostByFilename(self, post_filename):
+        data = self.getDataForKey(self._blog_post_key(post_filename))
         if not data:
-            data = self._build_blog_post(post_slug)
+            data = self._build_blog_post(post_filename)
+            self.putDataCache(self._blog_post_key(post_filename), data)
+        return data
+
+    def getBlogPostByTitle(self, post_title):
+        data = self.getDataForKey(self._blog_post_key(post_title))
+        if not data:
+            data = self._build_blog_post(post_title)
         return data
 
     def getBlogPosts(self):
-        return [self.getBlogPostBySlug(post_slug) for post_slug in self.blog_posts]
+        return [self.getBlogPostByFilename(post_name) for post_name in self.blog_posts]
 
 _default_datastore = None
 def getDefaultDatastore():
+    global _default_datastore
     if not _default_datastore:
         _default_datastore = Datastore(getDefaultCacheManager())
     return _default_datastore

@@ -43,6 +43,19 @@ def _getMarkdownFrontMatter(text):
     data = frontmatter.loads(text)
     return data
 
+def markdownObjectFromFile(file_path):
+    """
+    Args:
+        file_path: path of a file to parse
+
+    Return:
+        MarkdownObject of the parsed file
+    """
+    file = open(file_path, 'r')
+    md_object = MarkdownObject(file.read())
+    file.close()
+    return md_object
+
 class MarkdownObject(object):
     """
     Markdown object.
@@ -55,17 +68,11 @@ class MarkdownObject(object):
         self.metadata = frontmatter
         self.content = _generateHTMLFromMarkdown(frontmatter.content)
 
-    @classmethod
-    def markdownObjectFromFile(cls, file_path):
-        """
-        Args:
-            file_path: path of a file to parse
-
-        Return:
-            MarkdownObject of the parsed file
-        """
-        file = open(file_path, 'r')
-        md_object = MarkdownObject(file.readlines())
-        file.close()
-        return md_object
-
+    def toPost(self):
+        from application.Post import Post
+        return Post(
+            title=self.metadata["title"],
+            subtitle=self.metadata["subtitle"],
+            date=self.metadata["date"],
+            content= self.content
+        )
