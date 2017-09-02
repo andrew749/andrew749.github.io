@@ -1,7 +1,13 @@
 import unittest
-from unittest.mock import Mock
+
+import six
+if six.PY2:
+	from mock import Mock
+else:
+	from unittest.mock import Mock
 
 from application.caches.cache_manager import CacheManager
+
 
 class TestCacheManager(unittest.TestCase):
 	def setUp(self):
