@@ -2,56 +2,48 @@
 Layer to cache datastore queries and provide a uniform interface to access data in the application.
 """
 
-from application import db_helper
-from google.appengine.api import memcache
-from application import builder
+from application.markdown_object import MarkdownObject
+from application.caches.cache_manager import getDefaultCacheManager
 import logging
 import os
+import sys
 
-logging.basicConfig(format="%(levelname)s:  DATASTORE: %(message)s", level=logging.INFO)
+logging.basicConfig(stream=sys.stdout)
+logger = logging.getLogger("Datastore",)
 
 class Datastore:
-    def __init__(self):
+    def __init__(self, cache_manager):
         self.projects = {}
 
         self.blog_posts = {}
 
-        self.local_cache = {}
+        self.cache_manager = cache_manager
 
     def getCachedData(self, key):
-        local_cache_result = self.local_cache.get(key, None)
+        local_cache_result = self.cache_manager.get(key)
         if local_cache_result is not None:
-            logging.log("Cache hit for key: {}".format(key))
+            logger.debug("Cache hit for key: {}".format(key))
             return local_cache_result
-
-        memcache_result = memcache.get(key=key)
-        if memcache_result is not None:
-            logging.log("Memcache hit for key: {}".format(key))
-            return memcache_result
 
         return None
 
-    def putDataMemcache(self, key, value):
-        logging.log("Putting Data into Memcache for key: {}".format(key))
-        memcache.add(key, value)
-
     def putDataCache(self, key, value):
-        logging.log("Putting Data into local cache for key: {}".format(key))
-        self.local_cache[key] = value
-
-        self.putDataMemcache(key, value)
+        logger.debug("Putting Data into cache for key: {}".format(key))
+        self.cache_manager.add(key, value)
 
     def getDataForKey(self, key, directory=""):
-        cached_data = getCachedData(key=key)
+        cached_data = self.getCachedData(key=key)
         if not cached_data:
-            logging.log("Cache miss for key: {}".format(key))
+            logging.debug("Cache miss for key: {}".format(key))
             # we should fallback to database here
             # TODO: integrate with some database (for now just rebuild)
-            self.buildFile(os.path.join(directory, "{}.md".format(key)))
+            cached_data = self.buildFile(key, os.path.join(directory, "{}.md".format(key)))
+        return cached_data
 
-    def buildFile(self, file_path):
-        logging.log("Building html for file: {}".format(file_path))
+    def buildFile(self, key, file_path):
+        logger.debug("Building html for file: {}".format(file_path))
         data = builder.MarkdownObject.markdownObjectFromFile(file_path) 
+        ret = self.putDataCache(key, data)
         return data
 
     def _build_project(self, project_slug):
@@ -91,4 +83,8 @@ class Datastore:
     def getBlogPosts(self):
         return [self.getBlogPostBySlug(post_slug) for post_slug in self.blog_posts]
 
-ApplicationDatastore = Datastore()
+_default_datastore = None
+def getDefaultDatastore():
+    if not _default_datastore:
+        _default_datastore = Datastore(getDefaultCacheManager())
+    return _default_datastore
