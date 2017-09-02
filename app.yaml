@@ -5,5 +5,5 @@ threadsafe: true
 # [START handlers]
 handlers:
 - url: /.*
-  script: app.app
+  script: app.application
 # [END handlers]
