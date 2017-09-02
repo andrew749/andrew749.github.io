@@ -10,7 +10,7 @@ class CacheManager(Cache):
 	def __init__(self):
 		self._caches = []
 
-	def addCache(self, cache):
+	def add_cache(self, cache):
 		self._caches.append(cache)
 
 	def add(self, key, value, timeout=None):
