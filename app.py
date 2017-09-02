@@ -38,7 +38,7 @@ def blog():
 
 @application.route('/blog/<blog_slug>')
 def blog_post(blog_slug):
-    post = db_helper.getBlogPost(blog_slug)
+    post = datastore.getBlogPostByTitle(blog_slug)
     return render_template('blog_post.html',
                            title    = post.title,
                            subtitle = post.subtitle,
