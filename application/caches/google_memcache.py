@@ -7,7 +7,7 @@ class GoogleMemcache(Cache):
 		pass
 
 	def add(self, key, value):
-		return self.memcache.add(key, value)
+		return memcache.add(key, value)
 
 	def get(self, key):
-		return self.memcache.get(key)
+		return memcache.get(key)
