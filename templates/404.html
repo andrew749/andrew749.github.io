@@ -1,12 +1,13 @@
 {% extends 'template.html' %}
 
 {% block header %}
+<link  rel="stylesheet" href="{{url_for('static', filename='css/400_style.css')}}"/>
 {% endblock %}
 
 {% block body %}
-<h1>AAAAHHHHH!!!!!</h1>
-<h2>What did you do!?!?!</h2>
-
-Sorry this page doesn't exist.
-
+<div class="body_400">
+	<h1 class="title_400">Error: 400</h1>
+	<img class="image_400" src="{{url_for('static', filename='Images/not_found.jpg')}}"/>
+	<p class="paragraph_400">Sorry, this page doesn't exist.</p>
+</div>
 {% endblock %}
