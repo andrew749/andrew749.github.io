@@ -9,4 +9,5 @@ handlers:
   application_readable: true
 - url: /.*
   script: app.application
+  secure: always
 # [END handlers]
