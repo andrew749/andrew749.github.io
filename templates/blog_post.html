@@ -2,17 +2,19 @@
 
 {% block header%}
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-<link href="{{url_for('static', filename="css/blog_post.css")}}" rel="stylesheet" >
+<link href="{{url_for('static', filename="dist/blog_post.css")}}" rel="stylesheet" >
 {%endblock%}
 
 {% block body %}
 <div class="blog_view">
-<h1 class="blog_title">{{title}}</h1>
-<h4 class="blog_subtitle">{{subtitle}}</h4>
-<h5 class="blog_date">{{date}}</h5>
+<h2 class="blog_title">{{title}}</h1>
+<h5 class="blog_subtitle">{{subtitle}}</h4>
+<h6 class="blog_date">{{date}}</h5>
 <hr />
 <div class="blog_content">
-    {{content}}
+    <p>
+        {{content}}
+    </p>
 </div>
 </div>
 

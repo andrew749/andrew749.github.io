@@ -1,20 +1,12 @@
 {% extends 'template.html' %}
 
 {% block header%}
+<link rel="stylesheet" href="{{url_for('static', filename='dist/blog.css')}}">
 {%endblock%}
 
 {% block body %}
-<div class="post_container">
-{%for post in posts%}
-<a href="{{url_for('blog_post', blog_slug=post.title)}}">
-<div class="blog_post">
-    <h3 class="blog_main_title">{{post.title}}</h3>
-    <h4 class="blog_main_subtitle">{{post.subtitle}}</h4>
-    <h5 class="blog_main_date">{{post.date}}</h5>
-    <img class="blog_main_image" src="{{post.image}}" />
+<div class="post_container" id="post_container">
 </div>
-</a>
-{%endfor%}
-</div>
+<script src="{{url_for('static', filename='dist/blog_main.bundle.js')}}"></script>
 
 {% endblock %}

@@ -1,0 +1,52 @@
+$bgcolor: #F5F5F5;
+
+i {
+    color: #212121;
+}
+
+p {
+    text-align: justify;
+}
+
+.rounded-image {
+    border-radius:50%;
+}
+
+.fa {
+    display:inline;
+}
+
+body {
+    font-weight: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+    width: auto;
+}
+
+.card {
+    flex-basis: 500px;
+    background-color: white;
+    box-shadow: 1px 1px 2px;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+}
+
+.card:hover {
+    background-color: grey;
+}
+
+@keyframes card-in-animation-side {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    50% {
+        opacity: .2;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

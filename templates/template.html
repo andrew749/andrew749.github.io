@@ -9,7 +9,7 @@
 
         <!--Custom Fonts For Page-->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="{{url_for('static', filename='css/font-mfizz.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='fonts/font-mfizz.css')}}" rel="stylesheet">
 
 
         <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
@@ -19,7 +19,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesheet.css')}}">
         <!--Bootstrap -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
@@ -57,8 +56,6 @@
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li id="homebutton" class="selectednavbutton menubutton"><a href="{{url_for('index')}}">Home</a></li>
-                    <li id="aboutbutton" class="menubutton"><a href="#about">About</a></li>
-                    <li id="contactbutton" class="menubutton"><a href="#contact">Contact</a></li>
                     <li id="projects" class="menubutton"><a href="{{url_for('projects')}}">Projects</a></li>
                     <li class="menubutton"><a href="{{url_for('resume')}}">Resume</a></li>
                     <li id="blog" class="menubutton"><a href="{{url_for('blog')}}">Blog</a></li>
@@ -66,8 +63,11 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="main-content">
         <!--Start body section-->
         {% block body %} {% endblock %}
+        </div>
 
         <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
             <a class="btn-floating btn-large red">

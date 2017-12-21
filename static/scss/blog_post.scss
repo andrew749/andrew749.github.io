@@ -1,0 +1,31 @@
+@import 'common';
+@import 'header';
+
+body {
+    background-color: $bgcolor;
+}
+
+.blog_view {
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 2px;
+    padding: 0.5em;
+    margin: 1em auto;
+}
+
+p {
+    font-size: 14px;
+}
+
+.blog_content {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+ul li {
+    list-style-type: circle;
+}
+ul {
+    list-style-position: inside;
+}

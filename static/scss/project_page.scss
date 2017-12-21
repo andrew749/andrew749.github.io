@@ -1,0 +1,53 @@
+@import 'common';
+@import 'header';
+
+body {
+    background-color: $bgcolor;
+}
+
+.project_view {
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 2px;
+    padding: 0.5em;
+    margin: 1em auto;
+}
+
+p {
+    font-size: 14px;
+}
+
+.project_content {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+.project-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .project-title-holder {
+        margin: auto 0;
+        flex-grow: 2;
+    }
+
+    .project-image {
+        text-align: right;
+        flex-grow: 1;
+        flex-shrink: 1;
+        justify-content: right;
+
+        img {
+            max-width:50%;
+        }
+    }
+}
+
+ul li {
+    list-style-type: circle;
+}
+ul {
+    list-style-position: inside;
+}

@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+
+{% block header%}
+<link href="{{url_for('static', filename="dist/project_page.css")}}" rel="stylesheet" >
+{%endblock%}
+
+{% block body %}
+<div class="project_view">
+    <div class="project-info">
+        <div class="project-title-holder">
+            <h2 class="project_title">{{title}}</h1>
+            <h5 class="project_subtitle">{{subtitle}}</h4>
+        </div>
+        <div class="project-image">
+            <img src="{{thumbnailPath}}"/>
+        </div>
+    </div>
+    <hr />
+    <div class="project_content">
+        <p>
+            {{content}}
+        </p>
+    </div>
+</div>
+
+{% endblock %}

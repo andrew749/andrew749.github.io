@@ -1,0 +1,40 @@
+nav {
+    .nav-wrapper li {
+        list-style-type: none;
+    }
+
+    .brand-logo {
+        font-size:1em !important;
+        margin-left: 10px;
+    }
+
+    * {
+        color: black !important;
+    }
+
+    .nav-wrapper {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+
+}
+
+@media(max-width: 960px) {
+    .nav-wrapper {
+        width: 100% !important;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    nav {
+        position: fixed;
+        top: 0px;
+        z-index: 999;
+    }
+
+    .main-content {
+        margin-top: 40px;
+    }
+
+}

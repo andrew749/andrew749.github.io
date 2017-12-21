@@ -6,11 +6,16 @@ share/
 __pycache__/
 bower_components/
 build/
+node_modules/
+static/dist/
+static/css/
+.sass-cache/
 *.pyc
 pip-selfcheck.json
 .Python
 static/css/resume-styles.css
 .sass-cache
+yarn-error.log
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

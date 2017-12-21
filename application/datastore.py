@@ -21,7 +21,7 @@ logger.addHandler(ch)
 class Datastore:
     def __init__(self, cache_manager):
         self.projects = valid_projects
-        self.blog_posts = valid_blog_posts 
+        self.blog_posts = valid_blog_posts
         self.cache_manager = cache_manager
 
     def getCachedData(self, key):
@@ -48,7 +48,7 @@ class Datastore:
 
     def buildFile(self, file_path):
         logger.debug("Building html for file: {}".format(file_path))
-        data = markdownObjectFromFile(file_path) 
+        data = markdownObjectFromFile(file_path)
         post = data.toPost()
         blog_post_key = self._blog_post_key(post.title)
         ret = self.putDataCache(blog_post_key, post)
@@ -57,14 +57,15 @@ class Datastore:
     def _build_project(self, project_slug):
         logger.debug("Building project with slug: {}".format(project_slug))
         project_key = self._project_key(project_slug)
-        project_path = os.path.join("projects", self._jsonify(project_slug)) 
+        project_path = os.path.join("projects", self._jsonify(project_slug))
         file = open(project_path, 'r')
         json_data = json.loads(file.read())
         project = Project(
             title=json_data['title'],
             subtitle=json_data['subheading'],
             content=json_data['description'],
-            path=json_data['url']
+            thumbnailPath=json_data['url'],
+            projectSlug=project_slug
         )
         self.putDataCache(project_key, project)
         return project
@@ -88,18 +89,28 @@ class Datastore:
 
     def getProjectBySlug(self, project_slug):
         data = self.getDataForKey(self._project_key(project_slug))
-        if not data:
+
+        if not data and project_slug in self.projects:
+            print ("trying build")
             data = self._build_project(project_slug)
+        elif not data:
+            return None
+
         return data
 
     def getProjects(self):
         return [self.getProjectBySlug(slug) for slug in self.projects]
 
+    def getProjectSlugs(self):
+        return self.projects
+
     def getBlogPostByFilename(self, post_filename):
         data = self.getDataForKey(self._blog_post_key(post_filename))
+
         if not data:
             data = self._build_blog_post(post_filename)
             self.putDataCache(self._blog_post_key(post_filename), data)
+
         return data
 
     def getBlogPostByTitle(self, post_title):

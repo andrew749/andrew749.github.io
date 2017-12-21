@@ -14,7 +14,8 @@ projects = {
     "scribblerplaystwitch",
     "secretsauce",
     "tennisscore",
-    "textmetrics"
+    "textmetrics",
+    "textspam"
 }
 
 blog_posts = {
