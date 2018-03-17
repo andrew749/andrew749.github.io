@@ -6,7 +6,7 @@ class CacheManager(Cache):
 
 	Each cache should conform to application.caches.cache.py
 	"""
-	
+
 	def __init__(self):
 		self._caches = []
 
@@ -25,7 +25,7 @@ class CacheManager(Cache):
 
 		for cache in self._caches:
 			cache.add(key, value)
-			
+
 		return True
 
 
@@ -54,14 +54,14 @@ _cache_manager_instance = None
 def getDefaultCacheManager():
 	global _cache_manager_instance
 	from application.caches.local_cache import LocalCache
-	from application.caches.google_memcache import GoogleMemcache
+	# from application.caches.google_memcache import GoogleMemcache
 
 	if _cache_manager_instance is None:
 		_cache_manager_instance = CacheManager()
 		local_cache = LocalCache()
-		google_memcache = GoogleMemcache()
+		# google_memcache = GoogleMemcache()
 		_cache_manager_instance.add_cache(local_cache)
-		_cache_manager_instance.add_cache(google_memcache)
-		
+		# _cache_manager_instance.add_cache(google_memcache)
+
 	return _cache_manager_instance
 
