@@ -1,7 +1,8 @@
-SERVER_FILE=app.py
+SERVER_FILE="app.py"
 PID=/tmp/andrewcodispoti.me.pid
 HOST=0.0.0.0
-RUN_COMMAND="flask run --host=$(HOST)"
+FLASK_APP=$(SERVER_FILE)
+RUN_COMMAND=flask run --host=$(HOST)
 
 serve:
 	@echo "Starting Server"
@@ -14,18 +15,17 @@ debug: _debug_env start
 
 production: _prod_env start
 
-_debug_env: _common_env
+_debug_env:
 	@echo "DEBUG MODE ENABLED"
 	export FLASK_DEBUG=true
 
-_prod_env: _common_env
+_prod_env:
 	@echo "PRODUCTION"
 	export FLASK_DEBUG=false
 
-_common_env:
-	export FLASK_APP=$(SERVER_FILE)
 
 start:
+	export FLASK_APP=$(SERVER_FILE)
 	@echo "Restarting"
 	@$(RUN_COMMAND)
 
