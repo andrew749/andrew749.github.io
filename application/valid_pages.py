@@ -1,23 +1,5 @@
 import os
 
-projects = {
-    "0xFACE",
-    "chordi",
-    "decisions",
-    "drizio",
-    "heartratemonitor",
-    "hive",
-    "myomove",
-    "note-it-now",
-    "panic.io",
-    "play",
-    "scribblerplaystwitch",
-    "secretsauce",
-    "tennisscore",
-    "textmetrics",
-    "textspam"
-}
-
 blog_posts = {
     "big_brother",
     "hello_world",

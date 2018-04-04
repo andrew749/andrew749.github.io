@@ -12,16 +12,8 @@ def open_connection(path):
 def close_connection(connection):
     connection.close()
 
-projects_query = 'SELECT * from projects;'
 blog_query =  'SELECT * FROM blog;'
 blog_post_query = 'SELECT * FROM blog where title like (?);'
-
-# return an array of projects
-def getProjects():
-    connection, cursor = open_connection(db_constants.content_path)
-    data = cursor.execute(projects_query).fetchall()
-    close_connection(connection)
-    return [project.Project(x[0], x[1], x[2], x[3]) for x in data]
 
 ## return an array of blog posts
 def getBlogPosts():

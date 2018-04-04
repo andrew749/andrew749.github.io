@@ -1,7 +1,0 @@
-{
-"title":"Note-It-Now",
-"subheading":"Auto indexing hand written notes.",
-
-"url":"Images/note-it-now.png",
-"description":"Note-It-Now uses OpenCV and custom image processing algorithms to automatically segment notes based on a custom markdown written in the sidebar of a standard sheet of lined paper."
-}

@@ -41,7 +41,7 @@ rebuild_db: clean
 
 clean:
 	@echo "Cleaning compiled python files."
-	rm -rf *.pyc
+	rm -rf **/*.pyc
 	@echo "Removing sqlite database"
 	rm -f content.sqlite
 
