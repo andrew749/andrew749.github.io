@@ -16,9 +16,6 @@ serve:
 	@echo "Starting Watching Server"
 	@fswatch -o . | xargs -n1 -I{} make build
 
-build:
-	docker build .
-
 %.css: $(SCSS_SRC)/%.scss
 	sass $< $(CSS_OUT)/$(notdir $@)
 
