@@ -15,7 +15,6 @@ module.exports = {
     projects_style: './static/scss/projects.scss',
     blog: './static/scss/blog.scss',
     blog_post: './static/scss/blog_post.scss',
-    project_page: './static/scss/project_page.scss',
     resume: './static/scss/resume.scss',
     x400_style: './static/scss/400_style.scss',
     x500_style: './static/scss/500_style.scss'
