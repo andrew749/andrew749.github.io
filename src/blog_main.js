@@ -15,6 +15,7 @@ type Post = {
   title: string,
   subtitle: string,
   url: string,
+  date?: string,
 }
 
 export default class BlogPage extends React.Component<BlogPageProps, BlogPageState> {

@@ -1,13 +1,12 @@
 const path = require('path');
 
-//var FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
+var FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
     // JS files
     main: './src/index.js',
-    projects: './src/projects.js',
     blog_main: './src/blog_main.js',
 
     // STYLES
@@ -52,7 +51,7 @@ module.exports = {
    ]
   },
   plugins: [
-    //new FlowBabelWebpackPlugin(),
+    new FlowBabelWebpackPlugin(),
     new ExtractTextPlugin({ // define where to save the file
       filename: '[name].css',
       allChunks: true,
