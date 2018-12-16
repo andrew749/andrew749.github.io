@@ -5,14 +5,11 @@
 
         <!--Javascript Libraries-->
         <script src="{{url_for('static', filename='js/jquery-2.1.1.min.js')}}"></script>
-        <script src="{{url_for('static', filename='js/jquery.waypoints.js')}}"></script>
 
         <!--Custom Fonts For Page-->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <link href="{{url_for('static', filename='fonts/font-mfizz.css')}}" rel="stylesheet">
 
-
-        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
         <link rel="icon" type="image/png" href="{{url_for('static', filename='Images/favicon.ico')}}">
 
         <!-- Materialize -->
@@ -21,6 +18,7 @@
 
         <!--Bootstrap -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
 
         <!-- Google Analytics -->
         <script>
@@ -32,54 +30,15 @@
             ga('send', 'pageview');
         </script>
 
-        <script src="{{url_for('static', filename='js/common_script.js')}}"></script>
-
         {%block header%} {%endblock%}
 
         <title>{{title}}</title>
     </head>
 
     <body>
-        <!--This is the main page-->
-        <nav class="white">
-            <div class="nav-wrapper">
-                <a class="brand-logo black-text" href="{{url_for('index')}}">
-                    Andrew Codispoti
-                </a>
-                <a class="button-collapse" data-activates="mobile-demo" href="#"><i class="material-icons fa fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <!--<li id="homebutton" class="selectednavbutton menubutton"><a href="{{url_for('index')}}">Home</a></li>-->
-                    <li class="menubutton"><a href="{{url_for('resume')}}">Resume</a></li>
-                    <!--<li id="blog" class="menubutton"><a href="{{url_for('blog')}}">Blog</a></li>-->
-                    <li id="github" class="menubutton"><a href="http://github.com/andrew749">GitHub</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <!--<li id="homebutton" class="selectednavbutton menubutton"><a href="{{url_for('index')}}">Home</a></li>-->
-                    <li class="menubutton"><a href="{{url_for('resume')}}">Resume</a></li>
-                    <!--<li id="blog" class="menubutton"><a href="{{url_for('blog')}}">Blog</a></li>-->
-                    <li id="github" class="menubutton"><a href="http://github.com/andrew749">GitHub</a></li>
-                </ul>
-            </div>
-        </nav>
-
         <div class="main-content">
-        <!--Start body section-->
-        {% block body %} {% endblock %}
+            <!--Start body section-->
+            {% block body %} {% endblock %}
         </div>
-
-        <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large red">
-                <i class="large material-icons fa fa-user"></i>
-            </a>
-            <ul>
-                <li><a class="btn-floating red" href="https://github.com/andrew749"><i class="material-icons fa fa-github "></i></a></li>
-                <li><a class="btn-floating blue darken-1" href="https://twitter.com/Andrewcod749"><i class="material-icons fa fa-twitter"></i></a></li>
-                <li><a class="btn-floating green" href="https://ca.linkedin.com/in/acodispoti"><i class="material-icons fa fa-linkedin-square"></i></a></li>
-                <li><a class="btn-floating yellow" href="mailto:andrew.codispoti@gmail.com"><i class="material-icons fa fa-envelope-o"></i></a></li>
-                <li><a class="btn-floating orange" href="tel:4165287547"><i class="material-icons fa fa-phone"></i></a></li>
-                <li><a class="btn-floating blue darken-4" href="https://www.facebook.com/andrew.codispoti"><i class="material-icons fa fa-facebook"></i></a></li>
-            </ul>
-        </div>
-
     </body>
 </html>

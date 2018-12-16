@@ -9,75 +9,25 @@
 <div class="background">
     <canvas id="mosaic-background"></canvas>
 
-    <div class="contentpage">
-
+    <div class="content-page">
         <!--Main Page-->
-        <div class="first_section main_section">
-
-            <div class="jumbo-content-wrapper">
-                <h1 class="name-title">Andrew Codispoti</h1>
-                <h4 class="jumbotroncaption">
-                    Vim-wielding Pythonista
-                </h4>
-            </div>
-
+        <div class="main_section">
             <div class="profile-pic-wrapper">
-                <img class="rounded-image" id="profile-pic" src="{{url_for('static', filename='Images/glasses.jpg')}}"/>
+                <img class="rounded-image" id="profile-pic" src="{{url_for('static', filename='Images/profile.jpg')}}"/>
             </div>
-
+            <div class="jumbo-content-wrapper landing-page-content">
+                <h2 class="name-title">Andrew Codispoti</h1>
+                <p class="personal-caption">Building secure, reliable, and more scalable systems</p>
+                <p class="employment-summary">Currently <a href="https://linkedin.com">@LinkedIn</a>. Former <a href="https://facebook.com">@Facebook</a>, <a href="https://asana.com">@Asana</a>, <a href="https://wish.com">@Wish</a>, <a href="https://coursera.org">@Coursera</a></p>
+                <ul class="contact-info-form">
+                    <li><a href="https://www.linkedin.com/in/acodispoti/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://facebook.com/andrew.codispoti"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://github.com/andrew749"><i class="fab fa-github"></i></a></li>
+                    <li><a href="mailto:andrew.codispoti@gmail.com"><i class="far fa-envelope"></i></a></li>
+                </ul>
+                <p class="resume-link"><a href="/resume">Resume</a></p>
+            </div>
         </div>
-
-        <!-- About Me-->
-        <div class="main_section" id="about">
-            <h2 class="main_section_header_text">Who am I?</h2>
-            <p>
-                I am a work-a-holic and a perfectionist. In my spare time I try to be an avid city explorer.
-
-                <br/><br/>
-
-                Recently, I have dedicated some time to learning a bit about the (massive) field of Machine Learning. I've taken a few MOOC's in my spare time. I've also tried my hand at working to solve some basic problems using machine learning techniques.
-                <br/><br/>
-            </p>
-        </div>
-
-        <div class="main_section" >
-
-            <h2 class="main_section_header_text">What have I done?</h2>
-
-            <div class="language-header">
-                <h4 class="inline-header">Python</h4> <i class="icon-python fa-2x"></i>
-            </div>
-            <p>
-                If I need to solve a problem, I usually reach for my terminal and start up a Python prompt. I've worked with Python at <a href="http://wish.com">Wish</a> where I was a the primary merchant facing payments engineer, dealing with high volume payments (on the order of hundreds of millions of dollars bi-weekly). I also completed several courses which involved using Python to solve a variety of problems by implementing basic machine learning algorithms. I've also played around with making some simple neural nets as well as some genetic algorithms.
-            </p>
-
-            <div class="language-header">
-                <h4 class="inline-header">C++</h4> <i class="icon-cplusplus fa-2x"></i>
-            </div>
-            <p>
-                Most recently, I have worked towards making significant modifications to NodeJS and the V8 runtime bundled with the framework at <a href="http://www.asana.com">Asana</a>. I helped implement OS level forking in NodeJS.
-                I also have accumulated a portfolio of C++ projects from school which range from sorting algorithms, to a compiler, even my own compression algorithm.
-            </p>
-
-            <div class="language-header">
-                <h4 class="inline-header">iOS / MacOS</h4>
-            </div>
-            <p>
-                I am a professional iOS developer with experience developing application for iOS and the Apple Watch at <a href="http://www.xe.com">XE.com</a>. I have delved into large Objective C code bases, though I have also (luckily or unluckily)
-                had experience to all Swift versions, all the way from 1 to 3. I also maintain a forked version of MacDown which adds vim keybindings to the editor.
-            </p>
-
-            <div class="language-header">
-                <h4 class="inline-header">Android</h4> <i class="fa fa-android fa-2x"></i>
-            </div>
-
-            <p>
-                I was an Android developer at <a href="http://www.coursera.org">Coursera</a>.  If you open up the Coursera application, and you see the timeline on your homepage, that was a custom Android widget I developed. Also while at Coursera I designed and developed a custom audio streaming architecture allowing for background audio to work seamlessly. I also made several contributions to a custom content rendering system used across the application.
-            </p>
-
-        </div>
-
     </div>
-
 </div>
 {%endblock%}

@@ -1,5 +1,6 @@
 import sys
-from flask import Flask, url_for, render_template, Markup, abort, jsonify
+from flask import Flask, Blueprint, url_for, render_template, Markup, abort, jsonify
+from flask_scss import Scss
 import os
 import json
 import markdown
@@ -9,6 +10,7 @@ from application.valid_pages import blog_post_titles as valid_blog_posts
 from application.datastore import getDefaultDatastore
 
 application = Flask(__name__)
+Scss(application, static_dir="static", asset_dir="static/")
 datastore = getDefaultDatastore()
 
 content_dir = 'content'
@@ -36,24 +38,6 @@ def blog_post(blog_slug):
                            date     = post.date,
                            content  = Markup(markdown.markdown(post.content)))
 
-"""
-API ROUTES
-"""
-@application.route('/api/getBlogPosts')
-def get_blog_posts():
-    return jsonify([x.to_json() for x in datastore.getBlogPosts()])
-
-@application.route('/api/blog/<blog_slug>')
-def get_blog_post(blog_slug):
-    if blog_slug not in valid_blog_posts:
-        abort(404)
-    post = datastore.getBlogPostByTitle(blog_slug)
-
-    if not post:
-        abort(404)
-
-    return jsonify(post)
-
 @application.route('/500')
 def page500():
     return render_template(
@@ -72,3 +56,24 @@ def internal_server_error(e):
   return render_template(
     '500.html'
     )
+
+api = Blueprint('api', __name__)
+
+"""
+API ROUTES
+"""
+@api.route('/api/getBlogPosts')
+def get_blog_posts():
+    return jsonify([x.to_json() for x in datastore.getBlogPosts()])
+
+@api.route('/api/blog/<blog_slug>')
+def get_blog_post(blog_slug):
+    if blog_slug not in valid_blog_posts:
+        abort(404)
+    post = datastore.getBlogPostByTitle(blog_slug)
+
+    if not post:
+        abort(404)
+
+    return jsonify(post)
+

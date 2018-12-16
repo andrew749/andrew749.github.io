@@ -1,7 +1,8 @@
+# Flask configuration options
 SERVER_FILE=app.py
 HOST=0.0.0.0
 FLASK_APP=$(SERVER_FILE)
-RUN_COMMAND=FLASK_APP=$(SERVER_FILE) flask run --host=$(HOST)
+RUN_COMMAND=FLASK_DEBUG=true FLASK_APP=$(SERVER_FILE) flask run --host=$(HOST)
 
 # CSS Compile options
 CSS_C=sass
@@ -14,13 +15,14 @@ CSS_TARGETS=$(patsubst $(SCSS_SRC)/%.scss,%.css,$(wildcard $(SCSS_SRC)/*.scss))
 
 serve:
 	@echo "Starting Watching Server"
-	@fswatch -o . | xargs -n1 -I{} make build
+	@fswatch -o . | xargs -n1 -I{} make common_env
 
 %.css: $(SCSS_SRC)/%.scss
 	sass $< $(CSS_OUT)/$(notdir $@)
 
 common_env: $(CSS_TARGETS)
 
+# different types of servers we can launch 
 debug: _debug_env start
 _debug_env: common_env
 	@echo "Running debug server"
