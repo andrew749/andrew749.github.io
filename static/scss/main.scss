@@ -21,8 +21,8 @@ h2 {
 }
 
 .resume-link {
+    font-size: 16px;
     a {
-        color: inherit;
     }
 }
 
@@ -89,7 +89,7 @@ h2 {
 }
 
 .jumbo-content-wrapper {
-    width:60%;
+    width:80%;
 }
 
 .name-title{
@@ -118,15 +118,6 @@ h2 {
     .content-page{
         width:100%;
         margin: 0px;
-    }
-
-    .mainimage{
-        width: 100%;
-    }
-
-    .vertical-align{
-        display: block;
-        clear: both;
     }
 
     p {

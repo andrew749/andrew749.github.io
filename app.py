@@ -62,11 +62,11 @@ api = Blueprint('api', __name__)
 """
 API ROUTES
 """
-@api.route('/api/getBlogPosts')
+@api.route('/getBlogPosts')
 def get_blog_posts():
     return jsonify([x.to_json() for x in datastore.getBlogPosts()])
 
-@api.route('/api/blog/<blog_slug>')
+@api.route('/blog/<blog_slug>')
 def get_blog_post(blog_slug):
     if blog_slug not in valid_blog_posts:
         abort(404)
@@ -77,3 +77,5 @@ def get_blog_post(blog_slug):
 
     return jsonify(post)
 
+# install the api routes for blog content
+application.register_blueprint(api, url_prefix="/api")

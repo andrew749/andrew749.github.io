@@ -21,7 +21,7 @@ yarn build-dev
 
 
 ## Deploy
-First you need to build your css and js sources and then:
+First you need to build your css and js sources using the instructions above (for the blog). All python dependencies need to exist in the  /lib folder, otherwise they won't be found when we deploy. 
 
 ```
 gcloud app deploy app.yaml
